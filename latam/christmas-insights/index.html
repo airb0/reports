@@ -1,0 +1,359 @@
+<title>Holiday insights: delivery, miracles, relationships</title>
+<style>
+@font-face{font-family:"PP Agrandir";src:url("fonts/PPAgrandir-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Suisse Intl";src:url("fonts/SuisseIntl-Book.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Suisse Intl";src:url("fonts/SuisseIntl-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+/* Layout: a long research document — sticky contents column left, one reading column right; drawer under 900px. */
+:root{
+  --bg:#FFFFFF; --fg:#000000; --body:#141414; --muted:#55605A; --line:#D5E6DC; --line2:#EAF4EE;
+  --panel:#E4FFF2; --plate:#F4F3D8; --accent:#C1F11D; --on-accent:#000000;
+  --display:"PP Agrandir","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --text:"Suisse Intl","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --max:1200px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141414; --fg:#FFFFFF; --body:#ECEFED; --muted:#A4ADA8; --line:#2E3532; --line2:#222826;
+  --panel:#1D2421; --plate:#2A2A22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141414; --fg:#FFFFFF; --body:#ECEFED; --muted:#A4ADA8; --line:#2E3532; --line2:#222826;
+  --panel:#1D2421; --plate:#2A2A22; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:var(--muted);text-underline-offset:2px}
+a:hover{text-decoration-color:var(--fg)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:40px}
+/* cover */
+.cover{padding-block:56px 40px;border-bottom:2px solid var(--fg)}
+.series{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:40px}
+.series a{text-decoration:none}
+.series .on{color:var(--fg);font-weight:600}
+.series .brand{color:var(--fg);font-weight:600;margin-right:6px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,6.4vw,76px);line-height:1;letter-spacing:-.02em;color:var(--fg);margin:0 0 22px;text-wrap:balance;max-width:16ch}
+.hl{position:relative;z-index:0;color:var(--on-accent);padding:0 .08em;white-space:nowrap}
+.hl:before{content:"";position:absolute;z-index:-1;left:-.06em;right:-.1em;top:.08em;bottom:-.04em;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='316' height='68' viewBox='0 0 316 68' preserveAspectRatio='none'%3E%3Cpath d='M314.41 25.529C262.307 28.9686 113.618 24 7.42536 24C57.9532 29.7926 206.773 42.8579 311.885 42.8579C279.451 42.5847 158.673 45.5592 0.410173 42.8579' stroke='%23C1F11D' stroke-width='48' fill='none'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+.sub{font-size:19px;line-height:1.45;max-width:60ch;margin:0 0 30px;color:var(--body)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:13px;color:var(--muted);margin:0;padding:0;list-style:none}
+.facts b{display:block;font-family:var(--display);font-size:22px;color:var(--fg);letter-spacing:-.01em;line-height:1.1;font-variant-numeric:tabular-nums}
+/* layout */
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:56px;align-items:start;padding-block:0 120px}
+.toc{position:sticky;top:env(safe-area-inset-top,0px);max-height:100vh;overflow-y:auto;padding-block:36px;font-size:13.5px;scrollbar-width:thin}
+.toc .g{margin-bottom:22px}
+.toc .gt{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);padding-bottom:7px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.toc ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.toc a{color:var(--muted);text-decoration:none;line-height:1.3;display:block}
+.toc a:hover,.toc a.cur{color:var(--fg)}
+main{min-width:0;padding-top:36px}
+.burger,.scrim,.navhead{display:none}
+/* sections */
+section.sec{padding-top:8px;margin-bottom:64px;scroll-margin-top:16px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.05;letter-spacing:-.015em;color:var(--fg);margin:0 0 14px;text-wrap:balance}
+h3{font-size:18px;font-weight:600;line-height:1.3;color:var(--fg);margin:0;text-wrap:balance}
+p{margin:0 0 12px;max-width:68ch}
+.lead{font-size:18px;line-height:1.5;max-width:62ch;margin-bottom:24px}
+.country{border-top:2px solid var(--fg);padding-top:20px}
+/* verdict cards */
+.verdicts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:8px 0 18px}
+.verdict{background:var(--panel);padding:20px 20px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.verdict .m{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.verdict .w{font-family:var(--display);font-size:24px;line-height:1.05;color:var(--fg);letter-spacing:-.01em}
+.verdict p{font-size:14.5px;margin:0}
+.verdict .fit{font-size:13.5px;border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+/* items */
+.item{border-top:1px solid var(--line);padding-block:20px 6px}
+.ihead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:10px}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ev{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--plate);color:var(--fg);padding:3px 7px;white-space:nowrap}
+.item ul{margin:0 0 12px;padding-left:18px;max-width:68ch}
+.item li{margin-bottom:5px}
+.hook{background:var(--panel);padding:12px 16px;margin:4px 0 12px;max-width:68ch;font-size:15px}
+.hook b{display:inline-block;background:var(--accent);color:var(--on-accent);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;margin-right:8px;vertical-align:1px}
+.src{font-size:13px;color:var(--muted);max-width:76ch;margin:0 0 10px}
+.src a{color:var(--muted)}
+.q{font-style:normal;color:var(--fg)}
+ul.mdl{margin:0 0 14px;padding-left:18px;max-width:72ch}
+ul.mdl li{margin-bottom:7px}
+ul.mdl li.sub2{margin-left:18px;list-style:circle;color:var(--body)}
+code{font-size:.9em;background:var(--plate);padding:0 4px}
+/* patterns */
+.pats{counter-reset:p;display:grid;gap:0}
+.pat{border-top:1px solid var(--line);padding-block:16px 4px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 8px}
+.pat:before{counter-increment:p;content:counter(p);font-family:var(--display);font-size:22px;color:var(--fg);line-height:1.1}
+.pat h3{margin-bottom:6px}
+/* tables */
+.tbl{overflow-x:auto;margin:10px 0 18px;border-top:2px solid var(--fg)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-weight:600;color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.win td{background:var(--panel)}
+tr.win td:first-child{box-shadow:inset 4px 0 0 var(--accent);padding-left:10px}
+.tag{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+/* sources */
+.sources ol{padding-left:22px;font-size:13px;color:var(--muted);columns:2;column-gap:36px}
+.sources li{margin-bottom:6px;break-inside:avoid;overflow-wrap:anywhere}
+.sources li a{color:var(--body)}
+.foot{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:40px}
+/* mobile */
+@media (max-width:900px){
+  .wrap{padding-inline:18px}
+  .layout{display:block}
+  .verdicts{grid-template-columns:minmax(0,1fr)}
+  .sources ol{columns:1}
+  .burger{display:flex;position:fixed;right:14px;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:30;width:44px;height:44px;align-items:center;justify-content:center;background:var(--fg);color:var(--bg);border:0;cursor:pointer;transition:transform .2s}
+  .burger.away{transform:translateY(-80px)}
+  .burger span,.burger span:before,.burger span:after{display:block;width:18px;height:2px;background:currentColor;position:relative}
+  .burger span:before,.burger span:after{content:"";position:absolute;left:0}
+  .burger span:before{top:-6px}.burger span:after{top:6px}
+  .toc{position:fixed;top:0;right:0;bottom:0;width:min(86vw,340px);max-height:none;background:var(--bg);z-index:50;padding:calc(env(safe-area-inset-top,0px) + 16px) 20px 40px;transform:translateX(100%);transition:transform .25s;border-left:1px solid var(--line)}
+  .navhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-weight:600;color:var(--fg)}
+  .navhead button{background:none;border:0;font-size:26px;line-height:1;color:var(--fg);cursor:pointer;padding:4px 8px}
+  body.nav .toc{transform:none}
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:40}
+  body.nav .scrim{display:block}
+  body.nav{overflow:hidden}
+  table{font-size:13.5px}
+}
+@media (prefers-reduced-motion:reduce){.toc,.burger{transition:none}}
+</style>
+<header class="cover wrap">
+  <div class="series"><span class="brand">Christmas 2026 · Latin America</span><span>1 · Traditions</span><a class="on" href="#">2 · Holiday insights</a><span>3 · Social context & SMB</span><span>4 · Activations review</span></div>
+  <h1>Holiday insights for a <span class="hl">delivery</span> Christmas</h1>
+  <p class="sub">New Year attitudes, what couriers, customers and small businesses live through in December, which miracles people believe in, and how relationships behave around the holiday.</p>
+  <ul class="facts"><li><b>6</b>areas</li><li><b>19</b>sources linked</li></ul>
+</header>
+<button class="burger" type="button" aria-label="Open contents"><span></span></button>
+<div class="scrim"></div>
+<div class="layout wrap">
+  <nav class="toc" aria-label="Contents"><div class="navhead">Contents<button type="button" aria-label="Close contents">×</button></div><div class="g"><div class="gt">Holiday insights</div><ul><li><a href="#s1">Introduction</a></li><li><a href="#s2">Strongest 10</a></li><li><a href="#s3">1. New Year</a></li><li><a href="#s4">2. Couriers</a></li><li><a href="#s5">3. Customers</a></li><li><a href="#s6">4. Small businesses</a></li><li><a href="#s7">5. Belief in miracles</a></li><li><a href="#s8">6. Relationships</a></li><li><a href="#s9">Gaps</a></li></ul></div><div class="g"><ul><li><a href="#sources">All sources</a></li></ul></div></nav>
+  <main>
+<section class="sec" id="s1" data-toc="Introduction" data-group="Holiday insights">
+
+</section>
+<section class="sec" id="s2" data-toc="Strongest 10" data-group="Holiday insights"><h2>Strongest 10</h2>
+<ul class="mdl">
+<li>Couriers live by "if I'm not connected, nothing comes in", so a holiday off is a cost, not a choice (2.1).</li>
+<li>December is the deadliest month on Colombian roads, and motorcyclists account for most of those deaths (2.4).</li>
+<li>In Lima the last days before Nochebuena are slowed to a crawl: 12 km can take over two hours, worst around Gamarra and Mesa Redonda (2.6).</li>
+<li>The courier on shift on 1 January feels like "the only crazy one", and feels solidarity with the others working too (2.2).</li>
+<li>Couriers' small tips are a big share of their pay, so a customer's gesture weighs more than it looks (2.3).</li>
+<li>Colombians and Peruvians are among the most optimistic people in the world about next year, even after calling this year bad (1.1).</li>
+<li>For many the New Year ritual is family memory, not luck: yellow is worn to honour a grandmother (1.3).</li>
+<li>Fear in Lima has a name: in 2025 extortion was the year's most negative event, ahead of murders (4.3).</li>
+<li>Craftspeople working on the New Year shrink the product rather than lose the customer: the Año Viejo now fits in a car (4.1).</li>
+<li>January regret follows December spending: four in five Colombians regret their year-end money decisions (6.2).</li>
+</ul>
+</section>
+<section class="sec" id="s3" data-toc="1. New Year" data-group="Holiday insights"><h2>1. New Year</h2>
+<ul class="mdl">
+<li><b>1.1 People who call the old year bad still expect next year to be better for them personally — hope is personal, pessimism is national.</b></li>
+<li>Facts: Ipsos "Predicciones 2026" (30 countries, 23,642 adults, fieldwork from 24 Oct 2025): Colombia 89% optimistic that 2026 will be a better year for them (2nd of 30, after Indonesia 90%), Peru 86%, global average 71%. In Peru 77% said 2025 was a bad year for the country. Peru: 88% plan to prioritise family and health in 2026, 84% to exercise more, 80% expect large-scale protests.</li>
+<li>Markets: [CO] [PE]. No Ecuador figure in this wave.</li>
+<li>Sources: <a href="https://www.ipsos.com/es-pe/predicciones-para-el-2026">Ipsos Perú, Predicciones para el 2026 (26 Dec 2025)</a>; <a href="https://www.ipsos.com/sites/default/files/ct/news/documents/2025-12/CP%20Ipsos%20-%20Predicciones%202026.pdf">Ipsos press release with country ranking (Dec 2025, PDF)</a></li>
+<li>Evidence: well documented.</li>
+</ul>
+
+<ul class="mdl">
+<li><b>1.2 Peruvians are happy mostly through people, unhappy mostly through money — and still expect life to get much better.</b></li>
+<li>Facts: Ipsos Índice de Felicidad 2025: 65% of connected Peruvians call themselves happy (25th of 30 countries). Top sources of happiness: feeling appreciated 42%, family relationships and children 39%. Among the unhappy, 60% blame their financial situation. 73% expect their quality of life to improve significantly within five years.</li>
+<li>Markets: [PE].</li>
+<li>Sources: <a href="https://www.ipsos.com/es-pe/indice-de-felicidad-2025">Ipsos Perú, Índice de Felicidad 2025 (20 Mar 2025)</a></li>
+<li>Evidence: well documented (online sample, "connected Peruvians").</li>
+</ul>
+
+<ul class="mdl">
+<li><b>1.3 For many, the New Year ritual is less about luck than about keeping a family member present.</b></li>
+<li>Facts: Guayaquil, Dec 2025: a woman keeps wearing yellow on 31 Dec as a tradition started by her grandmother, "a way to honour her"; another has worn yellow for five years because "things have gone well". A vendor says the buyers of yellow are older people, grandmothers, or young people pushed by their parents; an informal seller says men buy yellow underwear "sometimes with shame". Underwear at US$1, 3–4 pieces for US$5.</li>
+<li>Markets: [EC]. Peru cábala shares (grapes 43%, yellow underwear 18% etc.) are already in the traditions notes.</li>
+<li>Sources: <a href="https://www.eluniverso.com/guayaquil/comunidad/guayaquil-se-viste-de-amarillo-para-fin-de-ano-la-cabala-que-se-mantiene-y-que-impulsa-las-ventas-nota/">El Universo, Guayaquil se viste de amarillo (27 Dec 2025)</a></li>
+<li>Evidence: partly documented (press testimony, quotes read in translation, no survey).</li>
+</ul>
+
+<ul class="mdl">
+<li><b>1.4 "New year, new me" is mostly a money resolution in disguise — and most people start January already behind.</b></li>
+<li>Facts: MejorCDT survey (&gt;1,000 respondents, published 15 Jan 2026): only 20% of Colombians started 2026 financially stable; 72.1% still feel "very optimistic" about their economy; 46% plan caution because of the election. Prima (December bonus) went to basic needs 19%, holidays 18%, debts 14%, savings 12%.</li>
+<li>Markets: [CO].</li>
+<li>Sources: <a href="https://es-us.noticias.yahoo.com/10-colombianos-iniciaron-2026-estabilidad-170000536.html">Yahoo Noticias / MejorCDT (15 Jan 2026)</a></li>
+<li>Evidence: partly documented (fintech's own survey, methodology not public).</li>
+</ul>
+
+<ul class="mdl">
+<li><b>1.5 Press claims that "health is Colombians' top resolution" have no survey behind them.</b></li>
+<li>Facts: Portafolio's 2 Jan 2026 piece says health displaced travel, money and love as the main resolution, but gives no survey source, sample or percentages (it cites health-system statistics instead). The Ipsos Peru figure (88% prioritise family and health) is the only measured resolution data found.</li>
+<li>Markets: [CO].</li>
+<li>Sources: <a href="https://www.portafolio.co/tendencias/sociales/salud-se-convierte-en-la-principal-prioridad-de-los-colombianos-rumbo-a-2026-segun-habitos-y-datos-oficiales-485609">Portafolio (2 Jan 2026)</a></li>
+<li>Evidence: thinly documented — do not use as a fact.</li>
+</ul>
+
+</section>
+<section class="sec" id="s4" data-toc="2. Couriers" data-group="Holiday insights"><h2>2. Couriers</h2>
+<ul class="mdl">
+<li><b>2.1 A courier cannot take the holiday off, because the day not worked is simply money that never arrives.</b></li>
+<li>Facts: Fairwork Peru 2025 case: Yesuli, 29, delivery rider in Lima for almost three years, joined for flexible night hours around her small child; to get close to the minimum wage she connects 10–12 hours a day, six days a week; bike, data and food costs are hers. "Si no me conecto, no entra nada" ("If I don't connect, nothing comes in"). She has been robbed while delivering, and a minor accident kept her off work for days with no compensation; she is frustrated by account blocks after customer complaints with no clear appeal.</li>
+<li>Markets: [PE].</li>
+<li>Sources: <a href="https://fairwork.oii.ox.ac.uk/wp-content/uploads/sites/11/2026/02/Labor-standards-in-the-platform-economy-SPANISH.pdf">Fairwork, Estándares laborales en la economía de plataformas — Perú 2025 (PDF, published Feb 2026)</a></li>
+<li>Evidence: well documented (academic network, interviews), single named case.</li>
+</ul>
+
+<ul class="mdl">
+<li><b>2.2 The courier working on a holiday morning feels like the only fool on the road — and then sees all the others doing the same.</b></li>
+<li>Facts: Néstor Camacho, Rappi/Didi courier in Colombia, worked from 6:00 on 1 Jan 2025: 4 h 07 min, COP 65,332 earned, one cash tip. "Creo que soy el único loco que… está un primero de enero" ("I think I'm the only crazy one… out on the first of January"). He thinks of "todas las personas que me cruce en el camino, haciendo lo mismo que yo" ("everyone I crossed on the way, doing the same as me").</li>
+<li>Markets: [CO].</li>
+<li>Sources: <a href="https://www.infobae.com/colombia/2025/01/07/al-que-madruga-dios-le-ayuda-domiciliario-se-le-midio-a-trabajar-desde-las-600-de-la-manana-el-1-de-enero-y-estas-fueron-sus-ganancias/">Infobae Colombia (7 Jan 2025)</a></li>
+<li>Evidence: partly documented (one courier's own video, retold by press).</li>
+</ul>
+
+<ul class="mdl">
+<li><b>2.3 For a courier, the tip is not a bonus but a visible share of the day.</b></li>
+<li>Facts: A young bike courier in Lima showed on TikTok about S/30 for three hours and six orders, of which S/3.80 and S/5.00 were tips (about S/20 from the orders). Viewers: "Me parece muy poco para todo lo que implica" ("Seems very little for all this job involves"). Néstor (2.2) got a single cash tip on 1 Jan.</li>
+<li>Markets: [PE] [CO].</li>
+<li>Sources: <a href="https://larepublica.pe/tendencias/2025/01/24/repartidor-en-lima-revela-cuanto-gana-en-3-horas-y-usuarios-opinan-muy-poco-351168">La República (25 Jan 2025)</a></li>
+<li>Evidence: partly documented (single self-reported shift; split between fare and tips as read on the page).</li>
+</ul>
+
+<ul class="mdl">
+<li><b>2.4 The most festive month is the most dangerous one on the road, and motorcyclists pay for it.</b></li>
+<li>Facts: Colombia, December 2024: 870 road deaths, the highest month of the year, of which 555 motorcyclists and 169 pedestrians (Ministry of Transport). Jan–Oct 2025: 7,040 deaths, 333 more than 2024, motorcyclists +8.3%. Bogotá, December 2024: 54 road deaths, +46% vs Dec 2023; motorcyclist deaths 16 → 31 (+94%). Secretaría de Movilidad: "Detrás de cada vida perdida hay una familia" ("Behind every life lost there is a family").</li>
+<li>Markets: [CO].</li>
+<li>Sources: <a href="https://mintransporte.gov.co/publicaciones/12201/la-epoca-mas-alegre-del-ano-tambien-es-la-mas-mortal-en-las-vias-esta-navidad-colombia-debe-decidir-si-enciende-luces-de-navidad-o-apaga-vidas/">Mintransporte (1 Dec 2025)</a>; <a href="https://www.infobae.com/colombia/2025/01/04/secretaria-de-movilidad-de-bogota-informo-que-muertes-por-accidentes-de-transito-aumentaron-un-46-en-diciembre-de-2024/">Infobae Colombia (4 Jan 2025)</a></li>
+<li>Evidence: well documented (official data). Note: one search summary gave 61 Bogotá deaths; the opened page says 54.</li>
+</ul>
+
+<ul class="mdl">
+<li><b>2.5 Lima's delivery riders work with the phone in hand and are hard to see at night.</b></li>
+<li>Facts: FIA + Touring y Automóvil Club del Perú observed &gt;3,600 motorcyclists in Lima: 40.2% of commercial delivery riders use the phone while riding; only 28.8% wear reflective gear at night; about 40% of motorcycles in Lima are commercial.</li>
+<li>Markets: [PE].</li>
+<li>Sources: <a href="https://larepublica.pe/sociedad/2025/12/07/motociclistas-de-delivery-en-lima-40-usan-el-celular-mientras-manejan-advierte-estudio-ntpe-472304">La República (8 Dec 2025)</a></li>
+<li>Evidence: well documented (observational study).</li>
+</ul>
+
+<ul class="mdl">
+<li><b>2.6 In the last days before Nochebuena, crossing Lima becomes the problem itself.</b></li>
+<li>Facts: Infobae, 24 Dec 2025: vehicle flow 20–30% above other months; a 12 km trip from Cercado to MegaPlaza took 2 h 10 min; critical zones include Mesa Redonda, Mercado Central, Gamarra and avenues Aviación/México, Javier Prado, Evitamiento; worst from 17:00 to 21:00. Builds on the Rappi Peru note (courier orders +20% "to send gifts without fighting holiday traffic").</li>
+<li>Markets: [PE].</li>
+<li>Sources: <a href="https://www.infobae.com/peru/2025/12/23/trafico-en-lima-se-agrava-previo-a-la-navidad-y-ano-nuevo-zonas-criticas-y-esperas-de-hasta-2-horas-por-cruzar-principales-avenidas/">Infobae Perú (24 Dec 2025)</a></li>
+<li>Evidence: well documented.</li>
+</ul>
+
+<ul class="mdl">
+<li><b>2.7 The migrant courier often goes through family milestones, even grief, alone and on shift.</b></li>
+<li>Facts: Alfredo, Venezuelan courier in Lima, worked up to 14 hours a day, lived alone with his family in Venezuela and mourned his father's death while working; "Las personas nos trataban mal" ("People treated us badly"). In the same series a Haitian courier in La Plata says he always "felt watched" on deliveries. Builds on the notes (≈80% of Lima couriers Venezuelan; flights to Venezuela suspended at Christmas 2025).</li>
+<li>Markets: [PE] [LATAM].</li>
+<li>Sources: <a href="https://repartoslatam.distintaslatitudes.net/ser-repartidor-y-migrante/">Distintas Latitudes, Repartos LATAM (22 Oct 2021)</a></li>
+<li>Evidence: partly documented (2021 reportage, older than wanted).</li>
+</ul>
+
+<ul class="mdl">
+
+
+<li>Markets: [CO] [PE].</li>
+<li>Sources: <a href="https://urosario.edu.co/periodico-nova-et-vetera/nuestra-u/fairwork-colombia-2025-revela-precariedad-persistente-en-el-trabajo-en-plataformas">Universidad del Rosario (2 Feb 2026)</a>; <a href="https://fairwork.oii.ox.ac.uk/wp-content/uploads/sites/11/2026/02/Labor-standards-in-the-platform-economy-SPANISH.pdf">Fairwork Peru 2025 (Feb 2026)</a></li>
+<li>Evidence: well documented.</li>
+</ul>
+
+</section>
+<section class="sec" id="s5" data-toc="3. Customers" data-group="Holiday insights"><h2>3. Customers</h2>
+<ul class="mdl">
+<li><b>3.1 December is the month carriers struggle to keep their promise, so "will it arrive in time" is a fair worry.</b></li>
+<li>Facts: Servientrega Colombia planned &gt;7 million shipments for the 2021 season, hired 500 extra staff and called December the country's highest-demand month, above Amor y Amistad, Mother's Day and VAT-free days; its logistics director said the challenge is that customers "not feel any difference". Unconfirmed on page: carrier Envía suspended pickups in Bogotá and Medellín on 5–6 Dec 2025 to clear delays (reported via MiPaquete notices; page did not load).</li>
+<li>Markets: [CO].</li>
+<li>Sources: <a href="https://www.portafolio.co/negocios/empresas/inversion-de-servientrega-para-mejorar-logistica-en-fin-de-ano-559949">Portafolio (23 Dec 2021)</a>; <a href="https://centrodenovedades.mipaquete.com/">MiPaquete centro de novedades (Dec 2025, not verified)</a></li>
+<li>Evidence: partly documented (Servientrega figure is from 2021; the Envía pause is not verified).</li>
+</ul>
+
+</section>
+<section class="sec" id="s6" data-toc="4. Small businesses" data-group="Holiday insights"><h2>4. Small businesses</h2>
+<ul class="mdl">
+<li><b>4.1 Craftspeople protect the tradition by shrinking the product rather than losing the customer.</b></li>
+<li>Facts: Guayaquil's Calle 6 de Marzo, Dec 2025: Año Viejo effigies sell for US$10–200; artisan Will Tenorio (16 years in the trade): "Trato de hacer muñecos menos grandes, de mi misma altura" ("I try to make smaller dolls, my own height") so more people can afford them. David Coronel: "Todo ha subido exageradamente" ("Everything has gone up wildly") — paint, flour, gas, paper. Newspaper used as raw material went from about US$7 before the pandemic to US$50–60. Buyers now take smaller figures that fit in a car.</li>
+<li>Markets: [EC].</li>
+<li>Sources: <a href="https://www.vistazo.com/actualidad/nacional/2025-30-29-tradicion-ano-viejo-6-de-marzo-monigotes-mas-pequenos-materiales-caros-PN10598124">Vistazo (30 Dec 2025)</a></li>
+<li>Evidence: partly documented (press reportage, two named artisans).</li>
+</ul>
+
+<ul class="mdl">
+<li><b>4.2 The season's sellers count on belief: their December depends on people still keeping the rituals.</b></li>
+<li>Facts: Guayaquil merchant Celestino Moreira (Dec 2025) expects more customers for New Year and hopes "people keep believing in superstitions"; sellers expected demand to start on 27 Dec and hoped the last weekend would beat Christmas sales.</li>
+<li>Markets: [EC].</li>
+<li>Sources: <a href="https://www.eluniverso.com/guayaquil/comunidad/guayaquil-se-viste-de-amarillo-para-fin-de-ano-la-cabala-que-se-mantiene-y-que-impulsa-las-ventas-nota/">El Universo (27 Dec 2025)</a></li>
+<li>Evidence: partly documented (quotes read in translation).</li>
+</ul>
+
+<ul class="mdl">
+<li><b>4.3 In Lima, the shopkeeper's biggest fear is not a slow season but extortion.</b></li>
+<li>Facts: Ipsos/Perú21 year-end poll (11–12 Dec 2025, n=1,211, national): the most negative event of 2025 was the rise in extortion (60%), ahead of the rise in murders (39%) and congressional scandals (38%).</li>
+<li>Markets: [PE].</li>
+<li>Sources: <a href="https://www.ipsos.com/es-pe/balance-de-fin-de-ano-encuesta-peru-21-ipsos-diciembre-2025">Ipsos Perú, Balance de fin de año (29 Dec 2025)</a></li>
+<li>Evidence: well documented for the public mood; no SMB-specific extortion data was collected in this pass.</li>
+</ul>
+
+</section>
+<section class="sec" id="s7" data-toc="5. Belief in miracles" data-group="Holiday insights"><h2>5. Belief in miracles</h2>
+<ul class="mdl">
+<li><b>5.1 Luck rituals survive half-embarrassed: people do them while joking that nobody should find out.</b></li>
+<li>Facts: see 1.3 — men buy yellow underwear "sometimes with shame"; buyers include young people "obliged by parents". Peru cábala shares and the Lima shamans' ritual are already in the traditions notes.</li>
+<li>Markets: [EC].</li>
+<li>Sources: <a href="https://www.eluniverso.com/guayaquil/comunidad/guayaquil-se-viste-de-amarillo-para-fin-de-ano-la-cabala-que-se-mantiene-y-que-impulsa-las-ventas-nota/">El Universo (27 Dec 2025)</a></li>
+<li>Evidence: thinly documented (one article).</li>
+</ul>
+
+<p>No new survey data on religiosity or belief in miracles was collected in this pass; see Gaps.</p>
+</section>
+<section class="sec" id="s8" data-toc="6. Relationships" data-group="Holiday insights"><h2>6. Relationships</h2>
+<ul class="mdl">
+<li><b>6.1 Next year, people want to give their time to family above all.</b></li>
+<li>Facts: Ipsos Predictions 2026: 88% of connected Peruvians plan to prioritise family and health. Ipsos Happiness 2025: family relationships and children are the second source of happiness (39%) after feeling appreciated (42%).</li>
+<li>Markets: [PE].</li>
+<li>Sources: <a href="https://www.ipsos.com/es-pe/predicciones-para-el-2026">Ipsos Perú (26 Dec 2025)</a>; <a href="https://www.ipsos.com/es-pe/indice-de-felicidad-2025">Ipsos Perú (20 Mar 2025)</a></li>
+<li>Evidence: well documented.</li>
+</ul>
+
+<ul class="mdl">
+<li><b>6.2 December generosity turns into January regret.</b></li>
+<li>Facts: MejorCDT (Jan 2026): 79% of Colombians regret financial decisions made at year-end; 55% claimed they had a plan for the prima, but spending did not follow it; only 20% started 2026 stable.</li>
+<li>Markets: [CO].</li>
+<li>Sources: <a href="https://es-us.noticias.yahoo.com/10-colombianos-iniciaron-2026-estabilidad-170000536.html">Yahoo Noticias / MejorCDT (15 Jan 2026)</a></li>
+<li>Evidence: partly documented (company survey).</li>
+</ul>
+
+</section>
+<section class="sec" id="s9" data-toc="Gaps" data-group="Holiday insights"><h2>Gaps</h2>
+<p>Searched but not found or not verified before the deadline:</p>
+<ul class="mdl">
+<li>New Year: no Peru or Ecuador survey on New Year resolutions or wishes for 2026; no Ecuador figures in Ipsos Predictions; no measured Colombian resolution ranking (the Portafolio claim has no source). The figure "Arequipa New Year items over S/5 million" appeared only in a search summary and was not used.</li>
+<li>Couriers: no 2024–2026 press testimony found of couriers working specifically on 24, 25 or 31 Dec in Lima, Bogotá, Quito or Guayaquil; no platform data on holiday surge earnings or tips; no Lima December road-death breakdown for couriers; no Ecuador courier data at all. Older migrant-courier testimony (2021) only.</li>
+<li>Customers: no Shalom, Olva or Tramaco December volume data; Servientrega figures are from 2021; the Envía pickup pause (5–6 Dec 2025) and the SIC case against D1 (about 13,000 complaints, at least 1,200 delivery-related) were seen only in search summaries and not confirmed on page; no Indecopi Christmas complaint statistics found.</li>
+<li>SMBs: not researched in this pass beyond Ecuador's monigote and yellow sellers (Gamarra, Mesa Redonda, anchetas, canastas, artisanal panetón, ferias, WhatsApp selling remain open). Existing notes cover Produce's December share of MYPE sales.</li>
+<li>Miracles: not researched in this pass — no Pew, Latinobarómetro, Ipsos Global Religion, Datum, Invamer or Cedatos data on religiosity or miracles; nothing new on Niño Dios, Divino Niño del 20 de Julio, Niño Manuelito, Pase del Niño, novenas or promesas.</li>
+<li>Relationships: not researched in this pass — no data on family conflict at Christmas, amigo secreto, office parties, remittances in December, January breakups, gift returns or loneliness.</li>
+</ul>
+</section>
+<section class="sec sources" id="sources">
+  <p class="eyebrow">Reference</p>
+  <h2>All sources</h2>
+  <p>Every link cited above, once, in order of first use. Figures were checked on the page itself, not taken from search snippets.</p>
+  <ol><li><a href="https://www.ipsos.com/es-pe/predicciones-para-el-2026">ipsos.com</a> — Ipsos Perú, Predicciones para el 2026 (26 Dec 2025)</li><li><a href="https://www.ipsos.com/sites/default/files/ct/news/documents/2025-12/CP%20Ipsos%20-%20Predicciones%202026.pdf">ipsos.com</a> — Ipsos press release with country ranking (Dec 2025, PDF)</li><li><a href="https://www.ipsos.com/es-pe/indice-de-felicidad-2025">ipsos.com</a> — Ipsos Perú, Índice de Felicidad 2025 (20 Mar 2025)</li><li><a href="https://www.eluniverso.com/guayaquil/comunidad/guayaquil-se-viste-de-amarillo-para-fin-de-ano-la-cabala-que-se-mantiene-y-que-impulsa-las-ventas-nota/">eluniverso.com</a> — El Universo, Guayaquil se viste de amarillo (27 Dec 2025)</li><li><a href="https://es-us.noticias.yahoo.com/10-colombianos-iniciaron-2026-estabilidad-170000536.html">es-us.noticias.yahoo.com</a> — Yahoo Noticias / MejorCDT (15 Jan 2026)</li><li><a href="https://www.portafolio.co/tendencias/sociales/salud-se-convierte-en-la-principal-prioridad-de-los-colombianos-rumbo-a-2026-segun-habitos-y-datos-oficiales-485609">portafolio.co</a> — Portafolio (2 Jan 2026)</li><li><a href="https://fairwork.oii.ox.ac.uk/wp-content/uploads/sites/11/2026/02/Labor-standards-in-the-platform-economy-SPANISH.pdf">fairwork.oii.ox.ac.uk</a> — Fairwork, Estándares laborales en la economía de plataformas — Perú 2025 (PDF, published Feb 2026)</li><li><a href="https://www.infobae.com/colombia/2025/01/07/al-que-madruga-dios-le-ayuda-domiciliario-se-le-midio-a-trabajar-desde-las-600-de-la-manana-el-1-de-enero-y-estas-fueron-sus-ganancias/">infobae.com</a> — Infobae Colombia (7 Jan 2025)</li><li><a href="https://larepublica.pe/tendencias/2025/01/24/repartidor-en-lima-revela-cuanto-gana-en-3-horas-y-usuarios-opinan-muy-poco-351168">larepublica.pe</a> — La República (25 Jan 2025)</li><li><a href="https://mintransporte.gov.co/publicaciones/12201/la-epoca-mas-alegre-del-ano-tambien-es-la-mas-mortal-en-las-vias-esta-navidad-colombia-debe-decidir-si-enciende-luces-de-navidad-o-apaga-vidas/">mintransporte.gov.co</a> — Mintransporte (1 Dec 2025)</li><li><a href="https://www.infobae.com/colombia/2025/01/04/secretaria-de-movilidad-de-bogota-informo-que-muertes-por-accidentes-de-transito-aumentaron-un-46-en-diciembre-de-2024/">infobae.com</a> — Infobae Colombia (4 Jan 2025)</li><li><a href="https://larepublica.pe/sociedad/2025/12/07/motociclistas-de-delivery-en-lima-40-usan-el-celular-mientras-manejan-advierte-estudio-ntpe-472304">larepublica.pe</a> — La República (8 Dec 2025)</li><li><a href="https://www.infobae.com/peru/2025/12/23/trafico-en-lima-se-agrava-previo-a-la-navidad-y-ano-nuevo-zonas-criticas-y-esperas-de-hasta-2-horas-por-cruzar-principales-avenidas/">infobae.com</a> — Infobae Perú (24 Dec 2025)</li><li><a href="https://repartoslatam.distintaslatitudes.net/ser-repartidor-y-migrante/">repartoslatam.distintaslatitudes.net</a> — Distintas Latitudes, Repartos LATAM (22 Oct 2021)</li><li><a href="https://urosario.edu.co/periodico-nova-et-vetera/nuestra-u/fairwork-colombia-2025-revela-precariedad-persistente-en-el-trabajo-en-plataformas">urosario.edu.co</a> — Universidad del Rosario (2 Feb 2026)</li><li><a href="https://www.portafolio.co/negocios/empresas/inversion-de-servientrega-para-mejorar-logistica-en-fin-de-ano-559949">portafolio.co</a> — Portafolio (23 Dec 2021)</li><li><a href="https://centrodenovedades.mipaquete.com/">centrodenovedades.mipaquete.com</a> — MiPaquete centro de novedades (Dec 2025, not verified)</li><li><a href="https://www.vistazo.com/actualidad/nacional/2025-30-29-tradicion-ano-viejo-6-de-marzo-monigotes-mas-pequenos-materiales-caros-PN10598124">vistazo.com</a> — Vistazo (30 Dec 2025)</li><li><a href="https://www.ipsos.com/es-pe/balance-de-fin-de-ano-encuesta-peru-21-ipsos-diciembre-2025">ipsos.com</a> — Ipsos Perú, Balance de fin de año (29 Dec 2025)</li></ol>
+</section>
+
+  </main>
+</div>
+<script>
+(function(){
+  var b=document.body, burger=document.querySelector('.burger'), last=0;
+  function close(){b.classList.remove('nav')}
+  burger&&burger.addEventListener('click',function(){b.classList.add('nav')});
+  document.querySelector('.scrim').addEventListener('click',close);
+  document.querySelector('.navhead button').addEventListener('click',close);
+  document.querySelectorAll('.toc a').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  window.addEventListener('scroll',function(){var y=window.scrollY; if(burger){burger.classList.toggle('away',y>last&&y>200)} last=y},{passive:true});
+  var links={}; document.querySelectorAll('.toc a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('cur')}); var l=links[e.target.id]; l&&l.classList.add('cur')}})},{rootMargin:'0px 0px -70% 0px'});
+    document.querySelectorAll('section.sec[id]').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>

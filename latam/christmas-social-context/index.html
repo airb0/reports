@@ -1,0 +1,492 @@
+<title>Social context 2026 and small-business life</title>
+<style>
+@font-face{font-family:"PP Agrandir";src:url("fonts/PPAgrandir-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Suisse Intl";src:url("fonts/SuisseIntl-Book.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Suisse Intl";src:url("fonts/SuisseIntl-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+/* Layout: a long research document — sticky contents column left, one reading column right; drawer under 900px. */
+:root{
+  --bg:#FFFFFF; --fg:#000000; --body:#141414; --muted:#55605A; --line:#D5E6DC; --line2:#EAF4EE;
+  --panel:#E4FFF2; --plate:#F4F3D8; --accent:#C1F11D; --on-accent:#000000;
+  --display:"PP Agrandir","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --text:"Suisse Intl","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --max:1200px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141414; --fg:#FFFFFF; --body:#ECEFED; --muted:#A4ADA8; --line:#2E3532; --line2:#222826;
+  --panel:#1D2421; --plate:#2A2A22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141414; --fg:#FFFFFF; --body:#ECEFED; --muted:#A4ADA8; --line:#2E3532; --line2:#222826;
+  --panel:#1D2421; --plate:#2A2A22; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:var(--muted);text-underline-offset:2px}
+a:hover{text-decoration-color:var(--fg)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:40px}
+/* cover */
+.cover{padding-block:56px 40px;border-bottom:2px solid var(--fg)}
+.series{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:40px}
+.series a{text-decoration:none}
+.series .on{color:var(--fg);font-weight:600}
+.series .brand{color:var(--fg);font-weight:600;margin-right:6px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,6.4vw,76px);line-height:1;letter-spacing:-.02em;color:var(--fg);margin:0 0 22px;text-wrap:balance;max-width:16ch}
+.hl{position:relative;z-index:0;color:var(--on-accent);padding:0 .08em;white-space:nowrap}
+.hl:before{content:"";position:absolute;z-index:-1;left:-.06em;right:-.1em;top:.08em;bottom:-.04em;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='316' height='68' viewBox='0 0 316 68' preserveAspectRatio='none'%3E%3Cpath d='M314.41 25.529C262.307 28.9686 113.618 24 7.42536 24C57.9532 29.7926 206.773 42.8579 311.885 42.8579C279.451 42.5847 158.673 45.5592 0.410173 42.8579' stroke='%23C1F11D' stroke-width='48' fill='none'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+.sub{font-size:19px;line-height:1.45;max-width:60ch;margin:0 0 30px;color:var(--body)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:13px;color:var(--muted);margin:0;padding:0;list-style:none}
+.facts b{display:block;font-family:var(--display);font-size:22px;color:var(--fg);letter-spacing:-.01em;line-height:1.1;font-variant-numeric:tabular-nums}
+/* layout */
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:56px;align-items:start;padding-block:0 120px}
+.toc{position:sticky;top:env(safe-area-inset-top,0px);max-height:100vh;overflow-y:auto;padding-block:36px;font-size:13.5px;scrollbar-width:thin}
+.toc .g{margin-bottom:22px}
+.toc .gt{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);padding-bottom:7px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.toc ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.toc a{color:var(--muted);text-decoration:none;line-height:1.3;display:block}
+.toc a:hover,.toc a.cur{color:var(--fg)}
+main{min-width:0;padding-top:36px}
+.burger,.scrim,.navhead{display:none}
+/* sections */
+section.sec{padding-top:8px;margin-bottom:64px;scroll-margin-top:16px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.05;letter-spacing:-.015em;color:var(--fg);margin:0 0 14px;text-wrap:balance}
+h3{font-size:18px;font-weight:600;line-height:1.3;color:var(--fg);margin:0;text-wrap:balance}
+p{margin:0 0 12px;max-width:68ch}
+.lead{font-size:18px;line-height:1.5;max-width:62ch;margin-bottom:24px}
+.country{border-top:2px solid var(--fg);padding-top:20px}
+/* verdict cards */
+.verdicts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:8px 0 18px}
+.verdict{background:var(--panel);padding:20px 20px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.verdict .m{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.verdict .w{font-family:var(--display);font-size:24px;line-height:1.05;color:var(--fg);letter-spacing:-.01em}
+.verdict p{font-size:14.5px;margin:0}
+.verdict .fit{font-size:13.5px;border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+/* items */
+.item{border-top:1px solid var(--line);padding-block:20px 6px}
+.ihead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:10px}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ev{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--plate);color:var(--fg);padding:3px 7px;white-space:nowrap}
+.item ul{margin:0 0 12px;padding-left:18px;max-width:68ch}
+.item li{margin-bottom:5px}
+.hook{background:var(--panel);padding:12px 16px;margin:4px 0 12px;max-width:68ch;font-size:15px}
+.hook b{display:inline-block;background:var(--accent);color:var(--on-accent);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;margin-right:8px;vertical-align:1px}
+.src{font-size:13px;color:var(--muted);max-width:76ch;margin:0 0 10px}
+.src a{color:var(--muted)}
+.q{font-style:normal;color:var(--fg)}
+ul.mdl{margin:0 0 14px;padding-left:18px;max-width:72ch}
+ul.mdl li{margin-bottom:7px}
+ul.mdl li.sub2{margin-left:18px;list-style:circle;color:var(--body)}
+code{font-size:.9em;background:var(--plate);padding:0 4px}
+/* patterns */
+.pats{counter-reset:p;display:grid;gap:0}
+.pat{border-top:1px solid var(--line);padding-block:16px 4px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 8px}
+.pat:before{counter-increment:p;content:counter(p);font-family:var(--display);font-size:22px;color:var(--fg);line-height:1.1}
+.pat h3{margin-bottom:6px}
+/* tables */
+.tbl{overflow-x:auto;margin:10px 0 18px;border-top:2px solid var(--fg)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-weight:600;color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.win td{background:var(--panel)}
+tr.win td:first-child{box-shadow:inset 4px 0 0 var(--accent);padding-left:10px}
+.tag{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+/* sources */
+.sources ol{padding-left:22px;font-size:13px;color:var(--muted);columns:2;column-gap:36px}
+.sources li{margin-bottom:6px;break-inside:avoid;overflow-wrap:anywhere}
+.sources li a{color:var(--body)}
+.foot{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:40px}
+/* mobile */
+@media (max-width:900px){
+  .wrap{padding-inline:18px}
+  .layout{display:block}
+  .verdicts{grid-template-columns:minmax(0,1fr)}
+  .sources ol{columns:1}
+  .burger{display:flex;position:fixed;right:14px;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:30;width:44px;height:44px;align-items:center;justify-content:center;background:var(--fg);color:var(--bg);border:0;cursor:pointer;transition:transform .2s}
+  .burger.away{transform:translateY(-80px)}
+  .burger span,.burger span:before,.burger span:after{display:block;width:18px;height:2px;background:currentColor;position:relative}
+  .burger span:before,.burger span:after{content:"";position:absolute;left:0}
+  .burger span:before{top:-6px}.burger span:after{top:6px}
+  .toc{position:fixed;top:0;right:0;bottom:0;width:min(86vw,340px);max-height:none;background:var(--bg);z-index:50;padding:calc(env(safe-area-inset-top,0px) + 16px) 20px 40px;transform:translateX(100%);transition:transform .25s;border-left:1px solid var(--line)}
+  .navhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-weight:600;color:var(--fg)}
+  .navhead button{background:none;border:0;font-size:26px;line-height:1;color:var(--fg);cursor:pointer;padding:4px 8px}
+  body.nav .toc{transform:none}
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:40}
+  body.nav .scrim{display:block}
+  body.nav{overflow:hidden}
+  table{font-size:13.5px}
+}
+@media (prefers-reduced-motion:reduce){.toc,.burger{transition:none}}
+</style>
+<header class="cover wrap">
+  <div class="series"><span class="brand">Christmas 2026 · Latin America</span><span>1 · Traditions</span><span>2 · Holiday insights</span><a class="on" href="#">3 · Social context & SMB</a><span>4 · Activations review</span></div>
+  <h1>What people and <span class="hl">small</span> businesses live with in 2026</h1>
+  <p class="sub">The mood of each market going into Christmas 2026 (politics, money, security, migration) and what small businesses deal with all year.</p>
+  <ul class="facts"><li><b>Oct 2026</b>state of play</li><li><b>74</b>sources linked</li></ul>
+</header>
+<button class="burger" type="button" aria-label="Open contents"><span></span></button>
+<div class="scrim"></div>
+<div class="layout wrap">
+  <nav class="toc" aria-label="Contents"><div class="navhead">Contents<button type="button" aria-label="Close contents">×</button></div><div class="g"><div class="gt">Social context</div><ul><li><a href="#s1">Introduction</a></li><li><a href="#s2">Mood in one paragraph per country</a></li><li><a href="#s3">Strongest 10</a></li><li><a href="#s4">Part A — Social context by country</a></li><li><a href="#s5">Part B — SMB insights year-round (thin: deadline)</a></li><li><a href="#s6">Gaps</a></li></ul></div><div class="g"><ul><li><a href="#sources">All sources</a></li></ul></div></nav>
+  <main>
+<section class="sec" id="s1" data-toc="Introduction" data-group="Social context">
+
+</section>
+<section class="sec" id="s2" data-toc="Mood in one paragraph per country" data-group="Social context"><h2>Mood in one paragraph per country</h2>
+<p><b>Peru.</b> Tired, scared, and squeezed. Peru has had four presidents in under a year (Boluarte removed Oct 2025, then Jerí, then Balcázar, then Keiko Fujimori from 28 Jul 2026), and Fujimori's honeymoon is already over: Ipsos approval fell from 57% to 42% in one month. Crime is the national obsession. Lima has been under a state of emergency again since 28 Aug, with 267 homicides in her first 50 days, extortion reports at about three an hour, and bus drivers and delivery riders shot on the job. The money pressure is new this year: Lima inflation is at an 18-year high (4.55%), led by food and fuel, and an "extraordinary" El Niño is forecast for summer 2026–27, so the heat will peak right at Christmas. Lima employment is growing, though, and unemployment is at a record low of 4.8%, so people are working but not feeling safe or better off. Peru did not play in the World Cup. Municipal elections on 4 Oct 2026 will put a new Lima mayor in place (sworn in Jan 2027) by Christmas.</p>
+<p><b>Colombia.</b> Shaken and in mourning, but cautiously hopeful. A M7.4 earthquake on 10 Aug 2026 killed about 285–288 people, mostly in Cali and Pereira, so this will be the first Christmas after a national tragedy, in two cities central to Christmas (Cali's Feria starts 25 Dec). The new right-wing president De la Espriella (since 7 Aug, won by 0.96 pts) starts with about 52% approval (AtlasIntel) and a security-first agenda. Extortion and homicides hit 10-year highs in Q1 2026, with early government claims of a fall in August. Prices are rising: inflation is 6.24% and climbing, with a year-end forecast near 7%, and consumer confidence fell 5.2 pts in August, though it is still well above 2025. Football gave a bittersweet high: Colombia went out of the World Cup unbeaten, on penalties to Switzerland in the round of 16.</p>
+<p><b>Ecuador.</b> Normalised fear and a thin wallet, but stable prices. Noboa is mid-term at roughly 44–47% approval. Homicides are slightly below 2025, the most violent year on record, but have risen again since June, with record killings of minors, a surge in El Oro/Machala, and extortion ("vacunas") now pushing even soft-drink and beer distributors out of Guayaquil neighbourhoods. Dollarised prices are flat (1.12% inflation), but only about 36.6% of workers have "adequate" jobs and informality is about 53–56%. Sectional (local) elections were moved up to 29 Nov 2026 because of the El Niño threat, so December follows straight after a campaign. Football: Ecuador beat Germany 2-1 for its World Cup moment and then went out to Mexico in the round of 32.</p>
+</section>
+<section class="sec" id="s3" data-toc="Strongest 10" data-group="Social context"><h2>Strongest 10</h2>
+<ul class="mdl">
+<li>Extortion is the shared nightmare of small business in all three markets. Peru has about 70 reports a day, Colombia had a 10-year Q1 high, and in Guayaquil distributors are abandoning routes. [PE][CO][EC] — Key watch-out, not a creative playground.</li>
+<li>Peru: up to 6,000 bodegas could close in 2026, double the 3,000–3,500 in 2025, from extortion, gota-a-gota loans and El Niño. Women-run bodegas are hit hardest. [PE]</li>
+<li>Delivery riders are dying on the job in Lima. Several riders were shot mid-delivery in 2026, one of them Venezuelan, aged 27, in Breña. [PE]</li>
+<li>Colombia's 10 Aug earthquake (M7.4, about 285 dead, Cali 105, Pereira 93) makes this the first Christmas after a tragedy. It also sparked a big solidarity and collection-centre culture. [CO]</li>
+<li>The Venezuelan diaspora's Christmas is complicated, not joyful. Maduro was captured (3 Jan 2026), but a double earthquake on 24 Jun 2026 killed 6,438 and damaged the Maiquetía airport. Flights from Bogotá resumed only on 1 Sep. 30% of Venezuelans in Peru consider returning within five years, and only 8% within a year. [PE][CO][EC]</li>
+<li>Peru's inflation is at an 18-year high (Lima 4.55%), led by food (tomato +29%, sugar +16%) and fuel. Christmas baskets will cost more. [PE]</li>
+<li>Colombia inflation is 6.24% and rising toward about 7%. The minimum-wage fight is the December story. [CO]</li>
+<li>An "extraordinary" El Niño is forecast in Peru through summer 2027, with record coastal heat Sep–Nov and beyond. This means a hot Christmas and pressure on farm prices. Ecuador moved its elections because of it. [PE][EC]</li>
+<li>Political fatigue: four presidents in Peru in about 10 months, Fujimori's approval down 15 pts in a month, and Colombia's narrowest runoff ever. Polarisation means politics is a no-go zone. [PE][CO]</li>
+<li>Lima jobs are up 6.1% and unemployment is at a record low of 4.8%, but average income is only S/2,308 and women earn 76% of what men earn. People have work but little margin, which is the hustle that SMB delivery serves. [PE]</li>
+</ul>
+</section>
+<section class="sec" id="s4" data-toc="Part A — Social context by country" data-group="Social context"><h2>Part A — Social context by country</h2>
+<div class="item"><div class="ihead"><h3>Peru</h3></div></div>
+<ul class="mdl">
+<li><b>Finding:</b> Keiko Fujimori won the closest possible runoff and took office on 28 Jul 2026. The country is split almost exactly in half.</li>
+<li>Facts: ONPE 100% count: Fujimori 50.135% (9,223,396) vs Roberto Sánchez 49.865% (9,173,755). The runoff was on 7 Jun 2026 and votes from abroad were decisive.</li>
+<li>[PE] · Sources: <a href="https://elcomercio.pe/elecciones/resultados-onpe-en-vivo-conteo-oficial-de-la-segunda-vuelta-entre-keiko-fujimori-y-roberto-sanchez-de-elecciones-peru-2026-lbposting-noticia/">El Comercio, ONPE results, Jun 2026</a>; <a href="https://www.infobae.com/peru/2026/06/11/keiko-fujimori-supera-a-roberto-sanchez-votos-del-extranjero-clave-en-el-resultado/">Infobae, 11 Jun 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Peru went through four presidents in about 10 months, and trust in politics is close to zero.</li>
+<li>Facts: Boluarte was removed on 10 Oct 2025. Jerí was censured on 17 Feb 2026. José María Balcázar governed from 18 Feb to 28 Jul 2026, then Fujimori took over.</li>
+<li>[PE] · Sources: <a href="https://www.infobae.com/peru/2026/02/18/eleccion-del-nuevo-presidente-de-peru-en-vivo-congreso-decide-hoy-al-sucesor-de-jose-jeri-entre-cuatro-candidatos/">Infobae, 18 Feb 2026</a>; <a href="https://larepublica.pe/politica/2026/02/18/quien-es-el-nuevo-presidente-del-peru-tras-censura-de-jose-jeri-resultado-de-votacion-en-congreso-hnews-1012950">La República, 18 Feb 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Fujimori's honeymoon ended within a month.</li>
+<li>Facts: Ipsos (3–4 Sep 2026) approval 42% vs disapproval 48%, down from 57/25 in August. Lima 53% approve, interior 36%. The new bicameral Congress: Chamber of Deputies 24% approve, Senate 26%. Datum: approval −18 pts in a month (60→42). IEP: 37%.</li>
+<li>[PE] · Sources: <a href="https://www.ipsos.com/es-pe/aprobacion-de-autoridades-encuesta-peru21-ipsos-septiembre-2026">Ipsos Perú, Sep 2026</a>; <a href="https://larepublica.pe/politica/2026/09/18/aprobacion-de-keiko-fujimori-cae-18-puntos-en-un-mes-y-desaprobacion-sube-a-44-segun-datum-1753560">La República, 18 Sep 2026</a> (search summary); <a href="https://www.infobae.com/peru/2026/09/18/iep-aprobacion-de-keiko-fujimori-en-setiembre-es-de-37-y-un-47-considera-que-esta-poco-o-nada-preparada-para-gobernar/">Infobae, 18 Sep 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Lima and Callao are again under a 60-day state of emergency. It was Fujimori's first major security act, and it may well be renewed through December.</li>
+<li>Facts: Decree 123-2026-PCM from 28 Aug 2026, 60 days. It suspends inviolability of the home, free movement, assembly and personal liberty, and the armed forces may join operations. In her first month: 151 homicides nationally, 75.5% by firearm, and 105 killings or armed attacks in Lima and Callao since inauguration.</li>
+<li>[PE] · Source: <a href="https://larepublica.pe/sociedad/2026/08/28/gobierno-de-keiko-fujimori-insiste-en-el-estado-de-emergencia-decretan-medida-en-lima-y-callao-por-60-dias-2714516">La República, 28 Aug 2026</a></li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Violence is rising and increasingly hits teenagers.</li>
+<li>Facts: 267 homicides from 28 Jul to 14 Sep (estimated about 300 real), 73.4% by firearm. Adolescents murdered Jan–Aug 2026: 67, already above all of 2024 (62). August 2026 had 195 homicides, 79.5% by firearm. Q1 2026: 529 homicides.</li>
+<li>[PE] · Sources: <a href="https://larepublica.pe/politica/2026/09/16/se-registran-mas-de-250-homicidios-en-los-primeros-50-dias-del-gobierno-de-keiko-fujimori-hnews-629712">La República, 16 Sep 2026</a>; <a href="https://www.infobae.com/peru/2026/09/20/violencia-contra-adolescentes-72-asesinatos-en-poco-mas-de-ocho-meses-ya-superan-el-total-de-2024/">Infobae, 20 Sep 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Extortion is a daily reality, with about three reports an hour nationally, concentrated in Lima's popular districts.</li>
+<li>Facts: 12,634 extortion/blackmail reports Jan–Jun 2026 (about 70 a day); 13,892 Jan–Jul. Lima Este (1,638), La Libertad (1,435), Lima Centro (1,309), Lima Norte (1,163) and Lima Sur (1,155) hold 53.3%. Transport: 107 attacks in Lima and Callao by mid-2026, equal to all of 2025.</li>
+<li>[PE] · Sources: <a href="https://rpp.pe/peru/actualidad/ministerio-publico-informo-que-mas-de-12-000-denuncias-por-extorsion-se-registraron-en-el-primer-semestre-de-2026-noticia-1697877">RPP, 18 Jul 2026</a>; <a href="https://altavoz.pe/locales/peru-registra-13-892-denuncias-por-extorsion-entre-enero-y-julio-de-2026/">Altavoz, Jan–Jul figure</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Bodegas are closing, and women-run bodegas suffer most.</li>
+
+<li>[PE] · Sources: <a href="https://www.infobae.com/peru/2026/09/15/cupos-de-hasta-s2-millones-semanales-extorsiones-prestamos-gota-a-gota-y-falta-de-credito-agravan-la-crisis-de-las-bodegas-en-peru/">Infobae, 15 Sep 2026</a>; <a href="https://www.infobae.com/peru/2026/09/12/menos-bodegas-en-los-barrios-6-mil-cerraran-este-2026-por-inaccion-del-gobierno-frente-a-criminalidad/">Infobae, 12 Sep 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Transport extortion tripled at the start of 2026 and drivers are being killed.</li>
+<li>Facts: The daily cupo rose from S/10 to S/30 (Martín Ojeda). About 80% of the sector pays. 2025 saw 121 attacks and at least 73 transport workers killed. Strikes were held on 14 Jan and 25 Aug 2026. 64 urban transport drivers had been killed in 2026 as of the RPP report, and a union leader says 100% of companies are extorted.</li>
+<li>[PE] · Sources: <a href="https://www.infobae.com/peru/2026/01/06/se-viene-el-primer-paro-de-transportistas-de-2026-en-lima-y-callao-gremio-denuncia-que-ahora-pagan-el-triple/">Infobae, 6 Jan 2026</a> (search summary); <a href="https://www.infobae.com/peru/2026/08/19/nuevo-paro-de-transportistas-este-25-de-agosto-todo-lo-que-se-sabe-de-la-medida-que-afectaria-a-lima-y-callao/">Infobae, 19 Aug 2026</a> (search summary); <a href="https://rpp.pe/lima/seguridad/crisis-de-transportes-en-peru-2026-64-choferes-asesinados-y-extorsion-masiva-noticia-1692330">RPP, 2026</a> (search summary)</li>
+<li>Evidence: partly documented (figures from search summaries, consistent across outlets)</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Delivery riders are being shot mid-delivery in Lima.</li>
+<li>Facts: A 29-year-old pollería rider was shot in SMP (Apr 2026). A 27-year-old Venezuelan fast-food rider was shot in Breña (30 Jul 2026). A rider was killed in Villa María del Triunfo while delivering.</li>
+<li>[PE] · Sources: <a href="https://rpp.pe/lima/policiales/smp-joven-repartidor-de-una-polleria-fue-asesinado-a-balazos-cuando-se-disponia-a-entregar-un-pedido-noticia-1683350">RPP, 2026</a>; <a href="https://elcomercio.pe/lima/policiales/brena-delincuentes-asesinan-a-balazos-a-delivery-de-comida-rapida-ultimas-noticia/">El Comercio, 2026</a> (search summaries)</li>
+<li>Evidence: partly documented (individual cases, no aggregate count of riders killed)</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Lima inflation is at its highest in about 18 years, led by food and fuel.</li>
+<li>Facts: Lima CPI +4.55% y/y in Sep 2026 (national 4.17%), the 7th month above the 1–3% target and the highest since 2008 excluding 2021–22. Passion fruit +34.8%, tomato +28.9%, peas +18.5%, corn +16.8%, sugar +16.2%, fuel +5.2%. Forecast: "closer to 5% than 4%" (Phase Consultores). BCRP rate 4.25%, with hikes signalled.</li>
+<li>[PE] · Sources: <a href="https://www.infobae.com/peru/2026/10/01/la-inflacion-de-lima-metropolitana-alcanza-el-455-en-septiembre-y-se-acerca-a-su-mayor-nivel-en-15-anos/">Infobae, 1 Oct 2026</a>; <a href="https://elcomercio.pe/economia/peru/inei-precios-al-consumidor-de-lima-metropolitana-aumentaron-012-en-septiembre-de-2026-l-ultimas-noticia/">El Comercio, Oct 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> People are working: Lima employment is growing and unemployment is at a record low, but incomes are thin.</li>
+<li>Facts: INEI Jun–Aug 2026: 5.96M employed (+6.1%, +343k), unemployment 4.8% (6.0% a year earlier), average income S/2,308.4 (+2.6%, below inflation). Men S/2,585 vs women S/1,976 (76.4%). National informality in 2025 was 70.7% (women 73.3%, ages 14–24 85.4%).</li>
+<li>[PE] · Sources: <a href="https://andina.pe/agencia/noticia-inei-empleo-lima-metropolitana-crecio-61-ultimos-tres-meses-del-2026-1091838.aspx">Andina, Sep 2026</a> (search summary); <a href="https://www.infobae.com/peru/2026/01/03/el-empleo-formal-e-informal-en-peru-durante-2025-balance-completo/">Infobae, 3 Jan 2026</a> (search summary)</li>
+<li>Evidence: partly documented (official INEI figures via search summaries; not opened)</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> An "extraordinary" El Niño is forecast, so Christmas 2026 will be hot and anxious on the coast.</li>
+<li>Facts: ENFEN: ≥62% probability of extraordinary magnitude between Sep 2026 and Jan 2027, with "strong to extraordinary" in Feb–Mar 2027 and transition by autumn 2027. Possible record coastal air temperatures Sep–Nov. AGREMUB already cites El Niño as a cause of bodega closures in the north.</li>
+<li>[PE] · Sources: <a href="https://www.infobae.com/peru/2026/09/15/el-nino-podria-alcanzar-una-magnitud-extraordinaria-y-extenderse-hasta-mediados-del-otono-de-2027-segun-el-enfen/">Infobae, 15 Sep 2026</a> (search summary); <a href="https://larepublica.pe/sociedad/2026/09/14/el-nino-costero-se-prolongaria-hasta-otono-de-2027-enfen-advierte-alta-probabilidad-de-magnitud-extraordinaria-1064336">La República, 14 Sep 2026</a> (search summary)</li>
+<li>Evidence: partly documented (consistent across outlets, not opened)</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Gen Z protest energy (2025) is real, but by late 2025 it was fading in the streets.</li>
+<li>Facts: Protests ran from 13 Sep to 14 Nov 2025, sparked by the AFP pension reform and the transport-extortion crisis. They were organised on TikTok, with no leaders, under a One Piece straw-hat flag. The 4 Oct 2025 march saw low turnout. A march against Jerí was called for 28 Jan 2026.</li>
+<li>[PE] · Sources: <a href="https://es.wikipedia.org/wiki/Protestas_de_la_generaci%C3%B3n_Z_en_Per%C3%BA">Wikipedia, Gen Z protests in Peru</a> (search summary); <a href="https://www.infobae.com/peru/2026/01/25/generacion-z-confirma-marcha-contra-jose-jeri-para-el-28-de-enero-todo-lo-que-se-sabe-de-la-movilizacion-en-lima/">Infobae, 25 Jan 2026</a> (search summary)</li>
+<li>Evidence: partly documented (2026 youth mood under Fujimori not researched)</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Peru votes again on 4 Oct 2026, so Lima will have a mayor-elect by Christmas.</li>
+<li>Facts: Regional and municipal elections on 4 Oct 2026 for 2027–2030. CPI poll: López Aliaga (Renovación Popular) 27.2%, Carlos Bruce 15.2%, Francis Allison 10.4%.</li>
+<li>[PE] · Sources: <a href="https://gestion.pe/peru/elecciones-regionales-y-municipales-2026-que-se-juega-peru-este-domingo-4-de-octubre-noticia/">Gestión, Oct 2026</a>; <a href="https://www.infobae.com/peru/2026/09/27/ultima-encuesta-de-cpi-asi-va-la-intencion-de-voto-a-rafael-lopez-aliaga-carlos-bruce-francis-allison-y-otros-candidatos-a-la-alcaldia-de-lima/">Infobae, 27 Sep 2026</a> (search summaries)</li>
+<li>Evidence: partly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Peru missed the 2026 World Cup, so there is no national football high this year.</li>
+<li>Facts: Peru was not among the qualified teams (inferred from World Cup coverage; no Peru match found).</li>
+<li>[PE] · Source: none opened.</li>
+<li>Evidence: thinly documented</li>
+</ul>
+
+<div class="item"><div class="ihead"><h3>Colombia</h3></div></div>
+<ul class="mdl">
+<li><b>Finding:</b> De la Espriella won by the narrowest margin in 32 years and took office on 7 Aug 2026.</li>
+<li>Facts: 21 Jun 2026 runoff: 12,960,166 votes (49.66%), the most ever for a candidate, beating Iván Cepeda by 250,830 votes (0.96 pts). He won 758 municipalities.</li>
+<li>[CO] · Sources: <a href="https://www.eltiempo.com/politica/elecciones-colombia-2026/abelardo-de-la-espriella-presidente-electo-de-colombia-tras-el-preconteo-se-impone-por-247-000-votos-3566015">El Tiempo, Jun 2026</a> (search summary); <a href="https://cnnespanol.cnn.com/2026/06/21/colombia/live-news/segunda-vuelta-elecciones-presidenciales-resultado-cepeda-espriella-orix">CNN, 21 Jun 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> The new government starts with moderate approval and a security-first agenda.</li>
+<li>Facts: AtlasIntel/Bloomberg (30 Aug–3 Sep 2026): 51.8% approve vs 43.2% disapprove, 54% positive image. A digital-sentiment model (IAElectoral) gives 72.4%, but it is explicitly not a poll. On 14 Sep: eight measures on economy, security and earthquake reconstruction.</li>
+<li>[CO] · Sources: <a href="https://cambiocolombia.com/poder/articulo/2026/9/atlasintel-de-la-espriella-cierra-su-primer-mes-con-518-por-ciento-de-aprobacion">Cambio, Sep 2026</a> (search summary); <a href="https://www.infobae.com/colombia/2026/09/08/gobierno-de-abelardo-de-la-espriella-inicia-con-aprobacion-digital-de-724-pero-la-economia-y-educacion-generan-dudas/">Infobae, 7 Sep 2026</a></li>
+<li>Evidence: partly documented (no Invamer poll found yet)</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> A M7.4 earthquake on 10 Aug 2026 makes this the first Christmas after a national tragedy, centred on Cali and Pereira.</li>
+<li>Facts: Epicentre San José del Palmar (Chocó), 7:34 am. UNGRD: 285 dead (other counts 288). Cali 105 dead and 1,401 injured, Pereira 93 dead. 61 buildings collapsed, 184 aftershocks. Collection centres sprang up nationwide, and business donations reached COP 15.0 billion (ANDI). The president promised a "Plan Marshall" for Chocó.</li>
+<li>[CO] · Sources: <a href="https://www.infobae.com/colombia/2026/08/10/en-vivo-fuerte-temblor-de-74-se-sintio-en-colombia-cali-y-manizales-reportan-derrumbes-en-edificaciones/">Infobae live, Aug 2026 (updated to Oct)</a>; <a href="https://cnnespanol.cnn.com/2026/08/10/colombia/live-news/sismo-magnitud-7-4-en-vivo-orix">CNN, 10 Aug 2026</a> (search summary); <a href="https://www.infobae.com/colombia/2026/08/13/esta-es-la-millonada-que-donaron-los-empresarios-de-colombia-para-las-victimas-del-terremoto-de-magnitud-74/">Infobae, 13 Aug 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Colombian inflation is rising again, with a minimum-wage fight in December.</li>
+<li>Facts: Aug 2026 CPI 6.24% y/y (5.10% a year earlier), 3 months above 6%. Food +0.7% m/m (potato, meat, chicken, rice), restaurants and hotels +9.36% y/y. Year-end forecast about 7% (BanRep staff 6.9%), with the quake, Tolima fires and El Niño cited. Analysts warn against a large minimum-wage hike.</li>
+<li>[CO] · Sources: <a href="https://www.lafm.com.co/economia/inflacion-colombia-agosto-2026-alimentos-supera-expectativas-balace-de-riesgos-410259">La FM, Sep–Oct 2026</a>; <a href="https://www.semana.com/economia/macroeconomia/articulo/inflacion-de-agosto-de-2026-fue-de-624-precios-retoman-tendencia-al-alza/202617/">Semana, Sep 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Consumer confidence fell in August but is far above 2025.</li>
+<li>Facts: Fedesarrollo ICC 15.5% in Aug 2026, −5.2 pts vs July (20.7%), but +17.9 pts vs Aug 2025 (−2.4%). The fall came mainly from expectations (30.3→22.6).</li>
+<li>[CO] · Sources: <a href="https://www.fedesarrollo.org.co/noticias/encuesta-de-opinion-del-consumidor-resultados-agosto-de-2026">Fedesarrollo, 17 Sep 2026</a>; <a href="https://www.infobae.com/colombia/2026/09/16/confianza-del-consumidor-cayo-52-puntos-en-agosto-los-colombianos-dejaron-de-comprar-vivienda-y-aumento-el-interes-por-adquirir-carros/">Infobae, 16 Sep 2026</a> (search summaries)</li>
+<li>Evidence: partly documented</li>
+</ul>
+
+<ul class="mdl">
+
+<li>Facts: Q1 2026 extortion: 2,914 cases vs 2,733, which is <b>+7% (not +13.1%)</b> and the highest Q1 in a decade (Mindefensa). Jan 1,128, Feb 1,100, Mar 686. Q1 homicides 3,391 (+1%). Jan–Aug 2026: extortion 8,717 (+3%), homicide 9,434 (+2%). August alone: extortion 499 vs 1,299 (−62%). August included only 24 days of the new government, and the drop is unexplained. Bogotá H1: 1,005 extortion cases (−6.7%). Barranquilla shop closures are linked to criminal pressure.</li>
+<li>[CO] · Sources: <a href="https://www.eltiempo.com/justicia/conflicto-y-narcotrafico/suben-los-casos-de-extorsion-en-el-primer-trimestre-de-2026-el-pais-llego-a-la-cifra-mas-alta-de-la-ultima-decada-3548692">El Tiempo, 17 Apr 2026</a>; <a href="https://www.elcolombiano.com/colombia/homicidio-extorsion-disparados-2026-cifras-muestran-duro-incremento-10-anos-HK35596001">El Colombiano, 17 Apr 2026</a>; <a href="https://www.eltiempo.com/justicia/conflicto-y-narcotrafico/agosto-primer-mes-de-de-la-espriella-cerro-con-reducciones-en-homicidio-extorsion-secuestro-y-otros-delitos-de-alto-impacto-3588883">El Tiempo, 25 Sep 2026</a></li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> <b>CORRECTION:</b> the Fenalco "COP 150–250k a week per tendero" figure is from 2014, not 2026.</li>
+<li>Facts: The quote "El 90% de los comerciantes del país están siendo extorsionados" and the 150–250k/week figure come from Fenalco Antioquia in an El País Cali article dated 12 Sep 2014 (updated 2023), about the Valle de Aburrá.</li>
+<li>[CO] · Source: <a href="https://www.elpais.com.co/judicial/el-90-de-los-comerciantes-del-pais-estan-siendo-extorsionados-fenalco.html">El País Cali, 2014/2023</a></li>
+<li>Evidence: well documented (as a dated figure)</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> "Plan Tenderos" is a flagship government–Fenalco programme for 500,000+ neighbourhood shops.</li>
+<li>Facts: Announced on 4 Aug 2026 by the president-elect with Fenalco (Jaime Alberto Cabal) and the trade minister Mauricio Gómez Amín: modernisation, technology, security and productivity for tiendas, panaderías and small businesses. The security part is a separate anti-extortion "Bloque de Búsqueda".</li>
+<li>[CO] · Sources: <a href="https://www.infobae.com/colombia/2026/08/04/abelardo-de-la-espriella-anuncia-plan-tenderos-con-fenalco-busca-modernizar-mas-de-500000-tiendas-de-barrio/">Infobae, 4 Aug 2026</a>; <a href="https://www.elheraldo.co/politica/2026/08/04/gobierno-de-abelardo-de-la-espriella-anuncia-plan-tenderos-para-fortalecer-pequenos-negocios-del-pais/">El Heraldo, 4 Aug 2026</a> (search summaries)</li>
+<li>Evidence: partly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Delivery riders have an image problem in Colombia, separate from the extortion issue.</li>
+<li>Facts: 13 Rappi riders were permanently blocked after violent incidents in Usaquén, Bogotá (29 Mar 2026). A viral Barranquilla clip shows a rider on a car roof after a dispute (Jul 2026), with the driver calling riders "una pandilla" ("a gang"). In 2025 there were complaints about riders charging extra.</li>
+<li>[CO] · Sources: <a href="https://www.elpais.com.co/colombia/rappi-toma-medidas-drasticas-tras-hechos-de-violencia-en-bogota-13-repartidores-fueron-expulsados-0207.html">El País Cali, 2026</a>; <a href="https://www.infobae.com/colombia/2026/07/12/domiciliario-de-barranquilla-termino-sobre-el-techo-de-un-vehiculo-por-un-pedido-conductora-se-defendio-en-redes-eso-es-una-pandilla/">Infobae, 12 Jul 2026</a> (search summaries)</li>
+<li>Evidence: partly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Colombia's World Cup was a bittersweet high: unbeaten but out.</li>
+<li>Facts: Groups: 3-1 Uzbekistan, 1-0 DR Congo, 0-0 Portugal (topped the group). Round of 32: 1-0 Ghana (Jhon Arias). Round of 16: 0-0 vs Switzerland, lost 3-4 on penalties (Dávinson Sánchez and Cucho Hernández missed). Finished 10th, one goal conceded. 50,000+ fans in Vancouver.</li>
+<li>[CO] · Source: <a href="https://www.elpais.com.co/amp/deportes/colombia-quedo-eliminada-del-mundial-2026-este-es-el-balance-del-equipo-de-nestor-lorenzo-que-se-fue-invicto-0757.html">El País Cali, 7 Jul 2026</a></li>
+<li>Evidence: well documented</li>
+</ul>
+
+<div class="item"><div class="ihead"><h3>Ecuador</h3></div></div>
+<ul class="mdl">
+<li><b>Finding:</b> Daniel Noboa is still president, mid-term, with split approval.</li>
+<li>Facts: Sep 2026: CB Consultora 47.4% (up from 45.3%), Click Research 43.88% approve vs 49.49% disapprove. Security is his strongest issue.</li>
+<li>[EC] · Sources: <a href="https://www.eldiario.ec/ecuador/daniel-noboa-registra-43-88-de-aprobacion-segun-encuesta-de-click-research-y-destaca-el-tema-de-la-seguridad-26092026/">El Diario EC, 26 Sep 2026</a>; <a href="https://www.larepublica.ec/blog/2026/09/14/aprobacion-de-noboa-sube-al-477-y-escala-al-puesto-8-segun-cb-consultora/">La República EC, 14 Sep 2026</a> (search summaries)</li>
+<li>Evidence: partly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Sectional elections were moved up to 29 Nov 2026 because of the El Niño threat.</li>
+<li>Facts: The CNE moved them from 14 Feb 2027 to 29 Nov 2026 by a 4–1 vote on 27 Mar 2026, citing a risk-management report on 2027 rains. They cover 23 prefects, 222 mayors and more, with 13.8M voters.</li>
+<li>[EC] · Sources: <a href="https://www.primicias.ec/politica/cne-elecciones-seccionales-ecuador-29-noviembre-119142/">Primicias, Mar 2026</a>; <a href="https://gk.city/2026/03/27/cne-adelanta-elecciones-ecuador-2026-que-hay-detras/">GK, 27 Mar 2026</a> (search summaries)</li>
+<li>Evidence: partly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Violence is slightly below the record 2025 but rising again, with record killings of minors.</li>
+<li>Facts: Jan–Jul 2026: 4,882 homicides vs 5,295 in 2025. June (693) and July (704) were above 2025. El Oro jumped from 358 to 634 and Machala from 159 to 280. Guayas had 2,028 in seven months. H1 2026 saw 305 minors/youth murdered, a record.</li>
+<li>[EC] · Sources: <a href="https://www.primicias.ec/seguridad/homicidios-aumento-ecuador-julio2026-crisis-seguridad-130726/">Primicias, 21 Aug 2026</a>; <a href="https://www.elheraldo.co/mundo/2026/07/29/ecuador-marco-un-record-de-305-homicidios-de-menores-en-el-primer-semestre-de-2026/">El Heraldo/EFE, 29 Jul 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Extortion ("vacunas") is pushing distributors and riders out of Guayaquil neighbourhoods, so tiendas must fetch their own stock.</li>
+<li>Facts: Nueva Prosperina: beverage distributors (beer, energy drinks, soda, water) abandoned interior routes and some repartidores quit. The vacuna started at $5 per entry and is now about $50 a week per route, more if several gangs control the area. About 12 shops near La Pileta have closed in 18 months. Earlier: a gremio estimates about 20% of Guayas small businesses pay vacunas (date of that article not confirmed in this pass).</li>
+<li>[EC] · Sources: <a href="https://www.extra.ec/noticia/especiales/extorsiones-nueva-prosperina-repartidores-abandonan-rutas-vacunas-160110.html">Extra, 9 Aug 2026</a>; <a href="https://www.eluniverso.com/noticias/seguridad/gremio-estima-que-20-de-los-negocios-pequenos-de-guayas-estarian-pagando-vacunas-a-los-extorsionadores-nota/">El Universo, gremio 20%</a> (search summary, date not checked)</li>
+<li>Evidence: well documented (Extra) / thinly documented (20% figure date)</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Prices are flat but jobs are poor.</li>
+<li>Facts: Inflation 1.12% y/y in Aug 2026. The new 98-item canasta básica costs $828.06. Sept spikes: potato +55%, plantain +73% (SIPA). Employment (May 2026): unemployment 3.1%, adequate employment 36.6%, informal sector 52.8%, informal employment 56.3% (Mar 2026).</li>
+<li>[EC] · Sources: <a href="https://www.expreso.ec/economia-y-negocios/canasta-basica-ecuador-productos-subieron-precio-septiembre-2026-296101.html">Expreso, Sep 2026</a> (search summary); <a href="https://www.expreso.ec/economia-y-negocios/significa-empleo-adecuado-ecuador-sigue-estancado-36-6-286685.html">Expreso, 2026</a> (search summary); <a href="https://www.larepublica.ec/blog/2026/06/23/desempleo-cae-en-ecuador-y-llega-al-31/">La República EC, 23 Jun 2026</a> (search summary)</li>
+<li>Evidence: partly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Ecuador's World Cup peak was beating Germany.</li>
+<li>Facts: Ecuador beat Germany 2-1 on 25 Jun 2026 (Sané 2', Nilson Angulo 9', Gonzalo Plata 77') and went through as one of the best third-placed teams. It then lost 0-2 to Mexico in the round of 32 (Quiñones 22', Jiménez 31'). <b>CORRECTION:</b> it went out in the round of 32, not the round of 16.</li>
+<li>[EC] · Sources: <a href="https://www.conmebol.com/noticias/remontada-y-clasificacion-ecuador-avanzo-a-los-dieciseisavos-de-final/">CONMEBOL, 25 Jun 2026</a>; <a href="https://cnnespanol.cnn.com/2026/07/01/deportes/live-news/resultado-goles-mexico-ecuador-mundial-2026-orix">CNN, Jul 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<div class="item"><div class="ihead"><h3>Across all three (Venezuelan diaspora)</h3></div></div>
+<ul class="mdl">
+<li><b>Finding:</b> Maduro was captured, but Venezuela is in a managed transition with no election date.</li>
+<li>Facts: The DEA captured Maduro and Cilia Flores in Caracas on 3 Jan 2026 (Operation "Absolute Resolve"/"Determinación Absoluta") and arraigned them in New York on 5 Jan. Delcy Rodríguez was sworn in as acting president on 5 Jan. At the UN (23 Sep 2026) she promised elections but gave no date.</li>
+<li>[PE][CO][EC] · Sources: <a href="https://es.wikipedia.org/wiki/Captura_de_Nicol%C3%A1s_Maduro">Wikipedia, Captura de Nicolás Maduro</a> (search summary); <a href="https://cnnespanol.cnn.com/2026/09/23/venezuela/habra-elecciones-dice-delcy-rodriguez-sin-fecha-orix">CNN, 23 Sep 2026</a> (search summary); <a href="https://news.un.org/es/story/2026/09/1541959">UN News, Sep 2026</a> (search summary)</li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> A double earthquake on 24 Jun 2026 devastated Venezuela's coast, so this Christmas many in the diaspora are sending help, not going home.</li>
+<li>Facts: M7.2 and M7.5 quakes 39 seconds apart, mainly La Guaira, Caracas and Miranda. Official toll: 6,438 dead (17 Aug 2026), 86,358 treated, 10,696 homes high-risk. The World Bank estimates $19.6B in direct damage. Maiquetía airport was damaged. Avianca resumed Bogotá–Caracas on 1 Sep 2026 (plus Maracaibo, Valencia) and Copa resumed Panama–Caracas. A telethon is set for 17 Oct.</li>
+<li>[PE][CO][EC] · Sources: <a href="https://www.infobae.com/venezuela/2026/08/17/tras-una-semana-sin-datos-oficiales-venezuela-elevo-a-6438-la-cifra-de-muertos-por-el-doble-terremoto/">Infobae, 17 Aug 2026</a>; <a href="https://www.infobae.com/venezuela/2026/08/28/las-aerolineas-avianca-y-copa-airlines-reanudaran-sus-vuelos-a-caracas-tras-el-doble-terremoto/">Infobae, 28 Aug 2026</a></li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Return intentions have risen sharply but are long-term and conditional.</li>
+
+<li>[PE][CO][EC] · Sources: <a href="https://rpp.pe/mundo/latinoamerica/laura-almirall-de-acnur-el-30-de-los-venezolanos-en-el-peru-considera-retornar-a-su-pais-noticia-1692854">RPP, 12 Jun 2026</a>; <a href="https://www.acnur.org/noticias/notas-de-prensa/una-encuesta-de-acnur-revela-que-un-tercio-de-los-venezolanos-desplazados-podria-plantearse-retornar">ACNUR, Apr 2026</a> (search summary); <a href="https://www.vanguardia.com/colombia/2026/02/23/migrantes-venezolanos-en-colombia-dudan-regresar-a-su-pais-tras-captura-de-maduro/">Vanguardia, 23 Feb 2026</a></li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Direct flights from Lima to Caracas are not confirmed as of Oct 2026.</li>
+<li>Facts: Dec 2025: no direct flights, with Venezuela isolated over Christmas. May 2026: ALAV expected a "pronta" (soon) resumption with Peru and Chile. Latam's Lima–Caracas route was found to be a 2023 story, not 2026. <b>CORRECTION:</b> "flights to Caracas resumed in 2026" is true for Bogotá/Panama (Copa from 13 Jan, then again after the quake on 1 Sep), not confirmed for Lima.</li>
+<li>[PE] · Sources: <a href="https://elaereo.com/2026/05/alav-anticipa-pronta-reanudacion-de-los-vuelos-entre-venezuela-chile-y-el-peru/">elaereo, May 2026</a> (search summary); <a href="https://www.semana.com/amp/economia/empresas/articulo/copa-airlines-anuncia-la-reanudacion-de-vuelos-desde-y-hacia-caracas-a-partir-del-martes-13-de-enero/202619/">Semana, Jan 2026</a> (search summary)</li>
+<li>Evidence: thinly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> El Niño is a shared regional anxiety. Peru forecasts an extraordinary event, Ecuador moved its elections, and Colombia cites it in food inflation.</li>
+<li>[PE][EC][CO] · Sources: see Peru El Niño, Ecuador elections, Colombia inflation items above.</li>
+<li>Evidence: partly documented</li>
+</ul>
+
+</section>
+<section class="sec" id="s5" data-toc="Part B — SMB insights year-round (thin: deadline)" data-group="Social context"><h2>Part B — SMB insights year-round (thin: deadline)</h2>
+
+<ul class="mdl">
+
+
+<li>Evidence: thinly documented (this pass)</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> WhatsApp is where Peruvian SMB sales close (80% of entrepreneurs).</li>
+
+<li>Evidence: thinly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Payments are already instant and mobile: Yape has 16.4M monthly users and 1M+ merchants, and Colombia's Bre-B (launched 6 Oct 2025) reached 34M users in six months.</li>
+
+<li>Evidence: thinly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Women and young people are over-represented in informal work and small trade.</li>
+<li>Facts: Peru informal employment women 73.3% vs men 68.7%, ages 14–24 85.4% (2025). Lima women earn 76.4% of men's income. AGREMUB (women bodegueras) says women-run bodegas are hit hardest by crime.</li>
+<li>[PE] · Sources: <a href="https://www.infobae.com/peru/2026/01/03/el-empleo-formal-e-informal-en-peru-durante-2025-balance-completo/">Infobae, 3 Jan 2026</a> (search summary); <a href="https://www.infobae.com/peru/2026/09/15/cupos-de-hasta-s2-millones-semanales-extorsiones-prestamos-gota-a-gota-y-falta-de-credito-agravan-la-crisis-de-las-bodegas-en-peru/">Infobae, 15 Sep 2026</a></li>
+<li>Evidence: partly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Credit is a top pain, and gota-a-gota loan sharks fill the gap, alongside extortion.</li>
+<li>[PE][CO] · Sources: <a href="https://www.infobae.com/peru/2026/09/15/cupos-de-hasta-s2-millones-semanales-extorsiones-prestamos-gota-a-gota-y-falta-de-credito-agravan-la-crisis-de-las-bodegas-en-peru/">Infobae, 15 Sep 2026</a>; <a href="https://www.elnuevosiglo.com.co/nacion/pagar-una-extorsion-se-convierte-en-un-gota-gota-que-afecta-todo-el-mundo-fenalco-bogota">El Nuevo Siglo (Fenalco Bogotá)</a> (search summary, date unchecked)</li>
+<li>Evidence: partly documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> In parts of Guayaquil, distribution has broken down: shops fetch their own stock because distributors won't enter.</li>
+<li>[EC] · Source: <a href="https://www.extra.ec/noticia/especiales/extorsiones-nueva-prosperina-repartidores-abandonan-rutas-vacunas-160110.html">Extra, 9 Aug 2026</a></li>
+<li>Evidence: well documented</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Finding:</b> Colombian tiendas are now a government priority (Plan Tenderos, 500k+ shops).</li>
+<li>[CO] · Source: <a href="https://www.infobae.com/colombia/2026/08/04/abelardo-de-la-espriella-anuncia-plan-tenderos-con-fenalco-busca-modernizar-mas-de-500000-tiendas-de-barrio/">Infobae, 4 Aug 2026</a></li>
+<li>Evidence: partly documented</li>
+</ul>
+
+</section>
+<section class="sec" id="s6" data-toc="Gaps" data-group="Social context"><h2>Gaps</h2>
+<ul class="mdl">
+<li>Part B is largely unresearched in this pass: MYPE/pyme counts for Colombia and Ecuador; seller channels (Instagram, TikTok LIVE, TikTok Shop status in PE/CO/EC, Facebook Marketplace, ferias); delivery costs and habits (own motorizado vs apps vs couriers, encomiendas between cities); package theft and returns; Temu/Shein/AliExpress competition and the 2026 de minimis or tax rules; platform fees; Ecuador payments (DeUna, Ahorita); self-descriptive slang ("emprendedor", "chamba", "negocito", "camello", "billete") with sourced usage; the SMB December reality in 2026; and what makes entrepreneurs proud.</li>
+
+
+<li>Not researched: trust in brands (Edelman, Ipsos/Kantar 2026), what people joke about and the 2026 viral or cultural moments per country (memes, TikTok trends, music), the Peru Gen Z mood under Fujimori, Peru consumer confidence (Ipsos Apoyo, BCRP expectations), Peru's World Cup absence as mood, whether the Feria de Cali 2026 goes ahead after the quake, a conventional poll (Invamer) on De la Espriella, Ecuador's state-of-emergency or "internal armed conflict" status in late 2026, Ecuador Venezuelan population and return, and whether the Lima/Callao emergency is renewed beyond late October.</li>
+<li>Riders: there is no aggregate 2026 count of delivery workers killed or extorted in Lima, Bogotá or Guayaquil, only individual cases.</li>
+</ul>
+</section>
+<section class="sec sources" id="sources">
+  <p class="eyebrow">Reference</p>
+  <h2>All sources</h2>
+  <p>Every link cited above, once, in order of first use. Figures were checked on the page itself, not taken from search snippets.</p>
+  <ol><li><a href="https://elcomercio.pe/elecciones/resultados-onpe-en-vivo-conteo-oficial-de-la-segunda-vuelta-entre-keiko-fujimori-y-roberto-sanchez-de-elecciones-peru-2026-lbposting-noticia/">elcomercio.pe</a> — El Comercio, ONPE results, Jun 2026</li><li><a href="https://www.infobae.com/peru/2026/06/11/keiko-fujimori-supera-a-roberto-sanchez-votos-del-extranjero-clave-en-el-resultado/">infobae.com</a> — Infobae, 11 Jun 2026</li><li><a href="https://www.infobae.com/peru/2026/02/18/eleccion-del-nuevo-presidente-de-peru-en-vivo-congreso-decide-hoy-al-sucesor-de-jose-jeri-entre-cuatro-candidatos/">infobae.com</a> — Infobae, 18 Feb 2026</li><li><a href="https://larepublica.pe/politica/2026/02/18/quien-es-el-nuevo-presidente-del-peru-tras-censura-de-jose-jeri-resultado-de-votacion-en-congreso-hnews-1012950">larepublica.pe</a> — La República, 18 Feb 2026</li><li><a href="https://www.ipsos.com/es-pe/aprobacion-de-autoridades-encuesta-peru21-ipsos-septiembre-2026">ipsos.com</a> — Ipsos Perú, Sep 2026</li><li><a href="https://larepublica.pe/politica/2026/09/18/aprobacion-de-keiko-fujimori-cae-18-puntos-en-un-mes-y-desaprobacion-sube-a-44-segun-datum-1753560">larepublica.pe</a> — La República, 18 Sep 2026</li><li><a href="https://www.infobae.com/peru/2026/09/18/iep-aprobacion-de-keiko-fujimori-en-setiembre-es-de-37-y-un-47-considera-que-esta-poco-o-nada-preparada-para-gobernar/">infobae.com</a> — Infobae, 18 Sep 2026</li><li><a href="https://larepublica.pe/sociedad/2026/08/28/gobierno-de-keiko-fujimori-insiste-en-el-estado-de-emergencia-decretan-medida-en-lima-y-callao-por-60-dias-2714516">larepublica.pe</a> — La República, 28 Aug 2026</li><li><a href="https://larepublica.pe/politica/2026/09/16/se-registran-mas-de-250-homicidios-en-los-primeros-50-dias-del-gobierno-de-keiko-fujimori-hnews-629712">larepublica.pe</a> — La República, 16 Sep 2026</li><li><a href="https://www.infobae.com/peru/2026/09/20/violencia-contra-adolescentes-72-asesinatos-en-poco-mas-de-ocho-meses-ya-superan-el-total-de-2024/">infobae.com</a> — Infobae, 20 Sep 2026</li><li><a href="https://rpp.pe/peru/actualidad/ministerio-publico-informo-que-mas-de-12-000-denuncias-por-extorsion-se-registraron-en-el-primer-semestre-de-2026-noticia-1697877">rpp.pe</a> — RPP, 18 Jul 2026</li><li><a href="https://altavoz.pe/locales/peru-registra-13-892-denuncias-por-extorsion-entre-enero-y-julio-de-2026/">altavoz.pe</a> — Altavoz, Jan–Jul figure</li><li><a href="https://www.infobae.com/peru/2026/09/15/cupos-de-hasta-s2-millones-semanales-extorsiones-prestamos-gota-a-gota-y-falta-de-credito-agravan-la-crisis-de-las-bodegas-en-peru/">infobae.com</a> — Infobae, 15 Sep 2026</li><li><a href="https://www.infobae.com/peru/2026/09/12/menos-bodegas-en-los-barrios-6-mil-cerraran-este-2026-por-inaccion-del-gobierno-frente-a-criminalidad/">infobae.com</a> — Infobae, 12 Sep 2026</li><li><a href="https://www.infobae.com/peru/2026/01/06/se-viene-el-primer-paro-de-transportistas-de-2026-en-lima-y-callao-gremio-denuncia-que-ahora-pagan-el-triple/">infobae.com</a> — Infobae, 6 Jan 2026</li><li><a href="https://www.infobae.com/peru/2026/08/19/nuevo-paro-de-transportistas-este-25-de-agosto-todo-lo-que-se-sabe-de-la-medida-que-afectaria-a-lima-y-callao/">infobae.com</a> — Infobae, 19 Aug 2026</li><li><a href="https://rpp.pe/lima/seguridad/crisis-de-transportes-en-peru-2026-64-choferes-asesinados-y-extorsion-masiva-noticia-1692330">rpp.pe</a> — RPP, 2026</li><li><a href="https://rpp.pe/lima/policiales/smp-joven-repartidor-de-una-polleria-fue-asesinado-a-balazos-cuando-se-disponia-a-entregar-un-pedido-noticia-1683350">rpp.pe</a> — RPP, 2026</li><li><a href="https://elcomercio.pe/lima/policiales/brena-delincuentes-asesinan-a-balazos-a-delivery-de-comida-rapida-ultimas-noticia/">elcomercio.pe</a> — El Comercio, 2026</li><li><a href="https://www.infobae.com/peru/2026/10/01/la-inflacion-de-lima-metropolitana-alcanza-el-455-en-septiembre-y-se-acerca-a-su-mayor-nivel-en-15-anos/">infobae.com</a> — Infobae, 1 Oct 2026</li><li><a href="https://elcomercio.pe/economia/peru/inei-precios-al-consumidor-de-lima-metropolitana-aumentaron-012-en-septiembre-de-2026-l-ultimas-noticia/">elcomercio.pe</a> — El Comercio, Oct 2026</li><li><a href="https://andina.pe/agencia/noticia-inei-empleo-lima-metropolitana-crecio-61-ultimos-tres-meses-del-2026-1091838.aspx">andina.pe</a> — Andina, Sep 2026</li><li><a href="https://www.infobae.com/peru/2026/01/03/el-empleo-formal-e-informal-en-peru-durante-2025-balance-completo/">infobae.com</a> — Infobae, 3 Jan 2026</li><li><a href="https://www.infobae.com/peru/2026/09/15/el-nino-podria-alcanzar-una-magnitud-extraordinaria-y-extenderse-hasta-mediados-del-otono-de-2027-segun-el-enfen/">infobae.com</a> — Infobae, 15 Sep 2026</li><li><a href="https://larepublica.pe/sociedad/2026/09/14/el-nino-costero-se-prolongaria-hasta-otono-de-2027-enfen-advierte-alta-probabilidad-de-magnitud-extraordinaria-1064336">larepublica.pe</a> — La República, 14 Sep 2026</li><li><a href="https://es.wikipedia.org/wiki/Protestas_de_la_generaci%C3%B3n_Z_en_Per%C3%BA">es.wikipedia.org</a> — Wikipedia, Gen Z protests in Peru</li><li><a href="https://www.infobae.com/peru/2026/01/25/generacion-z-confirma-marcha-contra-jose-jeri-para-el-28-de-enero-todo-lo-que-se-sabe-de-la-movilizacion-en-lima/">infobae.com</a> — Infobae, 25 Jan 2026</li><li><a href="https://gestion.pe/peru/elecciones-regionales-y-municipales-2026-que-se-juega-peru-este-domingo-4-de-octubre-noticia/">gestion.pe</a> — Gestión, Oct 2026</li><li><a href="https://www.infobae.com/peru/2026/09/27/ultima-encuesta-de-cpi-asi-va-la-intencion-de-voto-a-rafael-lopez-aliaga-carlos-bruce-francis-allison-y-otros-candidatos-a-la-alcaldia-de-lima/">infobae.com</a> — Infobae, 27 Sep 2026</li><li><a href="https://www.eltiempo.com/politica/elecciones-colombia-2026/abelardo-de-la-espriella-presidente-electo-de-colombia-tras-el-preconteo-se-impone-por-247-000-votos-3566015">eltiempo.com</a> — El Tiempo, Jun 2026</li><li><a href="https://cnnespanol.cnn.com/2026/06/21/colombia/live-news/segunda-vuelta-elecciones-presidenciales-resultado-cepeda-espriella-orix">cnnespanol.cnn.com</a> — CNN, 21 Jun 2026</li><li><a href="https://cambiocolombia.com/poder/articulo/2026/9/atlasintel-de-la-espriella-cierra-su-primer-mes-con-518-por-ciento-de-aprobacion">cambiocolombia.com</a> — Cambio, Sep 2026</li><li><a href="https://www.infobae.com/colombia/2026/09/08/gobierno-de-abelardo-de-la-espriella-inicia-con-aprobacion-digital-de-724-pero-la-economia-y-educacion-generan-dudas/">infobae.com</a> — Infobae, 7 Sep 2026</li><li><a href="https://www.infobae.com/colombia/2026/08/10/en-vivo-fuerte-temblor-de-74-se-sintio-en-colombia-cali-y-manizales-reportan-derrumbes-en-edificaciones/">infobae.com</a> — Infobae live, Aug 2026 (updated to Oct)</li><li><a href="https://cnnespanol.cnn.com/2026/08/10/colombia/live-news/sismo-magnitud-7-4-en-vivo-orix">cnnespanol.cnn.com</a> — CNN, 10 Aug 2026</li><li><a href="https://www.infobae.com/colombia/2026/08/13/esta-es-la-millonada-que-donaron-los-empresarios-de-colombia-para-las-victimas-del-terremoto-de-magnitud-74/">infobae.com</a> — Infobae, 13 Aug 2026</li><li><a href="https://www.lafm.com.co/economia/inflacion-colombia-agosto-2026-alimentos-supera-expectativas-balace-de-riesgos-410259">lafm.com.co</a> — La FM, Sep–Oct 2026</li><li><a href="https://www.semana.com/economia/macroeconomia/articulo/inflacion-de-agosto-de-2026-fue-de-624-precios-retoman-tendencia-al-alza/202617/">semana.com</a> — Semana, Sep 2026</li><li><a href="https://www.fedesarrollo.org.co/noticias/encuesta-de-opinion-del-consumidor-resultados-agosto-de-2026">fedesarrollo.org.co</a> — Fedesarrollo, 17 Sep 2026</li><li><a href="https://www.infobae.com/colombia/2026/09/16/confianza-del-consumidor-cayo-52-puntos-en-agosto-los-colombianos-dejaron-de-comprar-vivienda-y-aumento-el-interes-por-adquirir-carros/">infobae.com</a> — Infobae, 16 Sep 2026</li><li><a href="https://www.eltiempo.com/justicia/conflicto-y-narcotrafico/suben-los-casos-de-extorsion-en-el-primer-trimestre-de-2026-el-pais-llego-a-la-cifra-mas-alta-de-la-ultima-decada-3548692">eltiempo.com</a> — El Tiempo, 17 Apr 2026</li><li><a href="https://www.elcolombiano.com/colombia/homicidio-extorsion-disparados-2026-cifras-muestran-duro-incremento-10-anos-HK35596001">elcolombiano.com</a> — El Colombiano, 17 Apr 2026</li><li><a href="https://www.eltiempo.com/justicia/conflicto-y-narcotrafico/agosto-primer-mes-de-de-la-espriella-cerro-con-reducciones-en-homicidio-extorsion-secuestro-y-otros-delitos-de-alto-impacto-3588883">eltiempo.com</a> — El Tiempo, 25 Sep 2026</li><li><a href="https://www.elpais.com.co/judicial/el-90-de-los-comerciantes-del-pais-estan-siendo-extorsionados-fenalco.html">elpais.com.co</a> — El País Cali, 2014/2023</li><li><a href="https://www.infobae.com/colombia/2026/08/04/abelardo-de-la-espriella-anuncia-plan-tenderos-con-fenalco-busca-modernizar-mas-de-500000-tiendas-de-barrio/">infobae.com</a> — Infobae, 4 Aug 2026</li><li><a href="https://www.elheraldo.co/politica/2026/08/04/gobierno-de-abelardo-de-la-espriella-anuncia-plan-tenderos-para-fortalecer-pequenos-negocios-del-pais/">elheraldo.co</a> — El Heraldo, 4 Aug 2026</li><li><a href="https://www.elpais.com.co/colombia/rappi-toma-medidas-drasticas-tras-hechos-de-violencia-en-bogota-13-repartidores-fueron-expulsados-0207.html">elpais.com.co</a> — El País Cali, 2026</li><li><a href="https://www.infobae.com/colombia/2026/07/12/domiciliario-de-barranquilla-termino-sobre-el-techo-de-un-vehiculo-por-un-pedido-conductora-se-defendio-en-redes-eso-es-una-pandilla/">infobae.com</a> — Infobae, 12 Jul 2026</li><li><a href="https://www.elpais.com.co/amp/deportes/colombia-quedo-eliminada-del-mundial-2026-este-es-el-balance-del-equipo-de-nestor-lorenzo-que-se-fue-invicto-0757.html">elpais.com.co</a> — El País Cali, 7 Jul 2026</li><li><a href="https://www.eldiario.ec/ecuador/daniel-noboa-registra-43-88-de-aprobacion-segun-encuesta-de-click-research-y-destaca-el-tema-de-la-seguridad-26092026/">eldiario.ec</a> — El Diario EC, 26 Sep 2026</li><li><a href="https://www.larepublica.ec/blog/2026/09/14/aprobacion-de-noboa-sube-al-477-y-escala-al-puesto-8-segun-cb-consultora/">larepublica.ec</a> — La República EC, 14 Sep 2026</li><li><a href="https://www.primicias.ec/politica/cne-elecciones-seccionales-ecuador-29-noviembre-119142/">primicias.ec</a> — Primicias, Mar 2026</li><li><a href="https://gk.city/2026/03/27/cne-adelanta-elecciones-ecuador-2026-que-hay-detras/">gk.city</a> — GK, 27 Mar 2026</li><li><a href="https://www.primicias.ec/seguridad/homicidios-aumento-ecuador-julio2026-crisis-seguridad-130726/">primicias.ec</a> — Primicias, 21 Aug 2026</li><li><a href="https://www.elheraldo.co/mundo/2026/07/29/ecuador-marco-un-record-de-305-homicidios-de-menores-en-el-primer-semestre-de-2026/">elheraldo.co</a> — El Heraldo/EFE, 29 Jul 2026</li><li><a href="https://www.extra.ec/noticia/especiales/extorsiones-nueva-prosperina-repartidores-abandonan-rutas-vacunas-160110.html">extra.ec</a> — Extra, 9 Aug 2026</li><li><a href="https://www.eluniverso.com/noticias/seguridad/gremio-estima-que-20-de-los-negocios-pequenos-de-guayas-estarian-pagando-vacunas-a-los-extorsionadores-nota/">eluniverso.com</a> — El Universo, gremio 20%</li><li><a href="https://www.expreso.ec/economia-y-negocios/canasta-basica-ecuador-productos-subieron-precio-septiembre-2026-296101.html">expreso.ec</a> — Expreso, Sep 2026</li><li><a href="https://www.expreso.ec/economia-y-negocios/significa-empleo-adecuado-ecuador-sigue-estancado-36-6-286685.html">expreso.ec</a> — Expreso, 2026</li><li><a href="https://www.larepublica.ec/blog/2026/06/23/desempleo-cae-en-ecuador-y-llega-al-31/">larepublica.ec</a> — La República EC, 23 Jun 2026</li><li><a href="https://www.conmebol.com/noticias/remontada-y-clasificacion-ecuador-avanzo-a-los-dieciseisavos-de-final/">conmebol.com</a> — CONMEBOL, 25 Jun 2026</li><li><a href="https://cnnespanol.cnn.com/2026/07/01/deportes/live-news/resultado-goles-mexico-ecuador-mundial-2026-orix">cnnespanol.cnn.com</a> — CNN, Jul 2026</li><li><a href="https://es.wikipedia.org/wiki/Captura_de_Nicol%C3%A1s_Maduro">es.wikipedia.org</a> — Wikipedia, Captura de Nicolás Maduro</li><li><a href="https://cnnespanol.cnn.com/2026/09/23/venezuela/habra-elecciones-dice-delcy-rodriguez-sin-fecha-orix">cnnespanol.cnn.com</a> — CNN, 23 Sep 2026</li><li><a href="https://news.un.org/es/story/2026/09/1541959">news.un.org</a> — UN News, Sep 2026</li><li><a href="https://www.infobae.com/venezuela/2026/08/17/tras-una-semana-sin-datos-oficiales-venezuela-elevo-a-6438-la-cifra-de-muertos-por-el-doble-terremoto/">infobae.com</a> — Infobae, 17 Aug 2026</li><li><a href="https://www.infobae.com/venezuela/2026/08/28/las-aerolineas-avianca-y-copa-airlines-reanudaran-sus-vuelos-a-caracas-tras-el-doble-terremoto/">infobae.com</a> — Infobae, 28 Aug 2026</li><li><a href="https://rpp.pe/mundo/latinoamerica/laura-almirall-de-acnur-el-30-de-los-venezolanos-en-el-peru-considera-retornar-a-su-pais-noticia-1692854">rpp.pe</a> — RPP, 12 Jun 2026</li><li><a href="https://www.acnur.org/noticias/notas-de-prensa/una-encuesta-de-acnur-revela-que-un-tercio-de-los-venezolanos-desplazados-podria-plantearse-retornar">acnur.org</a> — ACNUR, Apr 2026</li><li><a href="https://www.vanguardia.com/colombia/2026/02/23/migrantes-venezolanos-en-colombia-dudan-regresar-a-su-pais-tras-captura-de-maduro/">vanguardia.com</a> — Vanguardia, 23 Feb 2026</li><li><a href="https://elaereo.com/2026/05/alav-anticipa-pronta-reanudacion-de-los-vuelos-entre-venezuela-chile-y-el-peru/">elaereo.com</a> — elaereo, May 2026</li><li><a href="https://www.semana.com/amp/economia/empresas/articulo/copa-airlines-anuncia-la-reanudacion-de-vuelos-desde-y-hacia-caracas-a-partir-del-martes-13-de-enero/202619/">semana.com</a> — Semana, Jan 2026</li><li><a href="https://www.elnuevosiglo.com.co/nacion/pagar-una-extorsion-se-convierte-en-un-gota-gota-que-afecta-todo-el-mundo-fenalco-bogota">elnuevosiglo.com.co</a> — El Nuevo Siglo (Fenalco Bogotá)</li></ol>
+</section>
+
+  </main>
+</div>
+<script>
+(function(){
+  var b=document.body, burger=document.querySelector('.burger'), last=0;
+  function close(){b.classList.remove('nav')}
+  burger&&burger.addEventListener('click',function(){b.classList.add('nav')});
+  document.querySelector('.scrim').addEventListener('click',close);
+  document.querySelector('.navhead button').addEventListener('click',close);
+  document.querySelectorAll('.toc a').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  window.addEventListener('scroll',function(){var y=window.scrollY; if(burger){burger.classList.toggle('away',y>last&&y>200)} last=y},{passive:true});
+  var links={}; document.querySelectorAll('.toc a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('cur')}); var l=links[e.target.id]; l&&l.classList.add('cur')}})},{rootMargin:'0px 0px -70% 0px'});
+    document.querySelectorAll('section.sec[id]').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>

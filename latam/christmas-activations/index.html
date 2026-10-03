@@ -1,0 +1,488 @@
+<title>Christmas and New Year activations review</title>
+<style>
+@font-face{font-family:"PP Agrandir";src:url("fonts/PPAgrandir-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Suisse Intl";src:url("fonts/SuisseIntl-Book.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Suisse Intl";src:url("fonts/SuisseIntl-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+/* Layout: a long research document — sticky contents column left, one reading column right; drawer under 900px. */
+:root{
+  --bg:#FFFFFF; --fg:#000000; --body:#141414; --muted:#55605A; --line:#D5E6DC; --line2:#EAF4EE;
+  --panel:#E4FFF2; --plate:#F4F3D8; --accent:#C1F11D; --on-accent:#000000;
+  --display:"PP Agrandir","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --text:"Suisse Intl","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --max:1200px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141414; --fg:#FFFFFF; --body:#ECEFED; --muted:#A4ADA8; --line:#2E3532; --line2:#222826;
+  --panel:#1D2421; --plate:#2A2A22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141414; --fg:#FFFFFF; --body:#ECEFED; --muted:#A4ADA8; --line:#2E3532; --line2:#222826;
+  --panel:#1D2421; --plate:#2A2A22; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:var(--muted);text-underline-offset:2px}
+a:hover{text-decoration-color:var(--fg)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:40px}
+/* cover */
+.cover{padding-block:56px 40px;border-bottom:2px solid var(--fg)}
+.series{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:40px}
+.series a{text-decoration:none}
+.series .on{color:var(--fg);font-weight:600}
+.series .brand{color:var(--fg);font-weight:600;margin-right:6px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,6.4vw,76px);line-height:1;letter-spacing:-.02em;color:var(--fg);margin:0 0 22px;text-wrap:balance;max-width:16ch}
+.hl{position:relative;z-index:0;color:var(--on-accent);padding:0 .08em;white-space:nowrap}
+.hl:before{content:"";position:absolute;z-index:-1;left:-.06em;right:-.1em;top:.08em;bottom:-.04em;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='316' height='68' viewBox='0 0 316 68' preserveAspectRatio='none'%3E%3Cpath d='M314.41 25.529C262.307 28.9686 113.618 24 7.42536 24C57.9532 29.7926 206.773 42.8579 311.885 42.8579C279.451 42.5847 158.673 45.5592 0.410173 42.8579' stroke='%23C1F11D' stroke-width='48' fill='none'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+.sub{font-size:19px;line-height:1.45;max-width:60ch;margin:0 0 30px;color:var(--body)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:13px;color:var(--muted);margin:0;padding:0;list-style:none}
+.facts b{display:block;font-family:var(--display);font-size:22px;color:var(--fg);letter-spacing:-.01em;line-height:1.1;font-variant-numeric:tabular-nums}
+/* layout */
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:56px;align-items:start;padding-block:0 120px}
+.toc{position:sticky;top:env(safe-area-inset-top,0px);max-height:100vh;overflow-y:auto;padding-block:36px;font-size:13.5px;scrollbar-width:thin}
+.toc .g{margin-bottom:22px}
+.toc .gt{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);padding-bottom:7px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.toc ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.toc a{color:var(--muted);text-decoration:none;line-height:1.3;display:block}
+.toc a:hover,.toc a.cur{color:var(--fg)}
+main{min-width:0;padding-top:36px}
+.burger,.scrim,.navhead{display:none}
+/* sections */
+section.sec{padding-top:8px;margin-bottom:64px;scroll-margin-top:16px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.05;letter-spacing:-.015em;color:var(--fg);margin:0 0 14px;text-wrap:balance}
+h3{font-size:18px;font-weight:600;line-height:1.3;color:var(--fg);margin:0;text-wrap:balance}
+p{margin:0 0 12px;max-width:68ch}
+.lead{font-size:18px;line-height:1.5;max-width:62ch;margin-bottom:24px}
+.country{border-top:2px solid var(--fg);padding-top:20px}
+/* verdict cards */
+.verdicts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:8px 0 18px}
+.verdict{background:var(--panel);padding:20px 20px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.verdict .m{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.verdict .w{font-family:var(--display);font-size:24px;line-height:1.05;color:var(--fg);letter-spacing:-.01em}
+.verdict p{font-size:14.5px;margin:0}
+.verdict .fit{font-size:13.5px;border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+/* items */
+.item{border-top:1px solid var(--line);padding-block:20px 6px}
+.ihead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:10px}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ev{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--plate);color:var(--fg);padding:3px 7px;white-space:nowrap}
+.item ul{margin:0 0 12px;padding-left:18px;max-width:68ch}
+.item li{margin-bottom:5px}
+.hook{background:var(--panel);padding:12px 16px;margin:4px 0 12px;max-width:68ch;font-size:15px}
+.hook b{display:inline-block;background:var(--accent);color:var(--on-accent);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;margin-right:8px;vertical-align:1px}
+.src{font-size:13px;color:var(--muted);max-width:76ch;margin:0 0 10px}
+.src a{color:var(--muted)}
+.q{font-style:normal;color:var(--fg)}
+ul.mdl{margin:0 0 14px;padding-left:18px;max-width:72ch}
+ul.mdl li{margin-bottom:7px}
+ul.mdl li.sub2{margin-left:18px;list-style:circle;color:var(--body)}
+code{font-size:.9em;background:var(--plate);padding:0 4px}
+/* patterns */
+.pats{counter-reset:p;display:grid;gap:0}
+.pat{border-top:1px solid var(--line);padding-block:16px 4px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 8px}
+.pat:before{counter-increment:p;content:counter(p);font-family:var(--display);font-size:22px;color:var(--fg);line-height:1.1}
+.pat h3{margin-bottom:6px}
+/* tables */
+.tbl{overflow-x:auto;margin:10px 0 18px;border-top:2px solid var(--fg)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-weight:600;color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.win td{background:var(--panel)}
+tr.win td:first-child{box-shadow:inset 4px 0 0 var(--accent);padding-left:10px}
+.tag{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+/* sources */
+.sources ol{padding-left:22px;font-size:13px;color:var(--muted);columns:2;column-gap:36px}
+.sources li{margin-bottom:6px;break-inside:avoid;overflow-wrap:anywhere}
+.sources li a{color:var(--body)}
+.foot{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:40px}
+/* mobile */
+@media (max-width:900px){
+  .wrap{padding-inline:18px}
+  .layout{display:block}
+  .verdicts{grid-template-columns:minmax(0,1fr)}
+  .sources ol{columns:1}
+  .burger{display:flex;position:fixed;right:14px;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:30;width:44px;height:44px;align-items:center;justify-content:center;background:var(--fg);color:var(--bg);border:0;cursor:pointer;transition:transform .2s}
+  .burger.away{transform:translateY(-80px)}
+  .burger span,.burger span:before,.burger span:after{display:block;width:18px;height:2px;background:currentColor;position:relative}
+  .burger span:before,.burger span:after{content:"";position:absolute;left:0}
+  .burger span:before{top:-6px}.burger span:after{top:6px}
+  .toc{position:fixed;top:0;right:0;bottom:0;width:min(86vw,340px);max-height:none;background:var(--bg);z-index:50;padding:calc(env(safe-area-inset-top,0px) + 16px) 20px 40px;transform:translateX(100%);transition:transform .25s;border-left:1px solid var(--line)}
+  .navhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-weight:600;color:var(--fg)}
+  .navhead button{background:none;border:0;font-size:26px;line-height:1;color:var(--fg);cursor:pointer;padding:4px 8px}
+  body.nav .toc{transform:none}
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:40}
+  body.nav .scrim{display:block}
+  body.nav{overflow:hidden}
+  table{font-size:13.5px}
+}
+@media (prefers-reduced-motion:reduce){.toc,.burger{transition:none}}
+</style>
+<header class="cover wrap">
+  <div class="series"><span class="brand">Christmas 2026 · Latin America</span><span>1 · Traditions</span><span>2 · Holiday insights</span><span>3 · Social context & SMB</span><a class="on" href="#">4 · Activations review</a></div>
+  <h1>Christmas activations worth <span class="hl">stealing</span> from</h1>
+  <p class="sub">Global and local Christmas and New Year activations reconstructed mechanic by mechanic: what was built, what people did and how it spread.</p>
+  <ul class="facts"><li><b>PE · CO · EC + global</b>scope</li><li><b>53</b>sources linked</li></ul>
+</header>
+<button class="burger" type="button" aria-label="Open contents"><span></span></button>
+<div class="scrim"></div>
+<div class="layout wrap">
+  <nav class="toc" aria-label="Contents"><div class="navhead">Contents<button type="button" aria-label="Close contents">×</button></div><div class="g"><div class="gt">Activations</div><ul><li><a href="#s1">Introduction</a></li><li><a href="#s2">Patterns</a></li><li><a href="#s3">Top 10 to steal from</a></li><li><a href="#s4">Group 1 — Global brand activations and stunts</a></li><li><a href="#s5">Group 2 — Festival-scale public moments in the three markets</a></li><li><a href="#s6">Group 3 — Local brand activations in Peru, Colombia and Ecua</a></li><li><a href="#s7">Gaps</a></li></ul></div><div class="g"><ul><li><a href="#sources">All sources</a></li></ul></div></nav>
+  <main>
+<section class="sec" id="s1" data-toc="Introduction" data-group="Activations">
+
+</section>
+<section class="sec" id="s2" data-toc="Patterns" data-group="Activations"><h2>Patterns</h2>
+<ul class="mdl">
+<li>The cases that spread fastest put one ordinary person on camera at the moment they receive something: WestJet's baggage carousel, UPS's reunions, iFood couriers getting gifts. The shareable unit is a reaction shot, not a product shot.</li>
+<li>The courier is the hero only when something real reaches them. Amazon's "Thank my driver" ($5 per thank-you, 51M thank-yous since 2022) and iFood's R$1.5M for 25,000 couriers turned delivery workers into the story. Zomato's record New Year's Eve, run while couriers were striking, shows the reverse: courier labour is a live issue in every market, and a stunt that just celebrates volume can backfire.</li>
+<li>Giving away the delivery is the cheapest and most copied mechanic. Cadbury (scan a poster, a postie delivers a free bar to someone else), UberSANTA Lima (tap a button, a driver brings a gift for S/5), UPS (share a wish, $1 to charity) and Amazon (thank the driver, he gets $5) all make the brand's own logistics the gift. The cost has a hard cap (120,000 bars, 2M thank-yous, $100k), so the budget is known in advance.</li>
+<li>In a city, the moving route beats the fixed stand. Coca-Cola's trucks and caravans (8 UK stops, Mexican city parades, four Lima districts plus four provincial cities in 2025) go to the people, run at dusk and give everyone the same photo. A courier fleet is already a caravan.</li>
+
+<li>Brands can invent a tradition if they own a concrete answer to "what do we do on the 24th". KFC Japan's "Kentucky for Christmas" (1974) made 24 December its busiest day, about ten times its average, through pre-orders taken from late October. The lesson for delivery is a booked slot for a specific night.</li>
+<li>An emotional film travels when it has one sharp twist and a single line, but on its own it is a media buy, not an activation. Edeka (a grandfather fakes his death, 43M views in three weeks) and Justino (a night guard and the "greatest prize is sharing it" line) are references for tone. Ruavieja is the stronger model because it added a calculator people could use and then paid for real coach tickets with ALSA.</li>
+<li>Don't touch the child's belief. Rappi's 2021 Medellín billboard "Santa no son LOS PAPÁS. Santa es Rappi Card" was pulled within a day after backlash. In Colombia the Niño Dios brings the gifts on the night of the 24th, and any mechanic has to protect that.</li>
+<li>Stunts that fail can still travel if the failure is filmed. Domino's Japan's reindeer delivery trial was dropped within a week and replaced with scooters dressed as reindeer, and the training video still went round the world.</li>
+
+</ul>
+</section>
+<section class="sec" id="s3" data-toc="Top 10 to steal from" data-group="Activations"><h2>Top 10 to steal from</h2>
+<ul class="mdl">
+
+<li>WestJet Christmas Miracle: collect wishes on the way in, buy and wrap overnight, hand them over on arrival with hidden cameras. A courier version fits in one night.</li>
+<li>Amazon "Alexa, thank my driver": one tap by the customer becomes cash for the courier. The cheapest way to make couriers the heroes.</li>
+<li>UberSANTA Lima 2016: a gift button inside the app, a driver delivers a surprise for a token S/5, part of it to charity. Proven in Lima already.</li>
+<li>Coca-Cola Caravana Navideña (Lima 2025, Mexico): a lit-up parade by district at 18:30. Translate it into a courier caravan through SMB streets (Gamarra and similar).</li>
+<li>Times Square Wishing Wall: people's handwritten wishes become the midnight confetti. Wishes could become the wrapping, or the cargo couriers deliver.</li>
+<li>iFood couriers' Christmas: reverse the roles so the courier receives the delivery. It films well and is true to the brand.</li>
+<li>Uber Carolers and the holiday hub video message: deliver an experience (a song, a person, a recorded message) rather than a parcel.</li>
+<li>Spotify Wrapped: a personal year-end card people post themselves. An SMB or courier "year in deliveries" card for creators in Colombia and Ecuador.</li>
+<li>Domino's Japan reindeer: an absurd seasonal delivery vehicle, filmed even when it fails, with a cheap fallback (scooters dressed as reindeer). Usable for costumed courier motos.</li>
+</ul>
+</section>
+<section class="sec" id="s4" data-toc="Group 1 — Global brand activations and stunts" data-group="Activations"><h2>Group 1 — Global brand activations and stunts</h2>
+<div class="item"><div class="ihead"><h3>WestJet Christmas Miracle: Real-Time Giving</h3></div></div>
+<ul class="mdl">
+<li>Brand / organiser: WestJet (Canada); agencies Mosaic and Studio M.</li>
+<li>Where / when: Toronto and Hamilton departure gates to Calgary arrivals; video released 9 Dec 2013.</li>
+<li>What it was: passengers told a virtual Santa what they wanted at the gate and found it waiting on the baggage carousel when they landed.</li>
+<li>Mechanic: (1) at the departure gate a passenger scans their boarding pass at a "virtual kiosk" and tells a live Santa their wish list; (2) a "Digital Command Centre" compiles the lists; (3) 150 volunteer WestJetters at the destination buy, wrap and personalise gifts during the flight for 250 guests; (4) the gifts come out on a decorated baggage carousel, filmed by 19 hidden cameras.</li>
+<li>Scale / results: 35M+ YouTube views (goal was 500k), 172,800 shares, 328M+ media impressions from 1,600+ stories, trended in Canada for 2 days, 86% increase in sales versus the same period the year before (per the award entry).</li>
+<li>Why it travelled: the carousel reveal, with one-to-one reaction shots, a family-friendly length and a known deadline (a flight).</li>
+
+<li>Sources: <a href="https://shortyawards.com/6th/westjet-christmas-miracle-real-time-giving">Shorty Awards entry (6th Shorty Awards, 2014)</a>; <a href="https://www.clickz.com/inside-westjets-christmas-marketing-miracle/34511/">ClickZ</a>. Video on WestJet's YouTube channel.</li>
+<li>Evidence: well documented (award entry with numbers).</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Coca-Cola Christmas Truck Tour (UK)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Coca-Cola Great Britain.</li>
+<li>Where / when: 2024 tour from 21 Nov (London, Truman Brewery) through Edinburgh, Gateshead, Wakefield, Ashton-under-Lyne, Liverpool, Manchester, Leeds; 8 stops on the official page.</li>
+<li>What it was: the red "Holidays Are Coming" truck parks at a mall or pub car park for an afternoon and evening.</li>
+<li>Mechanic: visitors queue for a photo in front of the truck, play festive games, take part in a lucky dip for merchandise, get a drink; each visit triggers a donation.</li>
+<li>Scale / results: hours 12:00–20:00 on most stops; Coca-Cola donated the equivalent of a meal to FareShare per visitor, aiming for up to 1 million meals in the season (official page). Press listed more stops (17), which I did not confirm.</li>
+<li>Why it travelled: one iconic object everyone photographs the same way; people post "the truck is in town".</li>
+
+<li>Sources: <a href="https://www.coca-cola.com/gb/en/social/coca-cola-christmas-in-great-britain-/coca-cola-christmas-truck-tour-2024-destinations">Coca-Cola GB tour page, 2024</a>; <a href="https://londonist.com/london/christmas-in-london/coca-cola-truck-london-christmas-2024">Londonist, 2024</a>.</li>
+<li>Evidence: partly documented (stops and charity mechanic confirmed, no visitor totals).</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Caravana Navideña Coca-Cola (Mexico)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Coca-Cola México with bottlers and city governments.</li>
+<li>Where / when: 2024 season ran 23 Nov–17 Dec across Mexican cities; confirmed stops include Mexicali (4 Dec, 18:00), Toluca (6 Dec), Hermosillo (7 Dec), León and Tepic (8 Dec), Puerto Vallarta (13 Dec), Cuautitlán Izcalli (14 Dec), Guadalajara (15 Dec), San Luis Potosí (17 Dec).</li>
+<li>What it was: a night parade of lit trucks and floats with dancers, polar bears and Santa, on a fixed route per city.</li>
+<li>Mechanic: families learn the route and time from local press and city halls, line the streets after dark and film the floats going past; the city closes roads.</li>
+<li>Scale / results: press describes "millions" preparing to attend (adn40). Search summaries cite 18 caravans, a trailer plus six floats and about 120 dancers, at least MXN 2.4M of public spending and 100+ tonnes of rubbish (SinEmbargo); unverified, because the page could not be opened.</li>
+<li>Why it travelled: a fixed date and route announced weeks ahead becomes a local news event ("route and road closures"), and everyone films the same procession.</li>
+
+<li>Sources: <a href="https://www.adn40.mx/mexico/2024-11-22/caravana-coca-cola-mexico-estados-fechas-rutas">adn40, 22 Nov 2024</a>; <a href="https://www.infobae.com/mexico/2024/12/04/caravana-navidena-coca-cola-en-edomex-esta-sera-la-ruta-y-cierres-viales/">Infobae, 4 Dec 2024</a>; <a href="https://www.sinembargo.mx/4734361/gobiernos-de-izquierda-y-derecha-promocionan-a-coca-cola-con-sus-caravanas-navidenas/">SinEmbargo (not opened)</a>.</li>
+<li>Evidence: partly documented (dates and route confirmed, scale not).</li>
+</ul>
+<div class="item"><div class="ihead"><h3>KFC Japan — "Kentucky for Christmas"</h3></div></div>
+<ul class="mdl">
+<li>Brand: KFC Japan.</li>
+<li>Where / when: Japan, since 1974.</li>
+<li>What it was: a brand-invented Christmas tradition: a fried-chicken party bucket for Christmas Eve.</li>
+<li>Mechanic: (1) KFC starts advertising and taking pre-orders and reservations as early as late October; (2) families book a Christmas bucket (originally chicken plus a bottle of wine, now with sides, cake and commemorative plates); (3) they pick it up on 23–25 Dec.</li>
+<li>Scale / results: 24 Dec is the busiest day of the year, about ten times KFC Japan's annual average (KFC global site). A search summary cites ¥7bn in sales over 23–25 Dec 2023 (unverified).</li>
+<li>Why it travelled: it answered an actual gap ("no turkey in Japan") with a simple ritual and a booked slot.</li>
+
+<li>Sources: <a href="https://global.kfc.com/stories/how-kentucky-for-christmas-began-in-japan">KFC global, "How Kentucky for Christmas began in Japan"</a>; <a href="https://www.cnn.com/travel/article/kfc-christmas-tradition-japan">CNN Travel</a>.</li>
+<li>Evidence: partly documented (origin and peak confirmed, recent numbers not).</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Lotería de Navidad — "Justino" (2015)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Loterías y Apuestas del Estado (Spain); Leo Burnett Madrid.</li>
+<li>Where / when: Spain, Nov–Dec 2015.</li>
+<li>What it was: an animated short about a night-shift security guard at a mannequin factory who leaves little scenes made with mannequins for the day shift. His colleagues share their winning lottery ticket with him. Line: "El mayor premio es compartirlo".</li>
+<li>Mechanic: a film-led campaign. The jury praised digital pieces in which the character "comes alive and endures over time", but I found no specifics on what viewers did.</li>
+<li>Scale / results: Cannes Lions 2016 Cyber Grand Prix (out of 2,886 Cyber entries); El Sol Grand Prix in TV/Cinema. The award article gives no views or sales figures.</li>
+<li>Why it travelled: the sharing line plus a lovable night worker nobody sees, which maps directly onto couriers.</li>
+
+<li>Sources: <a href="https://www.latinspots.com/noticia/justino-el-grand-prix-de-leo-burnett-en-cyber/40581">Latinspots, 22 Jun 2016</a>; <a href="https://www.latinspots.com/noticia/loteras-y-apuestas-del-estado-y-leo-burnett-traen-la-historia-de-justino-para-esta-navidad/38305">Latinspots launch note</a>.</li>
+<li>Evidence: partly documented (no numbers).</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Ruavieja — "Tenemos que vernos más" (2018)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Ruavieja liqueur (Spain); Leo Burnett Madrid.</li>
+<li>Where / when: Spain, launched 19 Nov 2018.</li>
+<li>What it was: a calculator website that tells you how many days you have left to spend with a chosen person, plus a film of real people reacting to their result.</li>
+<li>Mechanic: (1) on tenemosquevernosmas.com you pick a person and enter age, sex, where you each live and how often you meet; (2) the tool cross-references Spanish INE life-expectancy data and returns the remaining time together; (3) people share their own number; (4) the brand stopped paid promotion and partnered with the bus company ALSA to subsidise return tickets so people could go and see each other.</li>
+<li>Scale / results: the brand paused media because the campaign was spreading on its own (Reason Why). A search summary cites 6.6M+ YouTube views and 750,000 views before TV (unverified).</li>
+<li>Why it travelled: a personal number nobody wants to know but everyone checks and shares, followed by a real-world payoff (the ticket).</li>
+
+<li>Sources: <a href="https://www.reasonwhy.es/actualidad/ruavieja-tenemos-vernos-mas-2018">Reason Why, 19 Nov 2018</a>; <a href="https://shots.net/news/view/96841-calculator-predicting-time-left-with-loved-ones-goes-viral">shots.net</a>.</li>
+<li>Evidence: partly documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Edeka — #heimkommen (2015)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Edeka (Germany); Jung von Matt; director Alex Feil.</li>
+<li>Where / when: released 28 Nov 2015.</li>
+<li>What it was: a film in which a lonely grandfather fakes his own death so his scattered children come home for Christmas dinner.</li>
+<li>Mechanic: none for participants; the hashtag and integrated media did the work.</li>
+<li>Scale / results: 300,000 likes and 500,000 Facebook shares within four days; 20M+ YouTube views by 2 Dec; 43M+ by 18 Dec 2015. The song "Dad" reached no. 43 in the German charts. It spawned parodies, including one by Deutsche Bahn.</li>
+<li>Why it travelled: a shocking twist people argued about, and parody-ready.</li>
+
+<li>Sources: <a href="https://en.wikipedia.org/wiki/Heimkommen">Wikipedia, "Heimkommen"</a>; <a href="https://www.horizont.net/marketing/nachrichten/Jung-von-Matt-Weihnachtskampagne-Warum-im-Edeka-Spot-ein-verzweifelter-Grossvater-seinen-Tod-vortaeuscht-137675">Horizont</a>.</li>
+<li>Evidence: well documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>UPS — "Your Wishes Delivered" (2014–2018)</h3></div></div>
+<ul class="mdl">
+<li>Brand: UPS; agency T3 (2018).</li>
+<li>Where / when: US, holiday seasons since 2014.</li>
+<li>What it was: UPS filmed real wishes being delivered (a child who loves her UPS driver, Hurricane Maria relief, a soldier reunited with a rescued dog) and paid charities for each wish shared.</li>
+<li>Mechanic: (1) the public posts a wish with #WishesDelivered or through the UPS site; (2) UPS donates $1 per wish to one of three charities, up to $100,000; (3) UPS fulfils a few hero wishes on film, with drivers as protagonists.</li>
+<li>Scale / results: 2018 six-week campaign: 374,000+ shares, 28M+ video views, 130M impressions (Shorty entry); $500,000 donated since 2014 (Sustainable Brands, via search summary).</li>
+<li>Why it travelled: the driver as a recognisable neighbour, plus "your share = $1".</li>
+
+<li>Sources: <a href="https://shortyawards.com/11th/ups-wishes-delivered-2">Shorty Awards 11th entry (2019, for the 2018 campaign)</a>; <a href="https://www.globenewswire.com/news-release/2018/11/14/1651550/0/en/UPS-Delivers-Wishes-And-Gives-Back-This-Holiday-Season.html">GlobeNewswire, 14 Nov 2018</a>.</li>
+<li>Evidence: partly documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Amazon — "Alexa, thank my driver" / Thank My Driver</h3></div></div>
+<ul class="mdl">
+<li>Brand: Amazon (US).</li>
+<li>Where / when: since 2022; 2025 holiday window 3–31 Dec.</li>
+<li>What it was: customers thank their last delivery driver by voice or in the app, and Amazon pays the driver.</li>
+<li>Mechanic: (1) say "Alexa, thank my driver" or search "thank my driver" in the Amazon app; (2) the most recent driver gets $5, paid by Amazon, once per delivery; (3) after 2M thank-yous, Amazon awards $100 to the 1,250 most-thanked drivers each day (1,000 DSP associates, 200 Flex, 50 Hub) until 31 Dec.</li>
+<li>Scale / results: 51M thank-yous since launch; 5.5M in December 2025 alone. The 2M cap was reached on 10 Dec 2025 (press, via search).</li>
+<li>Why it travelled: zero cost to the customer, a feel-good action, and press explainers ("how to tip your driver for free").</li>
+
+<li>Sources: <a href="https://www.aboutamazon.com/news/transportation/thank-my-driver-amazon-delivery">About Amazon</a>; <a href="https://www.yahoo.com/news/alexa-thank-driver-promotion-gives-170511732.html">Yahoo/News</a>.</li>
+<li>Evidence: well documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Domino's Japan — reindeer delivery (2016)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Domino's Pizza Japan; with a reindeer research centre in Hokkaido.</li>
+<li>Where / when: Hokkaido, announced late Nov 2016, dropped about 1 Dec 2016.</li>
+<li>What it was: a trial to deliver pizzas by reindeer in snow, with a GPS tracker so customers could follow the reindeer.</li>
+<li>Mechanic: Domino's released a training video (boxes sliding off reindeer backs, switching to a red sleigh). It was announced as a "Snowfall Delivery Countermeasure Room" service for early December.</li>
+<li>Scale / results: worldwide coverage (CBS, NBC, Japan Times, Fortune, The Drum). Dropped because the reindeer could not be controlled, would not stop at houses and turned pizzas upside down; replaced with scooters decorated with antlers and fluffy tails.</li>
+<li>Why it travelled: an absurd but plausible seasonal vehicle, and the failure was funny too.</li>
+
+<li>Sources: <a href="https://www.cbsnews.com/news/dominos-japan-is-teaching-reindeer-to-deliver-pizzas-this-winter/">CBS News, 28 Nov 2016</a>; <a href="https://www.nbcnews.com/business/business-news/domino-s-tried-reindeer-delivery-program-you-can-guess-how-n691171">NBC News, 2 Dec 2016</a>.</li>
+<li>Evidence: well documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Uber — Holiday 2024 (Uber Carolers, tree delivery, gift video messages)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Uber / Uber Eats (US).</li>
+<li>Where / when: Carolers on Saturday 7 Dec 2024 only, in NYC, LA, Dallas, Miami and Washington DC; tree delivery and Holiday Hub 3–25 Dec.</li>
+<li>What it was: a set of on-demand holiday "deliveries" that were experiences rather than goods.</li>
+<li>Mechanic: on 7 Dec you open the app and tap the "Carolers" store, and a troupe of carolers arrives at your home, office or party with Diageo spirits. Through the Holiday Hub you can send a gift and record a video message that goes with it. Christmas trees, wreaths and poinsettias can be ordered via Uber Eats.</li>
+<li>Scale / results: no numbers published.</li>
+<li>Why it travelled: "you can order carolers on Uber" works as a headline in itself (Time Out and others).</li>
+
+<li>Sources: <a href="https://www.uber.com/newsroom/holiday-2024">Uber Newsroom, Holiday 2024</a>; <a href="https://www.timeout.com/usa/news/you-can-get-presents-a-tree-and-even-carolers-delivered-with-uber-this-year-120624">Time Out USA, Dec 2024</a>.</li>
+<li>Evidence: partly documented (mechanic confirmed, no results).</li>
+</ul>
+<div class="item"><div class="ihead"><h3>iFood — Christmas for couriers (Brazil, 2021)</h3></div></div>
+<ul class="mdl">
+<li>Brand: iFood.</li>
+<li>Where / when: Brazil, Christmas 2021 (credits usable from 20 Dec).</li>
+<li>What it was: a role reversal in which couriers received the gift.</li>
+<li>Mechanic: 25,000 partner couriers received iFood Card credit worth R$1.5M in total, spendable in the app (restaurants, supermarkets, pharmacies, pet shops). Gift kits were handed out at iFood headquarters in Osasco, and the handover was filmed.</li>
+<li>Scale / results: 25,000 couriers, R$1.5M. No reach figures.</li>
+<li>Why it travelled: the courier on the receiving end ("it's wonderful to be treated well and recognised").</li>
+
+<li>Sources: <a href="https://institucional.ifood.com.br/entregadores/acao-leva-natal-especial-aos-entregadores/">iFood institutional</a>.</li>
+<li>Evidence: partly documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Zomato / Blinkit — New Year's Eve record despite a courier strike (India, 2025)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Eternal (Zomato, Blinkit).</li>
+<li>Where / when: India, 31 Dec 2025.</li>
+<li>What it was: not a campaign but a cautionary tale. The CEO publicly celebrated record New Year's Eve orders while gig unions were calling a strike.</li>
+<li>Mechanic: none. The CEO posted on X: 75 lakh (7.5M) orders, 4.5 lakh (450,000) delivery partners, 63 lakh customers, "no special incentives".</li>
+<li>Scale / results: the same report mentions about 40,000 partners in a 25 Dec protest and 50–60% disruption in some cities.</li>
+<li>Why it travelled: as a labour controversy.</li>
+
+<li>Sources: <a href="https://indianstartupnews.com/news/zomato-blinkit-deliver-record-75-lakh-orders-on-new-years-eve-despite-strike-calls-deepinder-goyal-10965340">Indian Startup News, 1–2 Jan 2026</a>.</li>
+<li>Evidence: partly documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Spotify Wrapped (year-end recap)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Spotify.</li>
+<li>Where / when: global, early December yearly (2025 edition referenced).</li>
+<li>What it was: a personal year-in-review card stack built for Stories.</li>
+<li>Mechanic: open the app, swipe through your stats (top artists, minutes, "Listening Age", "Clubs"), compare live with friends (2025), and post the cards.</li>
+<li>Scale / results: 2025: 200M engaged users in about 24 hours, +19% YoY; ~500M shares, +41%. In 2024 the same 200M milestone took 62 hours.</li>
+<li>Why it travelled: personal data, flattering framing and a native vertical format.</li>
+
+<li>Sources: <a href="https://www.musicbusinessworldwide.com/spotify-wrapped-campaign-hit-200m-engaged-users-in-24-hours-a-19-yoy-increase/">Music Business Worldwide, Dec 2025</a>; <a href="https://variety.com/2025/music/news/spotify-wrapped-breaks-own-record-250-million-engagements-1236603493/">Variety, Dec 2025</a>.</li>
+<li>Evidence: well documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Times Square New Year's Eve — Wishing Wall and confetti</h3></div></div>
+<ul class="mdl">
+<li>Organisers: Times Square Alliance and Countdown Entertainment; presenting sponsor Planet Fitness.</li>
+<li>Where / when: Broadway plazas between 45th and 47th Streets, the week before 31 Dec; plus a virtual wall online.</li>
+<li>What it was: visitors write wishes on pieces of confetti, which are mixed into the midnight drop.</li>
+<li>Mechanic: (1) write a wish on confetti at the wall, or online; (2) wishes are collected until 29 Dec; (3) a press "confetti test" on 29 Dec at the sponsor's stage; (4) 3,000 lb of confetti, including the wishes, falls at midnight.</li>
+<li>Scale / results: messages in 40+ languages (CBS, 2023). A search summary cites 180,000 wishes for NYE 2026 (unverified).</li>
+<li>Why it travelled: "your wish falls on the crowd at midnight", and the confetti test gives the press a second date before the night.</li>
+
+<li>Sources: <a href="https://www.cbsnews.com/newyork/news/new-years-eve-organizers-test-out-confetti-drop-in-times-square-last-day-to-submit-wishes/">CBS New York, 29 Dec 2023</a>; <a href="https://www.timessquarenyc.org/news-and-press-releases/nye-2026-confetti-test">Times Square Alliance press release</a>.</li>
+<li>Evidence: partly documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Réveillon de Copacabana (Rio de Janeiro)</h3></div></div>
+<ul class="mdl">
+<li>Organiser: Prefeitura do Rio.</li>
+<li>Where / when: Copacabana beach plus 10 more stages across the city, 31 Dec 2024 → 2025.</li>
+<li>What it was: the world's biggest New Year's Eve (Guinness), with stages on the sand and fireworks from barges.</li>
+<li>Mechanic: people in white on the sand, three Copacabana stages (Palco Rio, Samba, Leme/gospel), a laser show before the countdown, 12 minutes of fireworks from 10 barges.</li>
+<li>Scale / results: 5M+ people city-wide, 2.6M in Copacabana; 13 stages; 8,358 municipal agents, 5,000 cleaners, 980 tonnes of waste; 220,000 metro trips. The city page names no sponsors.</li>
+<li>Why it travelled: the aerial wide shot of crowds and fireworks, plus the dress code (white).</li>
+
+<li>Sources: <a href="https://prefeitura.rio/cidade/reveillon-rio-2025-mais-de-cinco-milhoes-de-pessoas-celebram-a-chegada-do-ano-novo-na-maior-virada-do-mundo/">Prefeitura do Rio, Jan 2025</a>.</li>
+<li>Evidence: well documented (scale), thinly documented (brand presence).</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Cadbury — Secret Santa Postal Service (UK)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Cadbury (Mondelez); VCCP London.</li>
+<li>Where / when: UK, launched 14 Nov 2022; ran in several seasons.</li>
+<li>What it was: posters that work as a post office. Scan one and Cadbury sends a free bar, anonymously, to someone you choose.</li>
+<li>Mechanic: (1) find a digital 6-sheet, static poster or flyposter (static ones were activated with AR); (2) scan the QR code; (3) check whether bars are "in stock" (released in drops until 24 Dec); (4) pick a recipient and a bar and enter the address; (5) a Cadbury postie (the character "Jeff") delivers it anonymously.</li>
+<li>Scale / results: 120,000 bars released through 24 Dec 2022; 75,000 more bars donated to 200+ Trussell Trust food banks. Press cites 200+ digital posters and "150,000+ bars sent" for a later season (unverified).</li>
+<li>Why it travelled: free, secret and for someone else, with scarcity drops that made people check back.</li>
+
+<li>Sources: <a href="https://www.vccp.com/uk/work/cadbury/the-cadbury-secret-santa-postal-service">VCCP case page</a>; <a href="https://secretsanta.cadbury.co.uk/faqs">Cadbury FAQ</a>; <a href="https://www.dandad.org/work/d-ad-awards-archive/cadbury-secret-santa-postal-service">D&amp;AD archive</a>.</li>
+<li>Evidence: well documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>NORAD Tracks Santa and USPS Operation Santa (Santa logistics as a ritual)</h3></div></div>
+<ul class="mdl">
+<li>Organisers: NORAD (US and Canada military); USPS.</li>
+<li>Where / when: NORAD since 1955, on 24 Dec; USPS since 1912, letters accepted from September, all-digital adoption since 2019.</li>
+<li>What it was: two institutions that turned "Santa's delivery" into a public ritual: live tracking of the route (NORAD) and members of the public answering children's letters with real gifts (USPS).</li>
+<li>Mechanic: NORAD runs a site in 9 languages, an app and a phone line (1-877-HI-NORAD) staffed by volunteers on 24 Dec, and kids follow Santa's route live. USPS: kids write to 123 Elf Rd, North Pole 88888; letters are anonymised and published online; an adopter picks one and ships a gift (since 2024 via a Toys"R"Us gift shop).</li>
+<li>Scale / results: NORAD gets at least 100,000 calls a year, with millions following online (VOA/CPR 2024). Search summaries cite 32M site views and 380,000 calls on 24 Dec 2024 (unverified).</li>
+<li>Why it travelled: a map with a moving dot, and a letter you can adopt.</li>
+
+<li>Sources: <a href="https://www.cpr.org/2024/12/24/norad-santa-tracker-christmas-tradition/">CPR/AP, 24 Dec 2024</a>; <a href="https://www.voanews.com/a/7913717.html">VOA</a>; <a href="https://en.wikipedia.org/wiki/USPS_Operation_Santa">Wikipedia, USPS Operation Santa</a>; <a href="https://www.uspsoperationsanta.com/how">USPS Operation Santa, how it works</a>.</li>
+<li>Evidence: partly documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>UberSANTA (Uber × Mastercard, Lima and Arequipa, 2016)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Uber Peru with Mastercard; charity Magia por los Niños con Cáncer.</li>
+<li>Where / when: Lima and Arequipa, 16 Dec 2016 (qualifying trips 9–15 Dec).</li>
+<li>What it was: a one-day "UberSANTA" option in the app; a driver arrived with a surprise gift.</li>
+<li>Mechanic: (1) enter the code UBERSANTA2016; (2) choose UberSANTA in the app; (3) request it like a ride, for S/5; (4) a driver delivers a gift to home or office. Gift tiers: everyone got a Christmas pack or a selfie stick; Mastercard payers could get a GoPro, a Fujifilm instant camera or a S/170 gift card; users with 10+ Mastercard trips that week could win a shopping spree of up to S/5,000 at Real Plaza. 40% of the delivery value of the Christmas packs went to the charity.</li>
+<li>Scale / results: "hundreds of gifts" (Uber Chile blog). No results published.</li>
+<li>Why it travelled: a mystery gift arriving by app, and the novelty of "Santa swapped his sleigh for Uber" (local tech press).</li>
+
+<li>Sources: <a href="https://www.uber.com/es-PE/blog/lima/ubersanta/">Uber blog Lima (2016)</a>; <a href="https://gadgerss.com/2016/12/13/esta-navidad-santa-cambia-trineo-uber/">Gadgerss, 13 Dec 2016</a>.</li>
+<li>Evidence: well documented (mechanic), thinly documented (results).</li>
+</ul>
+</section>
+<section class="sec" id="s5" data-toc="Group 2 — Festival-scale public moments in the three markets" data-group="Activations"><h2>Group 2 — Festival-scale public moments in the three markets</h2>
+<p>Compiled from the traditions report (report 1), where each has full sources. Brand presence and sponsorship for these were not researched in this pass.</p>
+<div class="item"><div class="ihead"><h3>Alumbrados EPM, Medellín (28 Nov – 12 Jan)</h3></div></div>
+<ul class="mdl">
+<li>58th edition in 2025: 8 million LED bulbs, 600 km of light tubing, 25,000 figures across 61 points; more than 400,000 tourists expected. Owned by the public utility EPM. Source: <a href="https://www.infobae.com/colombia/2025/11/29/medellin-encendio-los-alumbrados-epm-con-ocho-millones-de-bombillas-led-este-ano-es-un-homenaje-a-la-historia-de-la-ciudad/">Infobae, 29 Nov 2025</a></li>
+</ul>
+
+<div class="item"><div class="ihead"><h3>Feria de Cali — Salsódromo (opens 25 Dec, runs to 30 Dec)</h3></div></div>
+<ul class="mdl">
+<li>68th edition in 2025: about 32,000 spectators, 2,200 dancers (+40%), full stands in constant rain. Source: <a href="https://occidente.co/cali/salsodromo-2025-en-la-feria-de-cali/">Occidente</a></li>
+</ul>
+
+<div class="item"><div class="ihead"><h3>Pase del Niño Viajero, Cuenca (24 Dec)</h3></div></div>
+<ul class="mdl">
+<li>About 10:00–15:00, national heritage since 2008; costumed children, floats, bands, an image of the Christ Child carried through the city. Source: <a href="https://www.turismo.gob.ec/el-pase-del-nino-en-cuenca-riqueza-costumbrista-en-navidad/">Ministry of Tourism</a></li>
+</ul>
+
+<div class="item"><div class="ihead"><h3>Año Viejo monigote streets, Guayaquil (from 24 Dec to 31 Dec)</h3></div></div>
+<ul class="mdl">
+<li>1,100 licensed sellers in three zones, 08:00–22:00; US$15–500; sales climb from 24 Dec. Ruta de los Monigotes Gigantes: 21 official figures 4–11 m. Sources: <a href="https://guayaquil.gob.ec/comerciantes-monigotes-venden-productos-sectores-guayaquil/">Municipality of Guayaquil</a>, <a href="https://www.eluniverso.com/guayaquil/comunidad/ruta-de-los-monigotes-gigantes-2025-en-el-suburbio-de-guayaquil-ubicaciones-y-personajes-nota/">El Universo</a></li>
+</ul>
+
+<div class="item"><div class="ihead"><h3>Nochebuena at midnight and Christmas Day on the beach, Lima (24–25 Dec)</h3></div></div>
+<ul class="mdl">
+<li>After the midnight hug people go out to greet neighbours while fireworks run for up to half an hour; on the 25th Agua Dulce and Los Yuyos fill from early morning. Sources: <a href="https://trome.com/actualidad/7-cosas-que-solo-los-peruanos-hacemos-en-navidad-fotos-video-imp-noticia/">Trome</a>, <a href="https://www.infobae.com/peru/2023/12/25/chorrillos-miles-de-familias-limenas-disfrutan-del-feriado-de-navidad-en-popular-playa-agua-dulce/">Infobae, 25 Dec 2023</a></li>
+</ul>
+
+<div class="item"><div class="ihead"><h3>Santurantikuy (Cusco, 22–24 Dec), Takanakuy (Chumbivilcas, 25 Dec), Diablada Pillareña (Píllaro, 1–6 Jan)</h3></div></div>
+<ul class="mdl">
+<li>A Christmas market of saints and Niño Manuelito figures; a ritual fistfight that closes the year's disputes with an embrace; a devil masquerade with about 18,000 visitors a day projected for 2026. Sources: <a href="https://www.boletomachupicchu.com/santurantikuy-cusco/">Boleto Machu Picchu</a>, <a href="https://www.infobae.com/peru/2024/12/15/takanakuy-la-violenta-tradicion-andina-en-peru-donde-se-saldan-cuentas-a-puno-limpio-en-navidad/">Infobae</a>, <a href="https://www.eluniverso.com/noticias/ecuador/diablada-pillaro-evento-patrimonial-movimiento-turistico-feriado-ano-nuevo-nota/">El Universo</a></li>
+</ul>
+</section>
+<section class="sec" id="s6" data-toc="Group 3 — Local brand activations in Peru, Colombia and Ecua" data-group="Activations"><h2>Group 3 — Local brand activations in Peru, Colombia and Ecuador</h2>
+<div class="item"><div class="ihead"><h3>Caravana Navideña Coca-Cola — Peru 2025</h3></div></div>
+<ul class="mdl">
+<li>Brand: Coca-Cola Peru (marketing director Sabrina Sánchez quoted).</li>
+<li>Where / when: Lima 12–14 Dec 2025 (Barranco, Los Olivos, Independencia, Jesús María); provinces on 5, 7, 19 and 21 Dec (Piura, Trujillo, Ica, Arequipa). Starts at 18:30.</li>
+<li>What it was: Coca-Cola's lit Christmas caravan with characters on a district route; the first year it went outside Lima.</li>
+<li>Mechanic: free; families gather on the announced route at dusk for "shows with festive characters, dazzling lights and special routes". There is a digital assistant called "Nico" (Coca-Cola Zero Sugar). Theme: "Toma una Coca-Cola. Vive el espíritu navideño".</li>
+<li>Scale / results: no attendance or float numbers published.</li>
+<li>Why it travelled: route-and-time articles in local press (Trome, Peru Retail, Mercado Negro) work as invitations.</li>
+
+<li>Sources: <a href="https://www.peru-retail.com/vuelve-la-caravana-navidena-de-coca-cola-en-lima-y-provincias-revisa-las-fechas-y-recorridos/">Peru Retail, 6 Dec 2025</a>; <a href="https://trome.com/actualidad/navidad-caravanas-navidenas-coca-cola-con-papa-noel-en-lima-peru-fechas-y-recorridos-shows-gratuitos-de-luces-y-personajes-eventos-espectaculos-navidenos-fotos-video-noticia/">Trome</a>.</li>
+<li>Evidence: partly documented.</li>
+</ul>
+<div class="item"><div class="ihead"><h3>Rappi — "Santa no son LOS PAPÁS" billboard (Medellín, 2021)</h3></div></div>
+<ul class="mdl">
+<li>Brand: Rappi (RappiCard).</li>
+<li>Where / when: Medellín, about 15–16 Dec 2021.</li>
+<li>What it was: an outdoor ad, "Santa no son LOS PAPÁS. Santa es Rappi Card. Feliz Navi Cash".</li>
+<li>Mechanic: none. A user posted a photo on Twitter and the backlash followed: it "spoils the magic" for children.</li>
+<li>Scale / results: Rappi apologised and removed every billboard in the campaign the next day.</li>
+<li>Why it travelled: as an outrage post.</li>
+
+<li>Sources: <a href="https://www.semana.com/economia/empresas/articulo/la-polemica-por-la-publicidad-navidena-de-rappi/202138/">Semana, Dec 2021</a>.</li>
+<li>Evidence: well documented (single source with statement).</li>
+</ul>
+<div class="item"><div class="ihead"><h3>UberSANTA Peru 2016 — see Group 1</h3></div></div>
+
+</section>
+<section class="sec" id="s7" data-toc="Gaps" data-group="Activations"><h2>Gaps</h2>
+<ul class="mdl">
+<li>Group 2 is entirely missing: dates, visitors, budgets and sponsors for the Alumbrados de Medellín (EPM), Bogotá and Cali lights, the Feria de Cali beyond the Salsódromo, the Barranquilla precarnaval (check whether anything falls in 24–27 Dec), Pase del Niño Viajero, the Guayaquil and Quito monigote galleries and contests (including brand monigotes), the Fiestas de Quito, the Circuito Mágico del Agua's Christmas programme, Lima's trees, Gamarra and Mesa Redonda, chocolatadas, Santurantikuy, Takanakuy and the Diablada Pillareña.</li>
+
+<li>Global cases not checked: Glovo, Deliveroo, DoorDash, DiDi and PedidosYa Christmas activations (no specific stunt found in a first search); La Poste's Secrétariat du Père Noël; Sydney NYE; Coca-Cola Caravana attendance numbers; Justino and Ruavieja view counts (only in search summaries); KFC Japan's recent sales; NORAD's 2024 call and visit numbers.</li>
+<li>Cost data is almost absent. Only the caps are known (Cadbury 120,000 bars, Amazon 2M × $5 plus $100 prizes, UPS $100k, iFood R$1.5M), plus unverified public spending on the Mexican caravan.</li>
+<li>Award-entry results (WestJet's +86% sales, UPS) are self-reported by agencies.</li>
+</ul>
+</section>
+<section class="sec sources" id="sources">
+  <p class="eyebrow">Reference</p>
+  <h2>All sources</h2>
+  <p>Every link cited above, once, in order of first use. Figures were checked on the page itself, not taken from search snippets.</p>
+  <ol><li><a href="https://shortyawards.com/6th/westjet-christmas-miracle-real-time-giving">shortyawards.com</a> — Shorty Awards entry (6th Shorty Awards, 2014)</li><li><a href="https://www.clickz.com/inside-westjets-christmas-marketing-miracle/34511/">clickz.com</a> — ClickZ</li><li><a href="https://www.coca-cola.com/gb/en/social/coca-cola-christmas-in-great-britain-/coca-cola-christmas-truck-tour-2024-destinations">coca-cola.com</a> — Coca-Cola GB tour page, 2024</li><li><a href="https://londonist.com/london/christmas-in-london/coca-cola-truck-london-christmas-2024">londonist.com</a> — Londonist, 2024</li><li><a href="https://www.adn40.mx/mexico/2024-11-22/caravana-coca-cola-mexico-estados-fechas-rutas">adn40.mx</a> — adn40, 22 Nov 2024</li><li><a href="https://www.infobae.com/mexico/2024/12/04/caravana-navidena-coca-cola-en-edomex-esta-sera-la-ruta-y-cierres-viales/">infobae.com</a> — Infobae, 4 Dec 2024</li><li><a href="https://www.sinembargo.mx/4734361/gobiernos-de-izquierda-y-derecha-promocionan-a-coca-cola-con-sus-caravanas-navidenas/">sinembargo.mx</a> — SinEmbargo (not opened)</li><li><a href="https://global.kfc.com/stories/how-kentucky-for-christmas-began-in-japan">global.kfc.com</a> — KFC global, "How Kentucky for Christmas began in Japan"</li><li><a href="https://www.cnn.com/travel/article/kfc-christmas-tradition-japan">cnn.com</a> — CNN Travel</li><li><a href="https://www.latinspots.com/noticia/justino-el-grand-prix-de-leo-burnett-en-cyber/40581">latinspots.com</a> — Latinspots, 22 Jun 2016</li><li><a href="https://www.latinspots.com/noticia/loteras-y-apuestas-del-estado-y-leo-burnett-traen-la-historia-de-justino-para-esta-navidad/38305">latinspots.com</a> — Latinspots launch note</li><li><a href="https://www.reasonwhy.es/actualidad/ruavieja-tenemos-vernos-mas-2018">reasonwhy.es</a> — Reason Why, 19 Nov 2018</li><li><a href="https://shots.net/news/view/96841-calculator-predicting-time-left-with-loved-ones-goes-viral">shots.net</a> — shots.net</li><li><a href="https://en.wikipedia.org/wiki/Heimkommen">en.wikipedia.org</a> — Wikipedia, "Heimkommen"</li><li><a href="https://www.horizont.net/marketing/nachrichten/Jung-von-Matt-Weihnachtskampagne-Warum-im-Edeka-Spot-ein-verzweifelter-Grossvater-seinen-Tod-vortaeuscht-137675">horizont.net</a> — Horizont</li><li><a href="https://shortyawards.com/11th/ups-wishes-delivered-2">shortyawards.com</a> — Shorty Awards 11th entry (2019, for the 2018 campaign)</li><li><a href="https://www.globenewswire.com/news-release/2018/11/14/1651550/0/en/UPS-Delivers-Wishes-And-Gives-Back-This-Holiday-Season.html">globenewswire.com</a> — GlobeNewswire, 14 Nov 2018</li><li><a href="https://www.aboutamazon.com/news/transportation/thank-my-driver-amazon-delivery">aboutamazon.com</a> — About Amazon</li><li><a href="https://www.yahoo.com/news/alexa-thank-driver-promotion-gives-170511732.html">yahoo.com</a> — Yahoo/News</li><li><a href="https://www.cbsnews.com/news/dominos-japan-is-teaching-reindeer-to-deliver-pizzas-this-winter/">cbsnews.com</a> — CBS News, 28 Nov 2016</li><li><a href="https://www.nbcnews.com/business/business-news/domino-s-tried-reindeer-delivery-program-you-can-guess-how-n691171">nbcnews.com</a> — NBC News, 2 Dec 2016</li><li><a href="https://www.uber.com/newsroom/holiday-2024">uber.com</a> — Uber Newsroom, Holiday 2024</li><li><a href="https://www.timeout.com/usa/news/you-can-get-presents-a-tree-and-even-carolers-delivered-with-uber-this-year-120624">timeout.com</a> — Time Out USA, Dec 2024</li><li><a href="https://institucional.ifood.com.br/entregadores/acao-leva-natal-especial-aos-entregadores/">institucional.ifood.com.br</a> — iFood institutional</li><li><a href="https://indianstartupnews.com/news/zomato-blinkit-deliver-record-75-lakh-orders-on-new-years-eve-despite-strike-calls-deepinder-goyal-10965340">indianstartupnews.com</a> — Indian Startup News, 1–2 Jan 2026</li><li><a href="https://www.musicbusinessworldwide.com/spotify-wrapped-campaign-hit-200m-engaged-users-in-24-hours-a-19-yoy-increase/">musicbusinessworldwide.com</a> — Music Business Worldwide, Dec 2025</li><li><a href="https://variety.com/2025/music/news/spotify-wrapped-breaks-own-record-250-million-engagements-1236603493/">variety.com</a> — Variety, Dec 2025</li><li><a href="https://www.cbsnews.com/newyork/news/new-years-eve-organizers-test-out-confetti-drop-in-times-square-last-day-to-submit-wishes/">cbsnews.com</a> — CBS New York, 29 Dec 2023</li><li><a href="https://www.timessquarenyc.org/news-and-press-releases/nye-2026-confetti-test">timessquarenyc.org</a> — Times Square Alliance press release</li><li><a href="https://prefeitura.rio/cidade/reveillon-rio-2025-mais-de-cinco-milhoes-de-pessoas-celebram-a-chegada-do-ano-novo-na-maior-virada-do-mundo/">prefeitura.rio</a> — Prefeitura do Rio, Jan 2025</li><li><a href="https://www.vccp.com/uk/work/cadbury/the-cadbury-secret-santa-postal-service">vccp.com</a> — VCCP case page</li><li><a href="https://secretsanta.cadbury.co.uk/faqs">secretsanta.cadbury.co.uk</a> — Cadbury FAQ</li><li><a href="https://www.dandad.org/work/d-ad-awards-archive/cadbury-secret-santa-postal-service">dandad.org</a> — D&amp;AD archive</li><li><a href="https://www.cpr.org/2024/12/24/norad-santa-tracker-christmas-tradition/">cpr.org</a> — CPR/AP, 24 Dec 2024</li><li><a href="https://www.voanews.com/a/7913717.html">voanews.com</a> — VOA</li><li><a href="https://en.wikipedia.org/wiki/USPS_Operation_Santa">en.wikipedia.org</a> — Wikipedia, USPS Operation Santa</li><li><a href="https://www.uspsoperationsanta.com/how">uspsoperationsanta.com</a> — USPS Operation Santa, how it works</li><li><a href="https://www.uber.com/es-PE/blog/lima/ubersanta/">uber.com</a> — Uber blog Lima (2016)</li><li><a href="https://gadgerss.com/2016/12/13/esta-navidad-santa-cambia-trineo-uber/">gadgerss.com</a> — Gadgerss, 13 Dec 2016</li><li><a href="https://www.infobae.com/colombia/2025/11/29/medellin-encendio-los-alumbrados-epm-con-ocho-millones-de-bombillas-led-este-ano-es-un-homenaje-a-la-historia-de-la-ciudad/">infobae.com</a> — Infobae, 29 Nov 2025</li><li><a href="https://occidente.co/cali/salsodromo-2025-en-la-feria-de-cali/">occidente.co</a> — Occidente</li><li><a href="https://www.turismo.gob.ec/el-pase-del-nino-en-cuenca-riqueza-costumbrista-en-navidad/">turismo.gob.ec</a> — Ministry of Tourism</li><li><a href="https://guayaquil.gob.ec/comerciantes-monigotes-venden-productos-sectores-guayaquil/">guayaquil.gob.ec</a> — Municipality of Guayaquil</li><li><a href="https://www.eluniverso.com/guayaquil/comunidad/ruta-de-los-monigotes-gigantes-2025-en-el-suburbio-de-guayaquil-ubicaciones-y-personajes-nota/">eluniverso.com</a> — El Universo</li><li><a href="https://trome.com/actualidad/7-cosas-que-solo-los-peruanos-hacemos-en-navidad-fotos-video-imp-noticia/">trome.com</a> — Trome</li><li><a href="https://www.infobae.com/peru/2023/12/25/chorrillos-miles-de-familias-limenas-disfrutan-del-feriado-de-navidad-en-popular-playa-agua-dulce/">infobae.com</a> — Infobae, 25 Dec 2023</li><li><a href="https://www.boletomachupicchu.com/santurantikuy-cusco/">boletomachupicchu.com</a> — Boleto Machu Picchu</li><li><a href="https://www.infobae.com/peru/2024/12/15/takanakuy-la-violenta-tradicion-andina-en-peru-donde-se-saldan-cuentas-a-puno-limpio-en-navidad/">infobae.com</a> — Infobae</li><li><a href="https://www.eluniverso.com/noticias/ecuador/diablada-pillaro-evento-patrimonial-movimiento-turistico-feriado-ano-nuevo-nota/">eluniverso.com</a> — El Universo</li><li><a href="https://www.peru-retail.com/vuelve-la-caravana-navidena-de-coca-cola-en-lima-y-provincias-revisa-las-fechas-y-recorridos/">peru-retail.com</a> — Peru Retail, 6 Dec 2025</li><li><a href="https://trome.com/actualidad/navidad-caravanas-navidenas-coca-cola-con-papa-noel-en-lima-peru-fechas-y-recorridos-shows-gratuitos-de-luces-y-personajes-eventos-espectaculos-navidenos-fotos-video-noticia/">trome.com</a> — Trome</li><li><a href="https://www.semana.com/economia/empresas/articulo/la-polemica-por-la-publicidad-navidena-de-rappi/202138/">semana.com</a> — Semana, Dec 2021</li><li><a href="https://www.mercadonegro.pe/actualidad/compras-navidenas-en-cuanto-aumentan-los-pedidos-por-delivery-y-que-compran-los-peruanos/">mercadonegro.pe</a> — Mercado Negro</li></ol>
+</section>
+
+  </main>
+</div>
+<script>
+(function(){
+  var b=document.body, burger=document.querySelector('.burger'), last=0;
+  function close(){b.classList.remove('nav')}
+  burger&&burger.addEventListener('click',function(){b.classList.add('nav')});
+  document.querySelector('.scrim').addEventListener('click',close);
+  document.querySelector('.navhead button').addEventListener('click',close);
+  document.querySelectorAll('.toc a').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  window.addEventListener('scroll',function(){var y=window.scrollY; if(burger){burger.classList.toggle('away',y>last&&y>200)} last=y},{passive:true});
+  var links={}; document.querySelectorAll('.toc a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('cur')}); var l=links[e.target.id]; l&&l.classList.add('cur')}})},{rootMargin:'0px 0px -70% 0px'});
+    document.querySelectorAll('section.sec[id]').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>

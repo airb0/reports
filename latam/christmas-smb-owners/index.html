@@ -1,0 +1,732 @@
+<title>Small-business owners: who they are and how they live</title>
+<style>
+@font-face{font-family:"PP Agrandir";src:url("fonts/PPAgrandir-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Suisse Intl";src:url("fonts/SuisseIntl-Book.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Suisse Intl";src:url("fonts/SuisseIntl-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+/* Layout: a long research document — sticky contents column left, one reading column right; drawer under 900px. */
+:root{
+  --bg:#FFFFFF; --fg:#000000; --body:#141414; --muted:#55605A; --line:#D5E6DC; --line2:#EAF4EE;
+  --panel:#E4FFF2; --plate:#F4F3D8; --accent:#C1F11D; --on-accent:#000000;
+  --display:"PP Agrandir","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --text:"Suisse Intl","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --max:1200px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141414; --fg:#FFFFFF; --body:#ECEFED; --muted:#A4ADA8; --line:#2E3532; --line2:#222826;
+  --panel:#1D2421; --plate:#2A2A22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141414; --fg:#FFFFFF; --body:#ECEFED; --muted:#A4ADA8; --line:#2E3532; --line2:#222826;
+  --panel:#1D2421; --plate:#2A2A22; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:var(--muted);text-underline-offset:2px}
+a:hover{text-decoration-color:var(--fg)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:40px}
+/* cover */
+.cover{padding-block:56px 40px;border-bottom:2px solid var(--fg)}
+.series{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:40px}
+.series a{text-decoration:none}
+.series .on{color:var(--fg);font-weight:600}
+.series .brand{color:var(--fg);font-weight:600;margin-right:6px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,6.4vw,76px);line-height:1;letter-spacing:-.02em;color:var(--fg);margin:0 0 22px;text-wrap:balance;max-width:16ch}
+.hl{position:relative;z-index:0;color:var(--on-accent);padding:0 .08em;white-space:nowrap}
+.hl:before{content:"";position:absolute;z-index:-1;left:-.06em;right:-.1em;top:.08em;bottom:-.04em;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='316' height='68' viewBox='0 0 316 68' preserveAspectRatio='none'%3E%3Cpath d='M314.41 25.529C262.307 28.9686 113.618 24 7.42536 24C57.9532 29.7926 206.773 42.8579 311.885 42.8579C279.451 42.5847 158.673 45.5592 0.410173 42.8579' stroke='%23C1F11D' stroke-width='48' fill='none'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+.sub{font-size:19px;line-height:1.45;max-width:60ch;margin:0 0 30px;color:var(--body)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:13px;color:var(--muted);margin:0;padding:0;list-style:none}
+.facts b{display:block;font-family:var(--display);font-size:22px;color:var(--fg);letter-spacing:-.01em;line-height:1.1;font-variant-numeric:tabular-nums}
+/* layout */
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:56px;align-items:start;padding-block:0 120px}
+.toc{position:sticky;top:env(safe-area-inset-top,0px);max-height:100vh;overflow-y:auto;padding-block:36px;font-size:13.5px;scrollbar-width:thin}
+.toc .g{margin-bottom:22px}
+.toc .gt{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);padding-bottom:7px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.toc ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.toc a{color:var(--muted);text-decoration:none;line-height:1.3;display:block}
+.toc a:hover,.toc a.cur{color:var(--fg)}
+main{min-width:0;padding-top:36px}
+.burger,.scrim,.navhead{display:none}
+/* sections */
+section.sec{padding-top:8px;margin-bottom:64px;scroll-margin-top:16px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.05;letter-spacing:-.015em;color:var(--fg);margin:0 0 14px;text-wrap:balance}
+h3{font-size:18px;font-weight:600;line-height:1.3;color:var(--fg);margin:0;text-wrap:balance}
+p{margin:0 0 12px;max-width:68ch}
+.lead{font-size:18px;line-height:1.5;max-width:62ch;margin-bottom:24px}
+.country{border-top:2px solid var(--fg);padding-top:20px}
+/* verdict cards */
+.verdicts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:8px 0 18px}
+.verdict{background:var(--panel);padding:20px 20px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.verdict .m{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.verdict .w{font-family:var(--display);font-size:24px;line-height:1.05;color:var(--fg);letter-spacing:-.01em}
+.verdict p{font-size:14.5px;margin:0}
+.verdict .fit{font-size:13.5px;border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+/* items */
+.item{border-top:1px solid var(--line);padding-block:20px 6px}
+.ihead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:10px}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ev{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--plate);color:var(--fg);padding:3px 7px;white-space:nowrap}
+.item ul{margin:0 0 12px;padding-left:18px;max-width:68ch}
+.item li{margin-bottom:5px}
+.hook{background:var(--panel);padding:12px 16px;margin:4px 0 12px;max-width:68ch;font-size:15px}
+.hook b{display:inline-block;background:var(--accent);color:var(--on-accent);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;margin-right:8px;vertical-align:1px}
+.src{font-size:13px;color:var(--muted);max-width:76ch;margin:0 0 10px}
+.src a{color:var(--muted)}
+.q{font-style:normal;color:var(--fg)}
+ul.mdl{margin:0 0 14px;padding-left:18px;max-width:72ch}
+ul.mdl li{margin-bottom:7px}
+ul.mdl li.sub2{margin-left:18px;list-style:circle;color:var(--body)}
+code{font-size:.9em;background:var(--plate);padding:0 4px}
+/* patterns */
+.pats{counter-reset:p;display:grid;gap:0}
+.pat{border-top:1px solid var(--line);padding-block:16px 4px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 8px}
+.pat:before{counter-increment:p;content:counter(p);font-family:var(--display);font-size:22px;color:var(--fg);line-height:1.1}
+.pat h3{margin-bottom:6px}
+/* tables */
+.tbl{overflow-x:auto;margin:10px 0 18px;border-top:2px solid var(--fg)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-weight:600;color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.win td{background:var(--panel)}
+tr.win td:first-child{box-shadow:inset 4px 0 0 var(--accent);padding-left:10px}
+.tag{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+/* sources */
+.sources ol{padding-left:22px;font-size:13px;color:var(--muted);columns:2;column-gap:36px}
+.sources li{margin-bottom:6px;break-inside:avoid;overflow-wrap:anywhere}
+.sources li a{color:var(--body)}
+.foot{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:40px}
+/* mobile */
+@media (max-width:900px){
+  .wrap{padding-inline:18px}
+  .layout{display:block}
+  .verdicts{grid-template-columns:minmax(0,1fr)}
+  .sources ol{columns:1}
+  .burger{display:flex;position:fixed;right:14px;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:30;width:44px;height:44px;align-items:center;justify-content:center;background:var(--fg);color:var(--bg);border:0;cursor:pointer;transition:transform .2s}
+  .burger.away{transform:translateY(-80px)}
+  .burger span,.burger span:before,.burger span:after{display:block;width:18px;height:2px;background:currentColor;position:relative}
+  .burger span:before,.burger span:after{content:"";position:absolute;left:0}
+  .burger span:before{top:-6px}.burger span:after{top:6px}
+  .toc{position:fixed;top:0;right:0;bottom:0;width:min(86vw,340px);max-height:none;background:var(--bg);z-index:50;padding:calc(env(safe-area-inset-top,0px) + 16px) 20px 40px;transform:translateX(100%);transition:transform .25s;border-left:1px solid var(--line)}
+  .navhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-weight:600;color:var(--fg)}
+  .navhead button{background:none;border:0;font-size:26px;line-height:1;color:var(--fg);cursor:pointer;padding:4px 8px}
+  body.nav .toc{transform:none}
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:40}
+  body.nav .scrim{display:block}
+  body.nav{overflow:hidden}
+  table{font-size:13.5px}
+}
+@media (prefers-reduced-motion:reduce){.toc,.burger{transition:none}}
+</style>
+<header class="cover wrap">
+  <div class="series"><span class="brand">Christmas 2026 · Latin America</span><span>1 · Traditions</span><span>2 · Holiday insights</span><span>3 · Social context & SMB</span><span>4 · Activations review</span><a class="on" href="#">5 · Small-business owners</a></div>
+  <h1>Who runs the <span class="hl">small</span> business</h1>
+  <p class="sub">A socio-demographic and lifestyle portrait of small-business owners in Peru, Colombia and Ecuador: who they are, how the business runs, how they are paid and borrow, and where the data stops.</p>
+  <ul class="facts"><li><b>3</b>countries</li><li><b>DANE · INEC · GEM · ComexPerú</b>main sources</li><li><b>33</b>sources linked</li></ul>
+</header>
+<button class="burger" type="button" aria-label="Open contents"><span></span></button>
+<div class="scrim"></div>
+<div class="layout wrap">
+  <nav class="toc" aria-label="Contents"><div class="navhead">Contents<button type="button" aria-label="Close contents">×</button></div><div class="g"><div class="gt">Owners</div><ul><li><a href="#s1">Across all three</a></li></ul></div><div class="g"><div class="gt">Peru</div><ul><li><a href="#s2">Peru</a></li><li><a href="#s3">Portrait in one paragraph</a></li><li><a href="#s4">Key numbers</a></li><li><a href="#s5">Who they are</a></li><li><a href="#s6">Archetypes</a></li><li><a href="#s7">Lifestyle</a></li><li><a href="#s8">Money and tools</a></li><li><a href="#s9">Identity and language</a></li><li><a href="#s10">Their December</a></li><li><a href="#s12">Strongest 8</a></li><li><a href="#s13">Gaps</a></li></ul></div><div class="g"><div class="gt">Colombia</div><ul><li><a href="#s14">Colombia</a></li><li><a href="#s15">Portrait in one paragraph</a></li><li><a href="#s16">Key numbers</a></li><li><a href="#s17">Who they are</a></li><li><a href="#s18">Archetypes</a></li><li><a href="#s19">Lifestyle</a></li><li><a href="#s20">Money and tools</a></li><li><a href="#s21">Identity and language</a></li><li><a href="#s22">Their December</a></li><li><a href="#s24">Strongest 8</a></li><li><a href="#s25">Gaps</a></li></ul></div><div class="g"><div class="gt">Ecuador</div><ul><li><a href="#s26">Ecuador</a></li><li><a href="#s27">Portrait in one paragraph</a></li><li><a href="#s28">Key numbers</a></li><li><a href="#s29">Who they are</a></li><li><a href="#s30">Archetypes</a></li><li><a href="#s31">Lifestyle</a></li><li><a href="#s32">Money and tools</a></li><li><a href="#s33">Identity and language</a></li><li><a href="#s34">Their December</a></li><li><a href="#s36">Strongest 8</a></li><li><a href="#s37">Gaps</a></li></ul></div><div class="g"><ul><li><a href="#sources">All sources</a></li></ul></div></nav>
+  <main>
+<section class="sec" id="s1" data-toc="Across all three" data-group="Owners"><h2>Across all three</h2>
+<p>In all three countries the typical small business is one person, often a woman, working from home or a street pitch, who started because there was no job and who pays for everything from her own pocket. Staff are relatives, cash is still the default, and the phone is the main business tool. The numbers differ by country and by source, so this page puts the three side by side and does not average them.</p>
+<div class="tbl"><table><thead><tr><th></th><th>Peru</th><th>Colombia</th><th>Ecuador</th></tr></thead><tbody>
+<tr><td>Scale</td><td>about 6.1M MYPEs, 86.5% informal (ComexPerú 2024); 2.33M formal in the PRODUCE register</td><td>5.3M micronegocios (DANE 2024)</td><td>1.07M registered firms, 92.2% micro (INEC 2024); 29.63% of adults starting or running a new business (GEM 2025)</td></tr>
+<tr><td>Women owners</td><td>51.4% overall, 73.6% in retail</td><td>35.4% overall, 58.8% of tiendas de barrio</td><td>52.23% of early-stage entrepreneurs, 49.20% of established</td></tr>
+<tr><td>Started out of necessity</td><td>52.4%</td><td>36.1% (31.0% opportunity)</td><td>91.5%</td></tr>
+<tr><td>Working alone</td><td>relatives are 81.4% of workers, 95.2% unpaid</td><td>82.3% have nobody else working</td><td>39.7% expect to hire nobody (GEM 2024)</td></tr>
+<tr><td>Premises</td><td>52.2% have no dedicated premises</td><td>30.6% at home, 17.4% door to door</td><td>not measured here</td></tr>
+<tr><td>Informal on paper</td><td>86.5%</td><td>77.6% no RUT</td><td>about 70% of new businesses have no RUC</td></tr>
+<tr><td>Money</td><td>54.1% have a bank product, 20.6% formal credit</td><td>cash 97.5%, transfers 38.9%; gota a gota 22.9% of credit seekers</td><td>not covered</td></tr>
+<tr><td>Digital</td><td>not covered</td><td>70.9% use a phone, 50.4% no internet use; 12% of tiendas on social media</td><td>66.9% use social media for the business</td></tr>
+</tbody></table></div>
+<p>What the three files do not cover well: lifestyle (hours, days off, whether they close at Christmas), identity and language, and December behaviour. Those sections are thin in each country file and are listed in each Gaps section. Treat this report as the structural picture, not the whole portrait.</p>
+<p>Read the three country sections in order: Peru is richest on structure and money, Colombia on how and where the business runs, Ecuador on motives and survival.</p>
+</section>
+<section class="sec" id="s2" data-toc="Peru" data-group="Peru"><h2>Peru</h2>
+
+</section>
+<section class="sec" id="s3" data-toc="Portrait in one paragraph" data-group="Peru"><h2>Portrait in one paragraph</h2>
+<p>The Peruvian small-business owner is, statistically, a woman in her mid-forties. She runs one of about 6.1 million micro or small businesses, nearly nine in ten of them informal, and in retail (bodegas, boticas, small shops) three in four owners are women. She started out of economic necessity rather than ambition (52.4%), and in about half of cases she heads her household, so the business is the family income rather than a side project. The "staff" are her relatives: 81.4% of MYPE workers are family members and almost all of them are unpaid. Half of these businesses have no dedicated premises and work out of the home, the street or a borrowed space. Only about a quarter keep any accounts, and a retail MYPE earns on average about S/10,700 a year in profit, roughly S/890 a month. Half now hold a bank account, but only one in five has formal credit. In Lima she also lives with extortion and bodega closures (earlier pass). Formality is shrinking: there are fewer formal MYPEs in 2025 than in 2019. The data is strong on structure (gender, age, money, premises) and almost silent on lifestyle, identity, devices and December, which this pass could not reach.</p>
+</section>
+<section class="sec" id="s4" data-toc="Key numbers" data-group="Peru"><h2>Key numbers</h2>
+<div class="tbl"><table><thead><tr><th>Indicator</th><th>Figure</th><th>Year</th><th>Source link</th></tr></thead><tbody>
+<tr><td>MYPEs, formal + informal (ENAHO-based)</td><td>about 6.1 million (+0.6% y/y)</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú, Las mypes en el Perú – Resultados 2024 (Jul 2025, PDF)</a></td></tr>
+<tr><td>MYPEs by sector, formal + informal</td><td>services 3.3M, commerce 2M, production 871,079</td><td>2025</td><td><a href="https://www.peru-retail.com/mypes-formales-en-peru-aun-no-recuperan-el-nivel-prepandemia-que-muestran-las-cifras-de-2025/">Peru Retail, 17 Sep 2026</a></td></tr>
+<tr><td>Sector split of MYPEs</td><td>services 50%, commerce 32%, production 15%, both 3%</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>Formal MIPYMEs (PRODUCE register)</td><td>2,331,173; micro 93.8%, small 5.3%, medium 0.2%</td><td>2024</td><td><a href="https://larepublica.pe/verificador/2026/03/27/el-candidato-presidencial-carlos-jaico-dijo-que-hay-235-millones-de-mypes-pero-no-es-asi-292599">La República verificador, 27 Mar 2026</a></td></tr>
+<tr><td>Productive units (INEI informal-economy satellite account)</td><td>7.051M, of which 6.091M informal (86.4%)</td><td>2022–2024</td><td><a href="https://larepublica.pe/verificador/2026/03/27/el-candidato-presidencial-carlos-jaico-dijo-que-hay-235-millones-de-mypes-pero-no-es-asi-292599">La República verificador, 27 Mar 2026</a></td></tr>
+<tr><td>MYPE informality (no RUC)</td><td>86.8% (2024); 86.5% (2025); 83.8% (2019)</td><td>2024–2025</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>; <a href="https://www.peru-retail.com/mypes-formales-en-peru-aun-no-recuperan-el-nivel-prepandemia-que-muestran-las-cifras-de-2025/">Peru Retail, 17 Sep 2026</a></td></tr>
+<tr><td>Formal MYPEs (ComexPerú count)</td><td>801,134 (vs 980,357 in 2019)</td><td>2025</td><td><a href="https://www.peru-retail.com/mypes-formales-en-peru-aun-no-recuperan-el-nivel-prepandemia-que-muestran-las-cifras-de-2025/">Peru Retail, 17 Sep 2026</a></td></tr>
+<tr><td>MYPE sales</td><td>S/164,010M = 13.7% of GDP (19.5% in 2019)</td><td>2025</td><td><a href="https://www.peru-retail.com/mypes-formales-en-peru-aun-no-recuperan-el-nivel-prepandemia-que-muestran-las-cifras-de-2025/">Peru Retail, 17 Sep 2026</a></td></tr>
+<tr><td>Share of labour force working in a MYPE</td><td>45.2%</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>Women among MYPE owner-employers</td><td>51.4% overall; commerce 73.6%, production 46.9%, services 37.3%</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>Owner age</td><td>range 14–98, average 44; commerce about 46, production about 45, services 43</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>Owner is head of household</td><td>51.6% overall; production 56.9%, commerce 46.3%</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>Started out of economic necessity</td><td>52.4% (48.8% in 2019)</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>MYPE workers who are owner's relatives</td><td>81.4%, of whom 95.2% unpaid</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>MYPEs with no dedicated premises</td><td>52.2%</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>MYPEs with at least one formal financial product</td><td>54.1% (35.1% in 2019); credit product 20.6%</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>MYPEs keeping no accounts at all</td><td>76.5%</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>Average annual profit, commerce MYPEs</td><td>S/10,717 (lowest of three sectors)</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+<tr><td>Lima's share of all MYPEs</td><td>31%</td><td>2024</td><td><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a></td></tr>
+
+</tbody></table></div>
+</section>
+<section class="sec" id="s5" data-toc="Who they are" data-group="Peru"><h2>Who they are</h2>
+<ul class="mdl">
+<li>There are about 6.1 million micro and small businesses in Peru once informal ones are counted. That is 99.7% of all firms, employing 45.2% of the labour force. ComexPerú (ENAHO 2024): about 6.1M MYPEs, +0.6% on 2023, sales S/154,380M (14.2% of GDP, down 0.8%). Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú, Resultados en 2024 (Jul 2025)</a>. [well]</li>
+</ul>
+
+<ul class="mdl">
+
+</ul>
+
+<ul class="mdl">
+<li>Informality is the norm and getting worse: formal MYPEs are still about 179,000 below their pre-pandemic level. Informality was 86.8% in 2024 and 86.5% in 2025, against 83.8% in 2019. Formal MYPEs: 801,134 in 2025 vs 980,357 in 2019. Lima is among the least informal regions, but still at 83–85%. Sources: <a href="https://www.peru-retail.com/mypes-formales-en-peru-aun-no-recuperan-el-nivel-prepandemia-que-muestran-las-cifras-de-2025/">Peru Retail, 17 Sep 2026</a>; <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Half of all owners are women, and in retail it is three in four. Women are 51.4% of MYPE owner-employers: 73.6% in commerce (bodegas, pharmacies and other retail), 46.9% in production and 37.3% in services. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>The typical owner is in her or his mid-forties, not young. Owners range from 14 to 98 years, with an average of 44: commerce about 46, production about 45, services 43. MYPE workers average 33. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Education is mostly secondary school, with service owners slightly more educated. Commerce owners have mostly completed secondary school, and production owners average completed secondary. Service owners average incomplete technical studies, "significantly higher" than the rest. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [well]</li>
+<li>In about half of cases the business is the household's main income. 51.6% of owners are heads of household (production 56.9%, commerce 46.3%). ComexPerú reads this as a large share, "if not 100%", of household income depending on the business. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>People start businesses out of necessity, and more so now than before the pandemic. Motives in 2024: economic necessity 52.4% (48.8% in 2019), to improve personal or family income 18.8%, to be independent 17.9%, couldn't find a salaried job 4.9%, family tradition 3.2%. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Services are the largest group, commerce is shrinking and production is the oldest. In 2025: services about 3.3M MYPEs (88.3% informal, sales S/75,022M), commerce about 2M (85.6% informal, S/74,694M), production 871,079 (84% informal, S/20,071M). In 2024 the number of commerce MYPEs fell 1.9% while services grew 2.5%. Production MYPEs have the longest average life (10 years) and services the shortest (6.3 years). Sources: <a href="https://www.peru-retail.com/mypes-formales-en-peru-aun-no-recuperan-el-nivel-prepandemia-que-muestran-las-cifras-de-2025/">Peru Retail, 17 Sep 2026</a>; <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. Conflict: an Infobae summary of the same 2025 study assigned 3.3M to production and 871,079 to commerce. Peru Retail's attribution is consistent with ComexPerú's 2024 split, so it is used here: <a href="https://www.infobae.com/peru/2026/09/16/peru-tiene-179-mil-mypes-formales-menos-que-antes-de-la-pandemia-negocios-en-negro-llegan-al-865/">Infobae, 16 Sep 2026</a>. [well]</li>
+<li>Lima holds almost a third of all MYPEs. Lima has 31% of MYPEs, then Piura 7.7% and La Libertad 6.1% (ENAHO 2024, national departments). No district-level split (Lima Norte, Este, Sur, Callao, Gamarra, Mesa Redonda) was found. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [well for Lima total, missing for districts]</li>
+<li>More than half have no dedicated premises: the business lives at home, on the street or on the move. 47.8% have a space used only for the business (owned, rented or borrowed) and 52.2% have none. ComexPerú's definition of "premises" includes a fixed street stall, a market stand, a shop or workshop, or a room inside the home used only for the business. So 52.2% are below even that bar, working in shared home space, as ambulantes or mobile, or providing services at the customer's site. Of those with premises, 65.1% own, 20.9% rent and 13.9% borrow. In 2025 ComexPerú named the lack of a space to operate as the main brake on formalising (Daniel Najarro). Sources: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>; <a href="https://www.peru-retail.com/mypes-formales-en-peru-aun-no-recuperan-el-nivel-prepandemia-que-muestran-las-cifras-de-2025/">Peru Retail, 17 Sep 2026</a>. [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>The basic infrastructure of the premises is poor. Among MYPEs with premises in 2024: public-grid electricity 59.3%, drinking water 22.7%, sewerage 13.2%. The 2025 figures reported by Infobae are 60.4%, 21.3% and 11.1%. Sources: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>; <a href="https://www.infobae.com/peru/2026/09/16/peru-tiene-179-mil-mypes-formales-menos-que-antes-de-la-pandemia-negocios-en-negro-llegan-al-865/">Infobae, 16 Sep 2026</a>. [well]</li>
+<li>Not found in this pass: migrant share (Andean internal migrants, Venezuelans), household size, number of children, and owner-level sector detail (bodega, food, Gamarra textiles, beauty, botica, flowers, auto parts, bakeries, online-only). See Gaps.</li>
+</ul>
+</section>
+<section class="sec" id="s6" data-toc="Archetypes" data-group="Peru"><h2>Archetypes</h2>
+<ul class="mdl">
+<li><b>The retail owner (bodeguera, botica, small shop): a woman of about 46 who runs the till with family help and the lowest profit of any sector.</b> Commerce MYPEs: 73.6% women-led, owner about 46, mostly completed secondary, 46.3% head the household, 50.8% have a formal financial product, 34% keep some accounts, 57.9% have a premises. Workers are 88.6% relatives, work 20.9 hours a week on average, and the few paid workers earn S/706 a month. Average annual profit is S/10,717, the lowest of the three sectors. Sources: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>; closures and extortion in <a href="https://www.infobae.com/peru/2026/09/15/cupos-de-hasta-s2-millones-semanales-extorsiones-prestamos-gota-a-gota-y-falta-de-credito-agravan-la-crisis-de-las-bodegas-en-peru/">Infobae, 15 Sep 2026 (earlier pass)</a>. [well for the national commerce owner; Lima-specific bodega profile only from an unverified Ipsos lead, see Gaps]</li>
+</ul>
+
+<ul class="mdl">
+<li><b>The producer (workshop, sewing, food-making; the national version of the Gamarra manufacturer): about 45, near gender parity, the longest-running businesses and the family's breadwinner.</b> Production MYPEs: 46.9% women-led, owner about 45, completed secondary, 56.9% head the household (the highest), 52.6% have a formal financial product, only 22.3% keep accounts. The business averages 10 years old, the oldest sector, though 1.3 years younger than in 2019. Production MYPEs employ the highest share of paid workers (12.1%), pay the highest wage (S/894) and have the fewest women workers (44.2%). Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [partly: national production MYPEs, no Gamarra-specific data verified]</li>
+</ul>
+
+<ul class="mdl">
+<li><b>The solo service provider (beauty, repairs, tutoring, independent trades): about 43, more often a man, more educated, and the newest business.</b> Services MYPEs: 37.3% women-led, owner 43, education about incomplete technical, 56.4% have a formal financial product, mostly one-person businesses, an average of 6.3 years old (the shortest), workers about 31 years old, paid workers S/826. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [partly: "services" mixes very different trades]</li>
+</ul>
+
+<ul class="mdl">
+<li><b>The business without a place: half of all MYPEs, working from home, the street or a borrowed corner.</b> 52.2% have no dedicated premises, and only 13.2% of those with premises have sewerage. The overlap with online selling is plausible but not measured here. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [well for the size; thin for who they are]</li>
+</ul>
+
+<ul class="mdl">
+<li><b>Not supported by data found in this pass:</b> the Instagram or TikTok seller, the young "emprendedor digital", the Venezuelan entrepreneur and the market-stall owner. Leads are listed under Gaps. [thin]</li>
+</ul>
+</section>
+<section class="sec" id="s7" data-toc="Lifestyle" data-group="Peru"><h2>Lifestyle</h2>
+<ul class="mdl">
+<li>Small businesses are staffed by the family, and almost nobody in the family gets a wage. 81.4% of MYPE workers are relatives of the owner, and 95.2% of those relatives are unpaid. Only 1.1% of MYPE workers have social insurance. In 2025, 92.1% of MYPE workers lacked a fixed salary (Infobae). MYPE workers average 33 years old and 49.5% are women. Sources: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>; <a href="https://www.infobae.com/peru/2026/09/16/peru-tiene-179-mil-mypes-formales-menos-que-antes-de-la-pandemia-negocios-en-negro-llegan-al-865/">Infobae, 16 Sep 2026</a>. [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Working hours are measured for workers, not owners, and they are split between part-time and long days. MYPE workers average 22.6 hours a week, with 19.7% working over 40 hours and 3.9% over 60. Commerce workers average 20.9 hours and production workers 24.8. Owners' own hours, days off and holidays are not in the opened sources. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [partly: owners' hours missing]</li>
+<li>Fear shapes daily life for Lima shopkeepers (earlier pass, not re-opened). Up to 6,000 bodegas could close in 2026; 15–20% of street-level shops pay cupos; women-run bodegas are hit hardest; SJL, Los Olivos, Independencia and Comas are named. Source: <a href="https://www.infobae.com/peru/2026/09/15/cupos-de-hasta-s2-millones-semanales-extorsiones-prestamos-gota-a-gota-y-falta-de-credito-agravan-la-crisis-de-las-bodegas-en-peru/">Infobae, 15 Sep 2026</a>. [well, earlier pass]</li>
+</ul>
+
+<ul class="mdl">
+<li>Not found in this pass: commuting and moving goods, devices, social media and WhatsApp use, media, leisure, religion, aspirations for the children, fears beyond crime, and health. See Gaps.</li>
+</ul>
+</section>
+<section class="sec" id="s8" data-toc="Money and tools" data-group="Peru"><h2>Money and tools</h2>
+<ul class="mdl">
+<li>Half of owners now bank, almost double 2019, but formal credit reaches only one in five. In 2024, 54.1% of MYPE owners had at least one formal financial product (35.1% in 2019). 52.7% had a savings account, 20.6% a credit product, 3.8% a current account and 0.7% a term deposit. 52.9% used a formal savings method (31.9% in 2019), and 21.7% saved informally. By sector, the share with a formal product: services 56.4%, production 52.6%, commerce 50.8%. ComexPerú links the jump to banking "as an instrument to make sales easier" after the pandemic, which is consistent with QR wallets, though Yape and Plin are not named. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. Conflict: Infobae reports that 22.1% "access formal financial products" in 2025. This is probably a different indicator, such as credit, and was not checked against the 2025 report: <a href="https://www.infobae.com/peru/2026/09/16/peru-tiene-179-mil-mypes-formales-menos-que-antes-de-la-pandemia-negocios-en-negro-llegan-al-865/">Infobae, 16 Sep 2026</a>. [well for 2024; conflict for 2025]</li>
+</ul>
+
+<ul class="mdl">
+<li>Most businesses keep no books at all, so pricing and costs are carried in the head. 76.5% keep no accounts, 19.8% keep only personal notes of income and spending, and 3.7% keep accounting books or a system. In commerce, 34% keep some record. In 2025, 22.9% kept accounting records (Infobae). Sources: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>; <a href="https://www.infobae.com/peru/2026/09/16/peru-tiene-179-mil-mypes-formales-menos-que-antes-de-la-pandemia-negocios-en-negro-llegan-al-865/">Infobae, 16 Sep 2026</a>. [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Profits are thin, and lowest in retail. Average annual profit for commerce MYPEs is S/10,717, roughly S/893 a month (our division), the lowest of the three sectors. Paid workers earn S/706 in commerce (−24.4% y/y), S/826 in services (−14.2%) and S/894 in production (−6.3%). Total MYPE sales were S/154,380M in 2024 (−0.8%) and S/164,010M in 2025. Sources: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>; <a href="https://www.peru-retail.com/mypes-formales-en-peru-aun-no-recuperan-el-nivel-prepandemia-que-muestran-las-cifras-de-2025/">Peru Retail, 17 Sep 2026</a>. [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Gota-a-gota loans and lack of credit squeeze bodegas (earlier pass, not re-opened). Source: <a href="https://www.infobae.com/peru/2026/09/15/cupos-de-hasta-s2-millones-semanales-extorsiones-prestamos-gota-a-gota-y-falta-de-credito-agravan-la-crisis-de-las-bodegas-en-peru/">Infobae, 15 Sep 2026</a>. [partly]</li>
+<li>Not found in this pass: income bands, juntas or panderos, Yape and Plin merchant use, POS, delivery cost and method (own motorizado vs apps), and Christmas campaign loans. See Gaps.</li>
+</ul>
+</section>
+<section class="sec" id="s9" data-toc="Identity and language" data-group="Peru"><h2>Identity and language</h2>
+<ul class="mdl">
+<li>The measured self-image is economic, not heroic: most owners say they started from need, and only a minority from a wish for independence. Necessity 52.4%, improving family income 18.8%, independence 17.9%, family tradition 3.2%. Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [well as motive; no data on self-descriptive language]</li>
+</ul>
+
+<ul class="mdl">
+<li>Not found in this pass: how owners describe themselves ("emprendedor", "chambeador", "luchador", "mi negocito"), values, Arellano's lifestyle segments and what they say about entrepreneurs, and the critique of the emprendedor myth. See Gaps. [thin]</li>
+</ul>
+</section>
+<section class="sec" id="s10" data-toc="Their December" data-group="Peru"><h2>Their December</h2>
+<ul class="mdl">
+<li>No December-specific SMB data was verified in this pass. The figures below come from the earlier notes, with their sources. Produce: December is 30–40% of annual sales for many retailers and MYPEs; Christmas sales about S/16 bn (+10%); over 60,000 temporary jobs, including delivery; 61% decide purchases after seeing digital content. Source: <a href="https://www.infobae.com/peru/2025/12/13/la-navidad-cada-vez-mas-en-lo-digital-61-de-los-peruanos-decidira-sus-compras-a-traves-de-redes-sociales/">Infobae, 13 Dec 2025</a>. 67% of MYPEs expected higher Christmas sales: <a href="https://www.peru-retail.com/el-67-de-las-mypes-peruanas-espera-mayores-ventas-durante-la-campana-navidena/">Peru Retail</a>. [partly, earlier pass, not re-opened]</li>
+</ul>
+
+<ul class="mdl">
+<li>Gamarra and Mesa Redonda are where Lima seizes up before Nochebuena (earlier pass). A 12 km trip from Cercado to MegaPlaza took 2 h 10 min on 23–24 Dec 2025, worst from 17:00 to 21:00. Source: <a href="https://www.infobae.com/peru/2025/12/23/trafico-en-lima-se-agrava-previo-a-la-navidad-y-ano-nuevo-zonas-criticas-y-esperas-de-hasta-2-horas-por-cruzar-principales-avenidas/">Infobae, 24 Dec 2025</a>. [well, earlier pass]</li>
+</ul>
+
+<ul class="mdl">
+<li>Structural facts that shape December, from this pass. 81.4% of workers are family, so December "hiring" is mostly family. 52.2% have no premises, so December selling happens from home, the street or social media. Only 20.6% have formal credit, so campaign stock is likely financed informally (inferred, not measured). Source: <a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">ComexPerú 2024</a>. [partly: inference from year-round data]</li>
+<li>Not found in this pass: extra workload, hired helpers, Christmas campaign loans, December selling channels, whether shops close or work on 24/25 Dec, and what owners do on 25–27 Dec. See Gaps.</li>
+</ul>
+</section>
+
+<section class="sec" id="s12" data-toc="Strongest 8" data-group="Peru"><h2>Strongest 8</h2>
+<ul class="mdl">
+<li>Half of Peru's roughly 6.1 million MYPEs are run by women (51.4%), and in retail three in four are (73.6%). [well]</li>
+
+<li>Necessity, not dream: 52.4% started a business out of economic necessity, more than before the pandemic (48.8%), and only 17.9% to be independent. [well]</li>
+<li>It's a family operation: 81.4% of MYPE workers are relatives and 95.2% of those are unpaid. [well]</li>
+<li>More than half (52.2%) have no dedicated premises: the business is the home, the street or the phone. [well]</li>
+<li>Retail MYPEs make about S/10,700 profit a year (about S/890 a month), so delivery price is a real decision. [well]</li>
+<li>In half of cases the owner heads the household (51.6%), so the business is the family income. [well]</li>
+<li>Formality is shrinking: 86.5% are informal and formal MYPEs fell from 980,357 (2019) to 801,134 (2025). Banking reaches 54.1% of owners, but formal credit only 20.6%. [well]</li>
+</ul>
+</section>
+<section class="sec" id="s13" data-toc="Gaps" data-group="Peru"><h2>Gaps</h2>
+<ul class="mdl">
+<li><b>Search stopped early.</b> Most of the lifestyle, identity and December sections could not be researched. Everything below is open.</li>
+<li><b>Ipsos leads seen only in search summaries; open them before use.</b> "Perfil del emprendedor" (Gestión): average age 40, 60% women, date not confirmed. A claim that about 54% of Peruvian entrepreneurs are 18–34 (revistaeconomia.com, source study unknown). Ipsos CIRCUM 2025 (El Comercio): 7 in 10 Lima entrepreneurs want training, 51% say income "le alcanza justo" (just enough) and 21% can save, the most common profile is "Competente" (37%), and 80% plan to invest (equipment 43%, premises 31%, marketing 21%). Ipsos "Perfil de la Bodega y el Bodeguero" (Ipsos page and 2014 PDF): 74% women, average 45, 61% NSE C, 53% married plus 15% cohabiting, 44% secondary or incomplete technical education, open until almost 11 pm. The year of these bodeguero figures is unknown and may be 2014. Links: <a href="https://gestion.pe/economia/empresas/perfil-del-emprendedor-tiene-40-anos-en-promedio-y-el-60-son-mujeres-noticia/">Gestión</a>, <a href="https://elcomercio.pe/respuestas/cuanto/circum-2025-7-de-cada-10-emprendedores-peruanos-buscan-capacitarse-para-impulsar-el-crecimiento-de-sus-negocios-ipsos-cristian-arens-peru-produce-jorge-serratos-carlos-deivis-josema-sanchez-ultimas-noticia/">El Comercio CIRCUM 2025</a>, <a href="https://www.ipsos.com/es-pe/perfil-de-la-bodega-y-el-bodeguero">Ipsos bodeguero</a>, <a href="https://www.mercadonegro.pe/actualidad/emprendimiento-actualidad/seis-datos-sobre-los-emprendedores-limenos-segun-ipsos/">Mercado Negro, six facts about Lima entrepreneurs</a>, <a href="https://gestion.pe/economia/empresas/el-nuevo-emprendedor-en-lima-jovenes-negocios-y-sus-giros-situacion-y-canales-empresas-emprendimiento-noticia/">Gestión, the new Lima entrepreneur</a>.</li>
+
+<li><b>ComexPerú 2025 report not opened directly.</b> The 2025 owner profile (gender, age, motives) is unconfirmed; this file uses the 2024 report. The 2025 "22.1% access formal financial products" in Infobae conflicts with the 2024 figure of 54.1% and needs checking against the source. A search summary says women MYPE owners average 49 years old and 74.9% have only primary or secondary education; not verified.</li>
+<li><b>Not researched:</b></li>
+<li>Arellano lifestyle segments (Progresistas, Formalistas, Modernas, Adaptados, Conservadoras, Sofisticados) and their entrepreneur angle.</li>
+<li>GEM Peru (ESAN): necessity vs opportunity, age and gender.</li>
+<li>Venezuelan entrepreneurs (Equilibrium CenDE, IOM, UNHCR).</li>
+<li>Andean internal-migrant share among Lima owners.</li>
+<li>Household size and children.</li>
+<li>INEI "Características de las empresas".</li>
+<li>PRODUCE "Las MIPYME en cifras 2024" (the full PDF).</li>
+<li>CCL/IEDEP.</li>
+<li>The Asociación de Bodegueros.</li>
+<li><b>Lifestyle not researched:</b></li>
+<li>Owners' hours, days off, and whether they close on 24/25 Dec.</li>
+<li>Where they live, how they commute, and how they move goods (own moto, mototaxi, bus, apps).</li>
+<li>Devices, WhatsApp, Facebook, TikTok and Instagram use.</li>
+<li>Media, leisure, religion, aspirations for children, health.</li>
+<li><b>Money not researched:</b></li>
+<li>Income bands.</li>
+<li>Juntas and panderos.</li>
+
+<li>POS use.</li>
+<li>Delivery cost per order and the split between own motorizado, apps and couriers.</li>
+<li>BCRP and SBS financial-inclusion data.</li>
+<li>December campaign credit (Mibanco, Caja, "crédito campaña navideña").</li>
+<li><b>December not researched:</b></li>
+<li>Sales share by archetype.</li>
+<li>Hiring helpers.</li>
+<li>Gamarra and Mesa Redonda campaign figures (visitors, sales).</li>
+<li>Selling channels in December.</li>
+<li>Family time vs working through 24/25 Dec.</li>
+<li>What owners do on 25–27 Dec.</li>
+<li><b>Identity not researched:</b></li>
+<li>Sourced usage of "emprendedor", "chambeador", "luchador", "mi negocito".</li>
+<li>The academic or press critique of the "emprendedor" myth.</li>
+<li><b>Geography:</b> no district-level split of MYPEs for Lima Norte, Lima Este, Lima Sur, Callao, La Victoria (Gamarra) or Cercado (Mesa Redonda).</li>
+<li><b>Unverified headline:</b> a Peru Retail related-news headline says the minimum wage rises to S/1,230 from October 2026. Not opened; verify before use.</li>
+</ul>
+</section>
+<section class="sec" id="s14" data-toc="Colombia" data-group="Colombia"><h2>Colombia</h2>
+
+</section>
+<section class="sec" id="s15" data-toc="Portrait in one paragraph" data-group="Colombia"><h2>Portrait in one paragraph</h2>
+<p>Colombia's small business is, overwhelmingly, one person. DANE counts 5.3 million micronegocios in 2024; nine in ten owners work on their own account and 82% of businesses have nobody else working in them. About a third run the business from their own home, and almost one in five sells door to door or delivers to the customer's home. Two in three owners are men overall, but the tienda de barrio is a woman's business: 59% of its 540,000 owners are women, and 62% of tiendas sit inside the owner's house. More owners started because they had no other way to earn (36%) than because they saw an opportunity (31%), and they paid for it themselves: 61% used personal savings, while gota a gota lenders supply almost a quarter of the credit that micronegocios seek, and more than half for street vendors. The business is informal on paper (78% have no RUT, 90% are not in the Cámara de Comercio, 88% of owners pay neither health nor pension contributions) but durable in life: 65% have been running for five years or more. Cash is almost universal (97.5%), but bank transfers have reached 39% of micronegocios and are spreading fast, even among street vendors (5% in 2022, 19% in 2024). Half of micronegocios still do not use the internet for the business, and only 12% of tiendas have any social-media presence. The phone is the shop's main tool: 71% use one for the business.</p>
+</section>
+<section class="sec" id="s16" data-toc="Key numbers" data-group="Colombia"><h2>Key numbers</h2>
+<div class="tbl"><table><thead><tr><th>Indicator</th><th>Figure</th><th>Year</th><th>Source link</th></tr></thead><tbody>
+<tr><td>Micronegocios (≤9 people), national</td><td>5,297,252</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024 (30 Jul 2025)</a></td></tr>
+<tr><td>Micronegocios in 24 main cities and metro areas</td><td>2,321,469</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Share of 24-city micronegocios: Bogotá / Medellín AM / Barranquilla AM / Cali AM</td><td>25.3% / 17.5% / 10.5% / 9.6%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Annual sales of all micronegocios</td><td>COP 191.2 trillion (billones)</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Own-account workers vs employers among owners</td><td>90.5% vs 9.5%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Businesses with only one person working</td><td>82.3%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Owners men / women, national</td><td>64.6% / 35.4%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Women owners in municipal capitals (towns and cities)</td><td>38.0%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Tiendas de barrio and panaderías</td><td>540,233</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">DANE EMICRON Panaderías y tiendas de barrio (8 May 2026)</a></td></tr>
+<tr><td>Women owners of tiendas and panaderías</td><td>58.8%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">DANE tiendas (8 May 2026)</a></td></tr>
+<tr><td>Street vendors (vendedores ambulantes) micronegocios; men / women</td><td>507,266; 60.4% / 39.6%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRONVendedoresAmbulantes-2024.pdf">DANE EMICRON Vendedores ambulantes (28 Oct 2025)</a></td></tr>
+<tr><td>Location: home / door to door or at the customer's home / farm / shop or premises / vehicle / street</td><td>30.6% / 17.4% / 13.5% / 12.5% / 11.3% / 9.6%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Tiendas located inside the owner's home</td><td>62.3%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">DANE tiendas</a></td></tr>
+<tr><td>No RUT (tax ID)</td><td>77.6% (70.4% in towns and cities)</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Not registered in Cámara de Comercio</td><td>89.5%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Owners paying neither health nor pension contributions</td><td>88.4%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Started because "no other income alternative" vs "market opportunity"</td><td>36.1% vs 31.0%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Running 5 years or more</td><td>65.0%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Started with personal savings</td><td>61.4%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Credit seekers who went to gota a gota lenders: all / tiendas / street vendors</td><td>22.9% / 11.3% / 56.2%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE 2024</a>; <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">tiendas</a>; <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRONVendedoresAmbulantes-2024.pdf">vendors</a></td></tr>
+<tr><td>Accept cash / bank transfer or online payment / debit card</td><td>97.5% / 38.9% / 1.6%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Street vendors accepting transfers</td><td>5.2% (2022) → 11.2% (2023) → 19.4% (2024)</td><td>2022–24</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRONVendedoresAmbulantes-2024.pdf">DANE vendors</a></td></tr>
+<tr><td>Use a phone for the business</td><td>70.9% (79.2% in towns and cities)</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Do not use the internet for the business</td><td>50.4% (38.3% in towns and cities)</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+<tr><td>Tiendas with any social-media presence</td><td>12.0%</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">DANE tiendas</a></td></tr>
+<tr><td>No accounting records at all</td><td>68.2% (27.1% use a notebook, Excel or till)</td><td>2024</td><td><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a></td></tr>
+</tbody></table></div>
+</section>
+<section class="sec" id="s17" data-toc="Who they are" data-group="Colombia"><h2>Who they are</h2>
+<ul class="mdl">
+<li>Colombia has about 5.3 million micronegocios, and they are mostly a single person: 90.5% of owners are own-account workers and only 9.5% employ anyone; 82.3% of businesses have one person working, 14.9% have two or three, 2.8% have four to nine. Together they employ 6,879,489 people, 77.0% of them the owners themselves. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024 (30 Jul 2025)</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>The urban micronegocio is concentrated in four metro areas: of 2,321,469 micronegocios in the 24 main cities, 25.3% are in Bogotá, 17.5% in Medellín AM, 10.5% in Barranquilla AM and 9.6% in Cali AM (then Bucaramanga AM 5.8%, Cartagena 5.4%, Cúcuta AM 3.4%). Bogotá produces 35.5% of their value added, Medellín AM 19.6%, Cali AM 8.1%, Barranquilla AM 7.4%. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Two in three owners are men nationally (64.6% vs 35.4% women), but in towns and cities women hold 38.0% and in rural areas only 29.5%. Women owners grew 1.7% in 2024, men 2.3%. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [well]</li>
+<li>What they do: 23.9% trade and vehicle/motorbike repair, 21.5% farming, 11.9% transport and storage, 10.0% manufacturing, 9.7% arts, recreation and other services (where hairdressers and beauty sit), 8.3% accommodation and food, 5.7% construction. In the 24 cities 58.3% are in services, 29.7% in trade and 11.0% in manufacturing. Trade earns 36.5% of all micronegocio sales. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [well]</li>
+<li>Necessity outweighs opportunity overall: 36.1% started because they had no other income alternative, 31.0% because they saw a market opportunity, 11.6% to practise a trade or profession, 10.8% by family tradition or inheritance, 8.5% to top up household income. Necessity-driven businesses grew 3.7% in 2024. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>They last: 65.0% have run for five years or more, 35.0% for under five; in towns and cities 39.0% are under five years old. 83.7% were created by the owner alone and 12.6% with family. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [well]</li>
+<li>Formal on paper is the exception: 77.6% have no RUT (70.4% in towns and cities), 89.5% are not registered in the Cámara de Comercio, and micronegocios with a RUT fell 4.1% in 2024 while those without rose 4.1%. 88.4% of owners pay neither health nor pension contributions and 93.6% have no workplace-risk (ARL) cover. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>The home is the most common workplace: 30.6% operate from the home (32.1% in towns and cities), 17.4% go door to door or to the customer's home, 13.5% on a farm, 12.5% from a shop, workshop or office, 11.3% from a vehicle, 9.6% on the street. Home-based businesses grew 9.8% in 2024 while door-to-door fell 6.5%. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Owner age bands, education, household composition, estrato, whether the business is the main household income, and the Venezuelan share of owners were not verified in this pass (EMICRON publishes some of these only in Excel annexes that were not opened). See Gaps. [thin]</li>
+</ul>
+</section>
+<section class="sec" id="s18" data-toc="Archetypes" data-group="Colombia"><h2>Archetypes</h2>
+<ul class="mdl">
+<li><b>The tendera de barrio.</b> A woman (58.8% of 540,233 tienda and panadería owners), selling groceries from her own house (62.3% of tiendas are in the home, 36.2% in separate premises), which she usually owns outright (59.9% own and fully paid, 20.7% rented). She runs it alone (72.8% one person) or with family (24.1% have two or three people; 10.4% of everyone working in tiendas are unpaid family members; 19.5% of tiendas were set up with a relative). She chose it more than she was forced into it (48.6% opportunity vs 30.6% no alternative), and she has been there a while (35.2% ten years or more). Almost all take cash (99.4%), 41.3% take transfers, 68.8% use a mobile phone for the shop, only 12.0% are on social media. Tiendas are more formal than the average micronegocio (55.0% have no RUT vs 77.6% overall). <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">DANE tiendas (8 May 2026)</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li><b>The street vendor.</b> Usually a man (60.4% of 507,266 ambulantes), mostly on the move (59.3% mobile, 40.7% fixed spot). Nearly all cash (99.8%), but transfers jumped from 5.2% in 2022 to 19.4% in 2024. When he needs money, more than half go to the gota a gota lender (56.2% of those seeking credit) rather than a bank (30.2%). Women vendors grew fastest in 2024 (+10.9%). <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRONVendedoresAmbulantes-2024.pdf">DANE EMICRON Vendedores ambulantes (28 Oct 2025)</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li><b>The home-based seller and door-to-door seller.</b> Together almost half of all micronegocios (30.6% at home plus 17.4% door to door or at the customer's home). Home-based is the fastest-growing location (+9.8% in 2024). The data does not say what they sell or whether they sell online. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [partly]</li>
+</ul>
+
+<ul class="mdl">
+<li><b>The owner on wheels.</b> 11.3% of micronegocios work from a vehicle, and transport and storage is 11.9% of all micronegocios (10.7% of sales). This includes mototaxis, independent couriers and drivers; DANE does not split them. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [partly]</li>
+</ul>
+
+<ul class="mdl">
+<li><b>The connected seller (Instagram/TikTok/WhatsApp emprendedor).</b> Data supports only a minority: 49.6% of micronegocios use the internet for the business (61.7% in towns and cities), and businesses using the internet grew 14.7% in 2024; only 12.0% of tiendas have social-media presence. No verified figures on which networks or on online-only sellers were collected. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [partly]</li>
+<li><b>The Venezuelan entrepreneur.</b> Not verified in this pass. Context carried over: about 2.8 million Venezuelans in Colombia, many saying "ya tengo mi vida acá" ("I already have my life here"); flights from Bogotá to Caracas resumed only on 1 Sep 2026 after the June earthquake in Venezuela. <a href="https://www.vanguardia.com/colombia/2026/02/23/migrantes-venezolanos-en-colombia-dudan-regresar-a-su-pais-tras-captura-de-maduro/">Vanguardia (23 Feb 2026)</a>, carried over from the social-context notes [thin]</li>
+</ul>
+</section>
+<section class="sec" id="s19" data-toc="Lifestyle" data-group="Colombia"><h2>Lifestyle</h2>
+<ul class="mdl">
+<li>Family is the staff: 6.0% of everyone working in micronegocios are unpaid family members or workers, 13.5% are paid workers, 3.6% partners; in tiendas the unpaid-family share rises to 10.4%. Rural micronegocios are more often family-built (20.5% set up with a relative). <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a>; <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">DANE tiendas</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>The phone is the main device: 89.1% use no electronic device (computer, tablet) for the business, but 70.9% use a phone (79.2% in towns and cities, 52.0% rural). <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Paid staff in tiendas are temporary: 67.5% of paid tienda workers are on temporary contracts and 65.8% get no health or pension contributions. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">DANE tiendas</a> [well]</li>
+<li>December roads are the most dangerous of the year and motorcyclists pay most: Colombia had 870 road deaths in December 2024, 555 of them motorcyclists; in Bogotá motorcyclist deaths almost doubled (16 to 31) vs Dec 2023. <a href="https://mintransporte.gov.co/publicaciones/12201/la-epoca-mas-alegre-del-ano-tambien-es-la-mas-mortal-en-las-vias-esta-navidad-colombia-debe-decidir-si-enciende-luces-de-navidad-o-apaga-vidas/">Mintransporte (1 Dec 2025)</a>, carried over from the insights notes [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Extortion is an everyday threat for tenderos, and Q1 2026 extortion was the highest in ten years. <a href="https://www.eltiempo.com/justicia/conflicto-y-narcotrafico/suben-los-casos-de-extorsion-en-el-primer-trimestre-de-2026-el-pais-llego-a-la-cifra-mas-alta-de-la-ultima-decada-3548692">El Tiempo (17 Apr 2026)</a>, carried over from the social-context notes [partly]</li>
+</ul>
+
+<ul class="mdl">
+<li>Working hours and days, days off, Christmas closures, estrato, moto ownership, social-media and messaging habits, media, leisure, religion, aspirations, fears and health of owners were not researched in this pass. See Gaps. [thin]</li>
+</ul>
+</section>
+<section class="sec" id="s20" data-toc="Money and tools" data-group="Colombia"><h2>Money and tools</h2>
+<ul class="mdl">
+<li>They start with their own money: 61.4% of owner-founded micronegocios used personal savings, 15.5% needed no financing, 10.6% borrowed from family, 8.8% got a bank loan and 2.4% went to moneylenders. Tiendas lean more on banks (17.7% bank loans, 60.0% savings, 15.1% family). <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a>; <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">DANE tiendas</a> [well]</li>
+<li>Gota a gota is a mainstream lender: of micronegocios that sought credit, 60.0% went to regulated institutions, 22.9% to gota a gota lenders, 13.3% to family and friends; in rural areas gota a gota is the main source (77.0%). For tiendas it is 69.9% regulated, 11.3% gota a gota; for street vendors 56.2% gota a gota, 30.2% regulated. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a>; <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRONVendedoresAmbulantes-2024.pdf">DANE vendors</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>How many seek credit is unclear in DANE's own text: the national bulletin says 85.8% of micronegocios "made some effort to request a credit", while the tiendas bulletin says 19.0% of tiendas did. The national figure is very likely the share that did not apply (inverted in the text); treat both with care until the annex table is checked. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a>; <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">DANE tiendas</a> [partly]</li>
+<li>Cash rules, transfers are rising: 97.5% accept cash, 38.9% accept bank transfers or online payment, 1.6% debit cards. In tiendas 99.4% cash, 41.3% transfers, 3.1% debit, 2.6% credit cards. Street vendors went from 5.2% to 19.4% accepting transfers in two years. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a>; <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">DANE tiendas</a>; <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRONVendedoresAmbulantes-2024.pdf">DANE vendors</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+
+<li>Books are kept in the head or a notebook: 68.2% keep no accounts at all, 27.1% use a notebook, Excel or till, 4.7% a formal method. Of the 1,185,978 micronegocios with a RUT, 93.7% say they are not liable for VAT. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Income ranges per owner, bank-account ownership among owners, cadenas and natilleras, QR use, and how they handle delivery (own domiciliario, apps, family) were not verified in this pass. [thin]</li>
+</ul>
+</section>
+<section class="sec" id="s21" data-toc="Identity and language" data-group="Colombia"><h2>Identity and language</h2>
+<ul class="mdl">
+<li>The data shows self-made and family-made pride rather than slang: 83.7% of micronegocios were created by the owner alone, 10.8% continue a family tradition or inheritance (24.0% in rural areas), and 11.6% exist so the owner can practise a trade or profession. <a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">DANE EMICRON 2024</a> [partly]</li>
+</ul>
+
+<ul class="mdl">
+<li>How owners describe themselves ("emprendedor", "echado pa'lante", "rebuscador", "el rebusque", "camello", "mi negocito") was not researched with sources in this pass. Do not quote these as owner self-descriptions until sourced. [thin]</li>
+</ul>
+</section>
+<section class="sec" id="s22" data-toc="Their December" data-group="Colombia"><h2>Their December</h2>
+<ul class="mdl">
+<li>No 2024–2026 Colombian data on the micronegocio December (sales share, prima-driven demand, extra helpers, seasonal credit, novenas in the shop, opening hours on 24–25 Dec, anchetas) was verified in this pass. [thin]</li>
+<li>Carried over: Servientrega called December Colombia's highest-demand month, above Amor y Amistad, Mother's Day and VAT-free days, planning more than 7 million shipments and 500 extra staff for the 2021 season. <a href="https://www.portafolio.co/negocios/empresas/inversion-de-servientrega-para-mejorar-logistica-en-fin-de-ano-559949">Portafolio (23 Dec 2021)</a>, carried over from the insights notes [partly]</li>
+<li>Carried over: the December prima went to basic needs 19%, holidays 18%, debts 14% and savings 12%, and 79% of Colombians regretted their year-end money decisions (fintech survey, method not public). <a href="https://es-us.noticias.yahoo.com/10-colombianos-iniciaron-2026-estabilidad-170000536.html">Yahoo Noticias / MejorCDT (15 Jan 2026)</a>, carried over from the insights notes [partly]</li>
+</ul>
+
+<ul class="mdl">
+<li>Carried over: a Rappi/Didi courier who worked from 6:00 on 1 Jan 2025 earned COP 65,332 in 4 h 07 min and felt like "el único loco" ("the only crazy one") on the road. <a href="https://www.infobae.com/colombia/2025/01/07/al-que-madruga-dios-le-ayuda-domiciliario-se-le-midio-a-trabajar-desde-las-600-de-la-manana-el-1-de-enero-y-estas-fueron-sus-ganancias/">Infobae Colombia (7 Jan 2025)</a>, carried over from the insights notes [partly]</li>
+</ul>
+
+</section>
+
+<section class="sec" id="s24" data-toc="Strongest 8" data-group="Colombia"><h2>Strongest 8</h2>
+<ul class="mdl">
+<li>A Colombian small business is usually one person: 5.3 million micronegocios, 90.5% own-account, 82.3% with nobody else working. [well]</li>
+<li>The tienda de barrio is a woman's business run from her home: 58.8% women owners, 62.3% inside the house. [well]</li>
+<li>Almost half of micronegocios work from the home (30.6%) or go door to door to the customer (17.4%). [well]</li>
+<li>More started out of necessity (36.1%) than opportunity (31.0%), and 61.4% paid for it from their own savings. [well]</li>
+<li>Gota a gota is a mainstream lender: 22.9% of credit seekers overall, 56.2% among street vendors. [well]</li>
+<li>Informal on paper, durable in life: 77.6% no RUT, 89.5% not in Cámara de Comercio, yet 65.0% have run five years or more. [well]</li>
+<li>Cash is near-universal (97.5%), but transfers are at 38.9% and street vendors went from 5.2% to 19.4% in two years. [well]</li>
+<li>The phone is the whole IT department: 70.9% use a phone for the business, half don't use the internet for it, only 12.0% of tiendas are on social media. [well]</li>
+</ul>
+</section>
+<section class="sec" id="s25" data-toc="Gaps" data-group="Colombia"><h2>Gaps</h2>
+<ul class="mdl">
+<li>Stopped early on the coordinator's instruction; only DANE EMICRON bulletins (national 2024, tiendas 2020–2024, street vendors 2024) were read. No other web sources were opened in this pass.</li>
+<li>Who they are: owner age bands, education, household size, whether the business is the main household income, estrato, and the Venezuelan share of owners. EMICRON annex tables (Excel) and GEIH were not opened; Proyecto Migración Venezuela / GIFMM entrepreneurship data not checked.</li>
+<li>Pymes (beyond micronegocios): Confecámaras company counts, ANIF Gran Encuesta Pyme, Fenalco figures not collected.</li>
+<li>City detail: per-city sex, location and internet splits for Bogotá, Medellín, Cali and Barranquilla not extracted (city variation figures in the bulletin's table could not be paired reliably and were not used).</li>
+<li>2025 update: the figure "2,434,942 micronegocios in 24 cities in 2025" appeared only in a search summary and was not found in the opened IV-2025 presentation; not used.</li>
+<li>Lifestyle: working hours and days, closing at Christmas, moto ownership, how goods move, WhatsApp/Facebook/TikTok/Instagram use, media, leisure, religion and community life, aspirations, fears, health: not researched.</li>
+<li>Money: owner income ranges, bank-account and credit-card ownership, cadenas and natilleras, Nequi/Daviplata/Bre-B merchant figures, QR adoption, delivery cost and own domiciliario vs apps: not researched. Bre-B 34 million users remains unverified.</li>
+<li>Identity: sourced usage of "emprendedor", "echado pa'lante", "rebusque", "camello", "mi negocito": not researched.</li>
+<li>December: micronegocio December sales share, prima demand, extra helpers, seasonal credit, novenas in shops, trading on 24–25 Dec, what owners do on 25–27 Dec, and the ancheta trade: not researched. Servientrega's December figures are from 2021.</li>
+<li>Data caution: DANE's national bulletin text says 85.8% of micronegocios sought credit, which conflicts with 19.0% for tiendas and is likely inverted; check annex table H.2 before using any "share who seek credit" number.</li>
+</ul>
+</section>
+<section class="sec" id="s26" data-toc="Ecuador" data-group="Ecuador"><h2>Ecuador</h2>
+<p>Status: partial pass, stopped early on instruction. Two primary sources were opened and read in full text: GEM Ecuador 2025 (published May 2026) and INEC's Registro Estadístico de Empresas 2024 (published Oct 2025). Everything else is either carried over from the earlier social-context and insights passes (already verified there) or marked as a search summary that was not opened. Lifestyle, money, language and migrant data are mostly open and listed under Gaps.</p>
+</section>
+<section class="sec" id="s27" data-toc="Portrait in one paragraph" data-group="Ecuador"><h2>Portrait in one paragraph</h2>
+<p>The typical Ecuadorian small-business owner runs a one- to five-person consumer business (a shop, food, a service) because there was no adequate job, not because they spotted a gap: 91.5% of early-stage entrepreneurs say they started "to earn a living because jobs are scarce", the highest share in Latin America. Ecuador has the second-highest early-stage entrepreneurship rate of 48 GEM countries (29.63% of adults aged 18–64, behind only Angola), and women are the majority (52.23%). The person starting out is young (18–34 is 55.7% of early-stage activity), has finished secondary school (54.3%), sells mostly to their own neighbourhood but often to other cities too, uses social media more than any other digital tool (66.9%), and in seven cases out of ten has no RUC tax number. Very few make it: only 6.52% of adults run an established business older than 3.5 years, down from 13.26% a year earlier, and 9.09% of adults closed a business in the last 12 months. Crime and extortion became the third reason for closing in 2025 (13.12%). Formal data shows the same churn: Ecuador lost about 101,900 registered microenterprises in 2024 (−9.3%), though INEC warns part of the drop is missing tax data. The survivors skew older (35–44 is the largest group; 55–64 doubles its share) and increasingly frame the business as family tradition (43.11%, up from 37.10%).</p>
+</section>
+<section class="sec" id="s28" data-toc="Key numbers" data-group="Ecuador"><h2>Key numbers</h2>
+<div class="tbl"><table><thead><tr><th>Indicator</th><th>Figure</th><th>Year</th><th>Source link</th></tr></thead><tbody>
+<tr><td>Early-stage entrepreneurial activity (TEA), adults 18–64</td><td>29.63%, 2nd of 48 countries (Angola 52.90%); 1st in Latin America (Chile 29.35%)</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025, May 2026</a></td></tr>
+<tr><td>Established business ownership (EBO, &gt;3.5 years)</td><td>6.52% (13.26% in 2024)</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Business discontinuation (closed in last 12 months)</td><td>9.09% of adults (13.51% 2024; 9.75% 2023)</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Top reasons for closing</td><td>Not profitable 24.07% (37.40% in 2024); personal/family 20.34%; crime and extortion 13.12%</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Necessity motive ("earn a living because jobs are scarce")</td><td>91.50% of TEA (90.55% 2024; regional avg 82.35%)</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>"Continue a family tradition" motive</td><td>43.11% (37.10% in 2024)</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Women's share of early-stage entrepreneurs</td><td>52.23% TEA; 54.43% nascent; 49.20% established</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Age of early-stage entrepreneurs</td><td>18–24: 22.36%; 25–34: 33.32%; 35–44: 22.74%; 45–54: 13.18%; 55–64: 8.40%</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Age of established owners</td><td>35–44: 27.86%; 25–34: 21.71%; 18–24: 19.43%; 45–54: 15.19%; 55–64: 15.82%</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Education of early-stage entrepreneurs</td><td>Secondary complete 54.28%; higher 23.43%; basic incomplete 13.84%; basic complete 7.95%</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Urban / rural</td><td>TEA 56.4% urban, 43.6% rural; established 61.69% / 38.31%</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Consumer-oriented sector share of TEA</td><td>83.18% (75.02% in 2023)</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Has a RUC (tax ID)</td><td>30.6% of early-stage, 55.2% of established</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Of RUC holders, on RIMPE</td><td>60.24% early-stage, 66.96% established</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Uses social media for the business</td><td>66.9% early-stage, 56.2% established</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Sells to customers in other parts of the country</td><td>48.95% early-stage, 41.57% established</td><td>2025</td><td><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a></td></tr>
+<tr><td>Registered enterprises</td><td>1,073,524 (−100,461, −8.6% vs 2023)</td><td>2024</td><td><a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024, Oct 2025</a></td></tr>
+<tr><td>Microenterprises (sales ≤ US$100k, 1–9 staff)</td><td>990.3k (92.2% of firms), −101.9k (−9.3%)</td><td>2024</td><td><a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a></td></tr>
+<tr><td>Small enterprises</td><td>61.2k (+1.8%)</td><td>2024</td><td><a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a></td></tr>
+<tr><td>Firms filing under RIMPE</td><td>489,154 (45.6% of all firms)</td><td>2024</td><td><a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a></td></tr>
+<tr><td>Firms by sector</td><td>Services 555,374 (51.7%); commerce 365,607 (34.1%); manufacturing 93,814 (8.7%)</td><td>2024</td><td><a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a></td></tr>
+<tr><td>Firms by province</td><td>Pichincha 297.6k (−8.2%); Guayas 237.7k; Azuay 69.2k</td><td>2024</td><td><a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a></td></tr>
+<tr><td>Firm churn</td><td>345,821 went inactive, 245,360 new or reactivated</td><td>2024</td><td><a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a></td></tr>
+<tr><td>Informal sector / informal employment</td><td>52.8% / 56.3% (search summary in earlier pass)</td><td>2026</td><td><a href="https://www.expreso.ec/economia-y-negocios/significa-empleo-adecuado-ecuador-sigue-estancado-36-6-286685.html">Expreso, 2026</a></td></tr>
+</tbody></table></div>
+</section>
+<section class="sec" id="s29" data-toc="Who they are" data-group="Ecuador"><h2>Who they are</h2>
+<ul class="mdl">
+<li>Ecuador is one of the most entrepreneurial countries on earth by share of adults: 29.63% of 18–64-year-olds are starting or running a business under 3.5 years old, 2nd of 48 countries behind Angola (52.90%) and 1st in Latin America, ahead of Chile (29.35%) and Guatemala (25.39%). <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025, May 2026</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>It is overwhelmingly necessity entrepreneurship: 91.50% of early-stage entrepreneurs started "to earn a living because jobs are scarce" (90.55% in 2024), the highest in the region (regional average 82.35%). At the same time 59.23% also want to "generate great wealth" and 51.14% to "make a difference". <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Survival is rare and got worse: established business ownership fell from 13.26% to 6.52% of adults in one year; 9.09% of adults closed a business in the last 12 months (13.51% in 2024, 9.75% in 2023). <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Crime entered the closure reasons: in 2025 "delincuencia y extorsión" was the third reason for closing (13.12%), a cause GEM says had no such weight the year before; lack of profitability fell from 37.40% to 24.07% and personal/family reasons were second (20.34%). <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Women lead the start, men the survival: women are 52.23% of early-stage entrepreneurs (51.18% in 2024) and 54.43% of nascent ones, but 49.20% of established owners; the female TEA rate is 30.38% vs 28.86% for men. GEM calls this the "fuga de género". <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Age: young starters, middle-aged survivors. 18–34 is 55.68% of early-stage activity (18–24 22.36%, 25–34 33.32%) and 53.94% of nascent; among established owners 35–44 leads (27.86%) and 55–64 reaches 15.82%, almost double its early-stage share (8.40%). <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+<li>Education: mostly secondary school. Early-stage: secondary complete 54.28%, higher education 23.43%, basic incomplete 13.84%, basic complete 7.95%; among established owners higher education drops to 18.85% and basic incomplete rises to 19.37%. GEM reads this as graduates using a business as a stopgap while job-hunting. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+<li>Not only cities: 43.6% of early-stage entrepreneurs and 38.31% of established owners are rural. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+<li>Sector: consumer businesses dominate and the share is rising. 83.18% of early-stage businesses are consumer-oriented (retail, food, personal services), up from 75.02% in 2023, the highest of the six Latin American GEM countries (Brazil 50.62%, Mexico 69.17%). <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Size: tiny. In the GEM chart on current employment, roughly 77% of early-stage and 70% of established businesses have 1–5 workers, and about 21% and 27% have none; text extraction makes the row labels slightly ambiguous, but GEM's text confirms a "significant" minority of one-person businesses. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [partly]</li>
+<li>Formal vs informal: only 30.6% of early-stage businesses have a RUC (so about 70% are informal) and 55.2% of established ones; 9.2% / 24.86% are registered with the Superintendencia de Compañías; 7.25% / 15.51% are in the popular and solidarity economy register (RUEPS). Among RUC holders, RIMPE is the main regime (60.24% early-stage, 66.96% established). <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Registered universe: INEC counts 1,073,524 enterprises in 2024 (100,461 fewer than 2023, −8.6%); microenterprises are 990.3k (92.2%) and lost about 101.9k (−9.3%), while small firms grew to 61.2k (+1.8%). 489,154 firms (45.6%) are counted via RIMPE. INEC warns the 2024 base is semi-definitive and undercounts because RIMPE data from the SRI was incomplete, so part of the micro drop is a data gap, not closures. <a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024, Oct 2025</a> [well]</li>
+<li>Churn in the register is huge: 345,821 firms active in 2023 were inactive in 2024 and 245,360 appeared or reappeared. <a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a> [well]</li>
+<li>Sector of registered firms: services 555,374 (51.7%), commerce 365,607 (34.1%), manufacturing 93,814 (8.7%), agriculture 28,113, construction 28,889. <a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a> [well]</li>
+<li>Geography: Pichincha (Quito) has the most registered firms, 297.6k in 2024 (down 26.7k, −8.2%), then Guayas (Guayaquil) 237.7k (243.8k in 2023) and Azuay (Cuenca) 69.2k (76.6k). Firms are counted by tax domicile, so informal Guayaquil commerce is under-represented. <a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a> [well]</li>
+<li>Markets reached: 87.71% of early-stage entrepreneurs sell to customers in their own area, 48.95% to other parts of the country and 13% abroad; established businesses are more local (91.22% / 41.57% / 2.1%). Urban starters: 51.32% reach other cities. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Tiendas de barrio: the Red Ecuatoriana de Tenderos is reported to count over 130,000 tenderos and about 1.5M direct and indirect jobs, with about 70% of daily household shopping going through the channel and 1,943 shops closing between Aug 2024 and Feb 2025 (11 a day). Search summaries only, pages not opened. <a href="https://www.eluniverso.com/noticias/economia/tiendas-de-barrio-ecuador-negocios-hard-discount-nota/">El Universo</a>; <a href="https://kchcomunicacion.com/2026/03/27/dia-del-tendero-negocios-de-barrio-que-impulsan-la-economia-y-la-inclusion-financiera-en-el-pais/">KCH FM, 27 Mar 2026</a> [thin]</li>
+<li>Migrant owners (Venezuelans, Colombians), household composition, whether the business is the main household income and years in business were not reached in this pass. See Gaps.</li>
+</ul>
+</section>
+<section class="sec" id="s30" data-toc="Archetypes" data-group="Ecuador"><h2>Archetypes</h2>
+<ul class="mdl">
+<li>The young starter (data-led): aged 18–34 (55.7% of early-stage activity), secondary school finished, no RUC (about 70% of early-stage), a consumer business (83.18%), on social media (66.9%), started because there was no job (91.5%), and statistically likely not to reach year four (EBO 6.52%). Often a woman: 54.43% of nascent entrepreneurs. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>The emprendedora at home or online (partly data-led): women are the majority of new businesses, social media is the dominant digital tool (66.9% early-stage), and only 41.2% have a website, so selling runs through social profiles and messaging. GEM describes the digital model as "presence rather than management". Where she sells from (home, market, online) is not measured in the opened sources. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [partly]</li>
+</ul>
+
+<ul class="mdl">
+<li>The survivor in mid-life (data-led): established owners are older (35–44 27.86%, 55–64 15.82%), more often male (50.80%), less often degree-holders (18.85%), more often formal (55.2% RUC), more local (91.22% sell in their own area) and more likely to describe the business as family tradition. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>The rural seller (data-led, thin on texture): 43.6% of early-stage entrepreneurs are rural; about 93% sell locally, 47.35% reach other parts of the country. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [partly]</li>
+<li>The tendero de barrio (thin): 130,000+ tenderos, a working day reported as 6:00 to 23:00 with no holidays or weekends off; in Guayaquil's Nueva Prosperina distributors have abandoned interior routes because of vacunas (about US$50 a week per route) and about 12 shops near La Pileta closed in 18 months, so shops fetch their own stock. Hours and counts are search summaries; Nueva Prosperina is from the earlier verified pass. <a href="https://www.expreso.ec/quito/tiendas-de-barrio-negocio-que-resuelve-urgencias-y-conecta-vecinos-quito-291167.html">Expreso, Quito tiendas</a> (search summary); <a href="https://www.extra.ec/noticia/especiales/extorsiones-nueva-prosperina-repartidores-abandonan-rutas-vacunas-160110.html">Extra, 9 Aug 2026</a> [thin for hours; well for Nueva Prosperina]</li>
+</ul>
+
+<ul class="mdl">
+<li>The December monigote maker (seasonal micro-business): on Guayaquil's Calle 6 de Marzo Año Viejo effigies sell for US$10–200; artisans make smaller figures as costs rise (newspaper went from about US$7 to US$50–60); buyers take figures that fit in a car. Carried over from the earlier verified insights pass. <a href="https://www.eluniverso.com/guayaquil/comunidad/guayaquil-se-viste-de-amarillo-para-fin-de-ano-la-cabala-que-se-mantiene-y-que-impulsa-las-ventas-nota/">El Universo, Dec 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>The Venezuelan entrepreneur and the Quito market seller: not grounded in this pass; no figures opened. See Gaps.</li>
+</ul>
+</section>
+<section class="sec" id="s31" data-toc="Lifestyle" data-group="Ecuador"><h2>Lifestyle</h2>
+<ul class="mdl">
+<li>Tienda hours are reported as 6:00 to 23:00, no holidays and no weekends, with some Quito shops cutting hours because of insecurity. Search summary of RET and Expreso, not opened. <a href="https://www.expreso.ec/quito/tiendas-de-barrio-negocio-que-resuelve-urgencias-y-conecta-vecinos-quito-291167.html">Expreso, Quito</a> [thin]</li>
+</ul>
+
+<ul class="mdl">
+<li>Social media is the business tool: 66.9% of early-stage and 56.2% of established businesses use social networks; email 37.7% / 32.5%, website 41.2% / 31.9%, email marketing 35.1% / 29%. Ecuador is below the regional average on every digital indicator. Platform split (WhatsApp, Facebook, TikTok, Instagram) is not in the opened sources. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+<li>Insecurity is now a business-closing force (13.12% of closures) and, in Guayaquil, a logistics force (distributors and repartidores leaving routes in Nueva Prosperina). <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a>; <a href="https://www.extra.ec/noticia/especiales/extorsiones-nueva-prosperina-repartidores-abandonan-rutas-vacunas-160110.html">Extra, 9 Aug 2026</a> [well]</li>
+<li>Working days, who helps (family), how goods move (moto, bus, apps), devices, media, leisure, religion, health and the effect of the 2024 power cuts were not reached. See Gaps.</li>
+</ul>
+</section>
+<section class="sec" id="s32" data-toc="Money and tools" data-group="Ecuador"><h2>Money and tools</h2>
+<ul class="mdl">
+<li>Formal tax status: among those with a RUC, about two in three are on RIMPE (60.24% early-stage, 66.96% established). RIMPE has two bands: Negocio Popular up to US$20,000 a year and Emprendedor US$20,000–300,000. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a>; <a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>In 2026 the SRI reportedly moved about 14,000 Negocios Populares to RIMPE Emprendedor (2025 income over US$20,000) and about 56,000 Emprendedores to the general regime. Search summary, not opened. <a href="https://www.primicias.ec/economia/sri-recategorizacion-contribuyentes-rimpe-emprendedores-impuestos-iva-113225/">Primicias</a>; <a href="https://www.vistazo.com/actualidad/nacional/2026-01-07-sri-actualiza-rimpe-traslada-miles-contribuyentes-otros-regimenes-asi-verificar-si-afecta-OF10629025">Vistazo, 7 Jan 2026</a> [thin]</li>
+<li>Popular and solidarity economy membership is small but grows with age: 7.25% of early-stage and 15.51% of established businesses are in the RUEPS; GEM reads this as joining associative schemes to reach solidarity finance. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+<li>Income ranges, bank account and credit access, chulco and gota-a-gota lending, cooperativas de ahorro y crédito, DeUna, Ahorita, Peigo and delivery cost were not reached. See Gaps.</li>
+</ul>
+</section>
+<section class="sec" id="s33" data-toc="Identity and language" data-group="Ecuador"><h2>Identity and language</h2>
+<ul class="mdl">
+<li>Family tradition is rising as a reason to be in business: 43.11% of early-stage entrepreneurs cite "continuing a family tradition" (37.10% in 2024, regional average 39.08%); GEM calls it "a refuge in legacy models amid uncertainty", and it is the only motive that holds up among established owners. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Need and ambition sit side by side: 91.5% necessity, yet 59.23% want great wealth and 51.14% want to make a difference. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM Ecuador 2025</a> [well]</li>
+<li>Artisan voice from the monigote trade: Will Tenorio (16 years in the trade) makes figures "de mi misma altura" (my own height) so more people can afford them. <a href="https://www.eluniverso.com/guayaquil/comunidad/guayaquil-se-viste-de-amarillo-para-fin-de-ano-la-cabala-que-se-mantiene-y-que-impulsa-las-ventas-nota/">El Universo, Dec 2025</a> [well]</li>
+<li>Self-descriptions ("emprendedor", "camello", "mi negocito", "el que no arriesga no gana"), values and Costa vs Sierra business culture were not sourced. See Gaps.</li>
+</ul>
+</section>
+<section class="sec" id="s34" data-toc="Their December" data-group="Ecuador"><h2>Their December</h2>
+<ul class="mdl">
+<li>Año Viejo monigotes are a December micro-business in Guayaquil: US$10–200 a figure on Calle 6 de Marzo, rising material costs, smaller figures that fit in a car. <a href="https://www.eluniverso.com/guayaquil/comunidad/guayaquil-se-viste-de-amarillo-para-fin-de-ano-la-cabala-que-se-mantiene-y-que-impulsa-las-ventas-nota/">El Universo, Dec 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>Yellow underwear and New Year cábalas are a 27–31 Dec trade for informal sellers: US$1 a piece, 3–4 for US$5; sellers expected demand from 27 Dec and hoped the last weekend would beat Christmas sales. <a href="https://www.eluniverso.com/guayaquil/comunidad/guayaquil-se-viste-de-amarillo-para-fin-de-ano-la-cabala-que-se-mantiene-y-que-impulsa-las-ventas-nota/">El Universo, 27 Dec 2025</a> [well]</li>
+</ul>
+
+<ul class="mdl">
+<li>December sales share, décimo tercer sueldo-driven demand, extra workload and helpers, seasonal credit, and whether owners work on 24/25 Dec were not reached. See Gaps.</li>
+</ul>
+</section>
+
+<section class="sec" id="s36" data-toc="Strongest 8" data-group="Ecuador"><h2>Strongest 8</h2>
+<ul class="mdl">
+<li>Ecuador has the 2nd-highest early-stage entrepreneurship rate of 48 countries: 29.63% of adults, 1st in Latin America. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM 2025</a> [well]</li>
+<li>91.5% started because jobs are scarce, the region's highest; necessity, not lifestyle. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM 2025</a> [well]</li>
+<li>Only 6.52% of adults run a business older than 3.5 years (13.26% a year earlier); 9.09% closed one in the last year. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM 2025</a> [well]</li>
+<li>Crime and extortion became the third reason for closing a business in 2025 (13.12%). <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM 2025</a> [well]</li>
+<li>Women are 52.23% of early-stage entrepreneurs and 54.43% of nascent ones, but fall to 49.20% of established owners. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM 2025</a> [well]</li>
+<li>83.18% of new businesses are consumer-facing, up from 75.02% in 2023; four in five sell to households. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM 2025</a> [well]</li>
+<li>About 70% of new businesses have no RUC; 66.9% use social media for the business; 48.95% already sell to other parts of the country. <a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">GEM 2025</a> [well]</li>
+<li>92.2% of Ecuador's 1.07M registered firms are microenterprises, and about 101,900 of them dropped off the register in 2024 (−9.3%, partly a data gap). <a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">INEC REEM 2024</a> [well]</li>
+</ul>
+</section>
+<section class="sec" id="s37" data-toc="Gaps" data-group="Ecuador"><h2>Gaps</h2>
+<ul class="mdl">
+<li>Not opened, search summaries only: Red Ecuatoriana de Tenderos figures (130,000+ tenderos, 1.5M jobs, 70% of daily household shopping, 1,943 shops closed Aug 2024–Feb 2025, 6:00–23:00 hours with no days off); SRI 2026 RIMPE recategorisation (about 14,000 and 56,000 taxpayers); El Comercio's report that intention to start a business fell in GEM 2025.</li>
+<li>GEM 2025 contains more that was not extracted: financing sources (savings, family, banks, cooperatives), occupation/labour status of entrepreneurs, gender by sector, hiring expectations, AI use, and the expert survey on finance access. The PDF is at the link above and can be mined further.</li>
+<li>Migrants: no figures for Venezuelan or Colombian business owners in Ecuador (UNHCR/IOM, GTRM Ecuador, R4V); no Venezuelan population figure for Ecuador in 2026.</li>
+<li>Household: whether the business is the main household income, household size, years in business, home vs market vs street vs shop vs online location (INEC ENEMDU self-employment tables would answer most of this).</li>
+<li>Sector detail: no counts for tiendas, restaurants, bakeries, pharmacies, beauty, clothing, auto parts, florists or online sellers.</li>
+<li>Lifestyle: days off, Christmas closing, family helpers, goods transport (moto, bus, delivery apps), devices, platform split (WhatsApp/Facebook/TikTok/Instagram), media, leisure, religion and community, health; the 2024 power cuts' effect on small businesses (CAPEIPI, Cámara de Comercio de Quito/Guayaquil losses) was not reached.</li>
+<li>Insecurity: the "about 20% of Guayas small businesses pay vacunas" gremio figure still has no confirmed date; no 2026 aggregate on extortion of small businesses.</li>
+<li>Money: income ranges, banking and credit access, chulco and gota-a-gota, cooperativas (SEPS member and branch counts), DeUna, Ahorita and Peigo user and merchant numbers, dollarisation effects, delivery spend.</li>
+<li>Identity and language: no sourced usage of "camello", "mi negocito", "emprendedor" or "el que no arriesga no gana"; no source on Costa vs Sierra business culture.</li>
+<li>December: December share of SMB sales, décimo tercer sueldo (paid by 24 Dec) and its pull on small-business sales, seasonal credit, extra helpers, working through 24/25 Dec, what owners do 25–31 Dec.</li>
+<li>City cuts: no Guayaquil, Quito or Cuenca figures beyond province firm counts (Pichincha, Guayas, Azuay).</li>
+</ul>
+</section>
+<section class="sec sources" id="sources">
+  <p class="eyebrow">Reference</p>
+  <h2>All sources</h2>
+  <p>Every link cited above, once, in order of first use. Figures were checked on the page itself, not taken from search snippets.</p>
+  <ol><li><a href="https://comex-assets.s3.amazonaws.com/comex-assets/web/posts/9750/reporte-mypes-2024.pdf">comex-assets.s3.amazonaws.com</a> — ComexPerú, Las mypes en el Perú – Resultados 2024 (Jul 2025, PDF)</li><li><a href="https://www.peru-retail.com/mypes-formales-en-peru-aun-no-recuperan-el-nivel-prepandemia-que-muestran-las-cifras-de-2025/">peru-retail.com</a> — Peru Retail, 17 Sep 2026</li><li><a href="https://larepublica.pe/verificador/2026/03/27/el-candidato-presidencial-carlos-jaico-dijo-que-hay-235-millones-de-mypes-pero-no-es-asi-292599">larepublica.pe</a> — La República verificador, 27 Mar 2026</li><li><a href="https://www.infobae.com/peru/2026/09/16/peru-tiene-179-mil-mypes-formales-menos-que-antes-de-la-pandemia-negocios-en-negro-llegan-al-865/">infobae.com</a> — Infobae, 16 Sep 2026</li><li><a href="https://www.infobae.com/peru/2026/09/15/cupos-de-hasta-s2-millones-semanales-extorsiones-prestamos-gota-a-gota-y-falta-de-credito-agravan-la-crisis-de-las-bodegas-en-peru/">infobae.com</a> — Infobae, 15 Sep 2026 (earlier pass)</li><li><a href="https://www.infobae.com/peru/2025/12/13/la-navidad-cada-vez-mas-en-lo-digital-61-de-los-peruanos-decidira-sus-compras-a-traves-de-redes-sociales/">infobae.com</a> — Infobae, 13 Dec 2025</li><li><a href="https://www.peru-retail.com/el-67-de-las-mypes-peruanas-espera-mayores-ventas-durante-la-campana-navidena/">peru-retail.com</a> — Peru Retail</li><li><a href="https://www.infobae.com/peru/2025/12/23/trafico-en-lima-se-agrava-previo-a-la-navidad-y-ano-nuevo-zonas-criticas-y-esperas-de-hasta-2-horas-por-cruzar-principales-avenidas/">infobae.com</a> — Infobae, 24 Dec 2025</li><li><a href="https://gestion.pe/economia/empresas/perfil-del-emprendedor-tiene-40-anos-en-promedio-y-el-60-son-mujeres-noticia/">gestion.pe</a> — Gestión</li><li><a href="https://elcomercio.pe/respuestas/cuanto/circum-2025-7-de-cada-10-emprendedores-peruanos-buscan-capacitarse-para-impulsar-el-crecimiento-de-sus-negocios-ipsos-cristian-arens-peru-produce-jorge-serratos-carlos-deivis-josema-sanchez-ultimas-noticia/">elcomercio.pe</a> — El Comercio CIRCUM 2025</li><li><a href="https://www.ipsos.com/es-pe/perfil-de-la-bodega-y-el-bodeguero">ipsos.com</a> — Ipsos bodeguero</li><li><a href="https://www.mercadonegro.pe/actualidad/emprendimiento-actualidad/seis-datos-sobre-los-emprendedores-limenos-segun-ipsos/">mercadonegro.pe</a> — Mercado Negro, six facts about Lima entrepreneurs</li><li><a href="https://gestion.pe/economia/empresas/el-nuevo-emprendedor-en-lima-jovenes-negocios-y-sus-giros-situacion-y-canales-empresas-emprendimiento-noticia/">gestion.pe</a> — Gestión, the new Lima entrepreneur</li><li><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-2024.pdf">dane.gov.co</a> — DANE EMICRON 2024 (30 Jul 2025)</li><li><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRON-PanaderiasTiendasBarrio-2024.pdf">dane.gov.co</a> — DANE EMICRON Panaderías y tiendas de barrio (8 May 2026)</li><li><a href="https://www.dane.gov.co/files/operaciones/EMICRON/bol-EMICRONVendedoresAmbulantes-2024.pdf">dane.gov.co</a> — DANE EMICRON Vendedores ambulantes (28 Oct 2025)</li><li><a href="https://www.vanguardia.com/colombia/2026/02/23/migrantes-venezolanos-en-colombia-dudan-regresar-a-su-pais-tras-captura-de-maduro/">vanguardia.com</a> — Vanguardia (23 Feb 2026)</li><li><a href="https://mintransporte.gov.co/publicaciones/12201/la-epoca-mas-alegre-del-ano-tambien-es-la-mas-mortal-en-las-vias-esta-navidad-colombia-debe-decidir-si-enciende-luces-de-navidad-o-apaga-vidas/">mintransporte.gov.co</a> — Mintransporte (1 Dec 2025)</li><li><a href="https://www.eltiempo.com/justicia/conflicto-y-narcotrafico/suben-los-casos-de-extorsion-en-el-primer-trimestre-de-2026-el-pais-llego-a-la-cifra-mas-alta-de-la-ultima-decada-3548692">eltiempo.com</a> — El Tiempo (17 Apr 2026)</li><li><a href="https://www.portafolio.co/negocios/empresas/inversion-de-servientrega-para-mejorar-logistica-en-fin-de-ano-559949">portafolio.co</a> — Portafolio (23 Dec 2021)</li><li><a href="https://es-us.noticias.yahoo.com/10-colombianos-iniciaron-2026-estabilidad-170000536.html">es-us.noticias.yahoo.com</a> — Yahoo Noticias / MejorCDT (15 Jan 2026)</li><li><a href="https://www.infobae.com/colombia/2025/01/07/al-que-madruga-dios-le-ayuda-domiciliario-se-le-midio-a-trabajar-desde-las-600-de-la-manana-el-1-de-enero-y-estas-fueron-sus-ganancias/">infobae.com</a> — Infobae Colombia (7 Jan 2025)</li><li><a href="https://uees.edu.ec/wp-content/uploads/2026/05/GEM-2025.pdf">uees.edu.ec</a> — GEM Ecuador 2025, May 2026</li><li><a href="https://www.ecuadorencifras.gob.ec/documentos/web-inec/Estadisticas_Economicas/Registro_Empresas_Establecimientos/2024/Semestre_II/Principales_Resultados_REEM_2024.pdf">ecuadorencifras.gob.ec</a> — INEC REEM 2024, Oct 2025</li><li><a href="https://www.expreso.ec/economia-y-negocios/significa-empleo-adecuado-ecuador-sigue-estancado-36-6-286685.html">expreso.ec</a> — Expreso, 2026</li><li><a href="https://www.eluniverso.com/noticias/economia/tiendas-de-barrio-ecuador-negocios-hard-discount-nota/">eluniverso.com</a> — El Universo</li><li><a href="https://kchcomunicacion.com/2026/03/27/dia-del-tendero-negocios-de-barrio-que-impulsan-la-economia-y-la-inclusion-financiera-en-el-pais/">kchcomunicacion.com</a> — KCH FM, 27 Mar 2026</li><li><a href="https://www.expreso.ec/quito/tiendas-de-barrio-negocio-que-resuelve-urgencias-y-conecta-vecinos-quito-291167.html">expreso.ec</a> — Expreso, Quito tiendas</li><li><a href="https://www.extra.ec/noticia/especiales/extorsiones-nueva-prosperina-repartidores-abandonan-rutas-vacunas-160110.html">extra.ec</a> — Extra, 9 Aug 2026</li><li><a href="https://www.eluniverso.com/guayaquil/comunidad/guayaquil-se-viste-de-amarillo-para-fin-de-ano-la-cabala-que-se-mantiene-y-que-impulsa-las-ventas-nota/">eluniverso.com</a> — El Universo, Dec 2025</li><li><a href="https://www.primicias.ec/economia/sri-recategorizacion-contribuyentes-rimpe-emprendedores-impuestos-iva-113225/">primicias.ec</a> — Primicias</li><li><a href="https://www.vistazo.com/actualidad/nacional/2026-01-07-sri-actualiza-rimpe-traslada-miles-contribuyentes-otros-regimenes-asi-verificar-si-afecta-OF10629025">vistazo.com</a> — Vistazo, 7 Jan 2026</li></ol>
+</section>
+
+  </main>
+</div>
+<script>
+(function(){
+  var b=document.body, burger=document.querySelector('.burger'), last=0;
+  function close(){b.classList.remove('nav')}
+  burger&&burger.addEventListener('click',function(){b.classList.add('nav')});
+  document.querySelector('.scrim').addEventListener('click',close);
+  document.querySelector('.navhead button').addEventListener('click',close);
+  document.querySelectorAll('.toc a').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  window.addEventListener('scroll',function(){var y=window.scrollY; if(burger){burger.classList.toggle('away',y>last&&y>200)} last=y},{passive:true});
+  var links={}; document.querySelectorAll('.toc a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('cur')}); var l=links[e.target.id]; l&&l.classList.add('cur')}})},{rootMargin:'0px 0px -70% 0px'});
+    document.querySelectorAll('section.sec[id]').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>

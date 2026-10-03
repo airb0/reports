@@ -1,0 +1,356 @@
+<title>Christmas traditions in Peru, Colombia and Ecuador</title>
+<style>
+@font-face{font-family:"PP Agrandir";src:url("fonts/PPAgrandir-Bold.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Suisse Intl";src:url("fonts/SuisseIntl-Book.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Suisse Intl";src:url("fonts/SuisseIntl-Semibold.woff2") format("woff2");font-weight:600;font-display:swap}
+/* Layout: a long research document — sticky contents column left, one reading column right; drawer under 900px. */
+:root{
+  --bg:#FFFFFF; --fg:#000000; --body:#141414; --muted:#55605A; --line:#D5E6DC; --line2:#EAF4EE;
+  --panel:#E4FFF2; --plate:#F4F3D8; --accent:#C1F11D; --on-accent:#000000;
+  --display:"PP Agrandir","Arial Black","Helvetica Neue",Arial,sans-serif;
+  --text:"Suisse Intl","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --max:1200px; color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141414; --fg:#FFFFFF; --body:#ECEFED; --muted:#A4ADA8; --line:#2E3532; --line2:#222826;
+  --panel:#1D2421; --plate:#2A2A22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141414; --fg:#FFFFFF; --body:#ECEFED; --muted:#A4ADA8; --line:#2E3532; --line2:#222826;
+  --panel:#1D2421; --plate:#2A2A22; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--body);font-family:var(--text);font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration-color:var(--muted);text-underline-offset:2px}
+a:hover{text-decoration-color:var(--fg)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--fg);outline-offset:2px}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:40px}
+/* cover */
+.cover{padding-block:56px 40px;border-bottom:2px solid var(--fg)}
+.series{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:40px}
+.series a{text-decoration:none}
+.series .on{color:var(--fg);font-weight:600}
+.series .brand{color:var(--fg);font-weight:600;margin-right:6px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(38px,6.4vw,76px);line-height:1;letter-spacing:-.02em;color:var(--fg);margin:0 0 22px;text-wrap:balance;max-width:16ch}
+.hl{position:relative;z-index:0;color:var(--on-accent);padding:0 .08em;white-space:nowrap}
+.hl:before{content:"";position:absolute;z-index:-1;left:-.06em;right:-.1em;top:.08em;bottom:-.04em;background:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='316' height='68' viewBox='0 0 316 68' preserveAspectRatio='none'%3E%3Cpath d='M314.41 25.529C262.307 28.9686 113.618 24 7.42536 24C57.9532 29.7926 206.773 42.8579 311.885 42.8579C279.451 42.5847 158.673 45.5592 0.410173 42.8579' stroke='%23C1F11D' stroke-width='48' fill='none'/%3E%3C/svg%3E") no-repeat center/100% 100%}
+.sub{font-size:19px;line-height:1.45;max-width:60ch;margin:0 0 30px;color:var(--body)}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:13px;color:var(--muted);margin:0;padding:0;list-style:none}
+.facts b{display:block;font-family:var(--display);font-size:22px;color:var(--fg);letter-spacing:-.01em;line-height:1.1;font-variant-numeric:tabular-nums}
+/* layout */
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:56px;align-items:start;padding-block:0 120px}
+.toc{position:sticky;top:env(safe-area-inset-top,0px);max-height:100vh;overflow-y:auto;padding-block:36px;font-size:13.5px;scrollbar-width:thin}
+.toc .g{margin-bottom:22px}
+.toc .gt{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--fg);padding-bottom:7px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.toc ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+.toc a{color:var(--muted);text-decoration:none;line-height:1.3;display:block}
+.toc a:hover,.toc a.cur{color:var(--fg)}
+main{min-width:0;padding-top:36px}
+.burger,.scrim,.navhead{display:none}
+/* sections */
+section.sec{padding-top:8px;margin-bottom:64px;scroll-margin-top:16px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 8px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,3.4vw,40px);line-height:1.05;letter-spacing:-.015em;color:var(--fg);margin:0 0 14px;text-wrap:balance}
+h3{font-size:18px;font-weight:600;line-height:1.3;color:var(--fg);margin:0;text-wrap:balance}
+p{margin:0 0 12px;max-width:68ch}
+.lead{font-size:18px;line-height:1.5;max-width:62ch;margin-bottom:24px}
+.country{border-top:2px solid var(--fg);padding-top:20px}
+/* verdict cards */
+.verdicts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:8px 0 18px}
+.verdict{background:var(--panel);padding:20px 20px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.verdict .m{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.verdict .w{font-family:var(--display);font-size:24px;line-height:1.05;color:var(--fg);letter-spacing:-.01em}
+.verdict p{font-size:14.5px;margin:0}
+.verdict .fit{font-size:13.5px;border-top:1px solid var(--line);padding-top:10px;margin-top:auto}
+/* items */
+.item{border-top:1px solid var(--line);padding-block:20px 6px}
+.ihead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-bottom:10px}
+.when{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.ev{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;background:var(--plate);color:var(--fg);padding:3px 7px;white-space:nowrap}
+.item ul{margin:0 0 12px;padding-left:18px;max-width:68ch}
+.item li{margin-bottom:5px}
+.hook{background:var(--panel);padding:12px 16px;margin:4px 0 12px;max-width:68ch;font-size:15px}
+.hook b{display:inline-block;background:var(--accent);color:var(--on-accent);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;margin-right:8px;vertical-align:1px}
+.src{font-size:13px;color:var(--muted);max-width:76ch;margin:0 0 10px}
+.src a{color:var(--muted)}
+.q{font-style:normal;color:var(--fg)}
+ul.mdl{margin:0 0 14px;padding-left:18px;max-width:72ch}
+ul.mdl li{margin-bottom:7px}
+ul.mdl li.sub2{margin-left:18px;list-style:circle;color:var(--body)}
+code{font-size:.9em;background:var(--plate);padding:0 4px}
+/* patterns */
+.pats{counter-reset:p;display:grid;gap:0}
+.pat{border-top:1px solid var(--line);padding-block:16px 4px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 8px}
+.pat:before{counter-increment:p;content:counter(p);font-family:var(--display);font-size:22px;color:var(--fg);line-height:1.1}
+.pat h3{margin-bottom:6px}
+/* tables */
+.tbl{overflow-x:auto;margin:10px 0 18px;border-top:2px solid var(--fg)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:640px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px 10px 0;border-bottom:1px solid var(--line)}
+th{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td:first-child{font-weight:600;color:var(--fg);white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.win td{background:var(--panel)}
+tr.win td:first-child{box-shadow:inset 4px 0 0 var(--accent);padding-left:10px}
+.tag{font-size:11px;font-weight:600;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+/* sources */
+.sources ol{padding-left:22px;font-size:13px;color:var(--muted);columns:2;column-gap:36px}
+.sources li{margin-bottom:6px;break-inside:avoid;overflow-wrap:anywhere}
+.sources li a{color:var(--body)}
+.foot{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px;margin-top:40px}
+/* mobile */
+@media (max-width:900px){
+  .wrap{padding-inline:18px}
+  .layout{display:block}
+  .verdicts{grid-template-columns:minmax(0,1fr)}
+  .sources ol{columns:1}
+  .burger{display:flex;position:fixed;right:14px;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:30;width:44px;height:44px;align-items:center;justify-content:center;background:var(--fg);color:var(--bg);border:0;cursor:pointer;transition:transform .2s}
+  .burger.away{transform:translateY(-80px)}
+  .burger span,.burger span:before,.burger span:after{display:block;width:18px;height:2px;background:currentColor;position:relative}
+  .burger span:before,.burger span:after{content:"";position:absolute;left:0}
+  .burger span:before{top:-6px}.burger span:after{top:6px}
+  .toc{position:fixed;top:0;right:0;bottom:0;width:min(86vw,340px);max-height:none;background:var(--bg);z-index:50;padding:calc(env(safe-area-inset-top,0px) + 16px) 20px 40px;transform:translateX(100%);transition:transform .25s;border-left:1px solid var(--line)}
+  .navhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;font-weight:600;color:var(--fg)}
+  .navhead button{background:none;border:0;font-size:26px;line-height:1;color:var(--fg);cursor:pointer;padding:4px 8px}
+  body.nav .toc{transform:none}
+  .scrim{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:40}
+  body.nav .scrim{display:block}
+  body.nav{overflow:hidden}
+  table{font-size:13.5px}
+}
+@media (prefers-reduced-motion:reduce){.toc,.burger{transition:none}}
+</style>
+<header class="cover wrap">
+  <div class="series"><span class="brand">Christmas 2026 · Latin America</span><a class="on" href="#">1 · Traditions</a><span>2 · Holiday insights</span><span>3 · Social context & SMB</span><span>4 · Activations review</span></div>
+  <h1>Christmas in Peru, Colombia and <span class="hl">Ecuador</span></h1>
+  <p class="sub">How each market spends December: which night matters most, the days between 24 and 27 December, the local layers on the Christian calendar, and lottery and Reyes equivalents.</p>
+  <ul class="facts"><li><b>24 Dec</b>the peak in all three</li><li><b>79</b>sources linked</li></ul>
+</header>
+<button class="burger" type="button" aria-label="Open contents"><span></span></button>
+<div class="scrim"></div>
+<div class="layout wrap">
+  <nav class="toc" aria-label="Contents"><div class="navhead">Contents<button type="button" aria-label="Close contents">×</button></div><div class="g"><div class="gt">Start here</div><ul><li><a href="#answer">What matters most</a></li><li><a href="#window">24–27 December day by day</a></li><li><a href="#patterns">What repeats</a></li></ul></div><div class="g"><div class="gt">Peru</div><ul><li><a href="#peru">Overview</a></li></ul></div><div class="g"><div class="gt">Colombia</div><ul><li><a href="#colombia">Overview</a></li></ul></div><div class="g"><div class="gt">Ecuador</div><ul><li><a href="#ecuador">Overview</a></li></ul></div><div class="g"><div class="gt">Reference</div><ul><li><a href="#spain">El Gordo &amp; Los Reyes: local equivalents</a></li><li><a href="#gaps">What is missing</a></li></ul></div><div class="g"><ul><li><a href="#sources">All sources</a></li></ul></div></nav>
+  <main>
+<section class="sec" id="answer" data-toc="What matters most" data-group="Start here">
+<p class="eyebrow">The short answer</p>
+<h2>Christmas, New Year or something of their own?</h2>
+<p class="lead">All three are Catholic-majority countries with no competing religious calendar of their own. What differs is which night carries the emotion and which one carries the street. In Peru it is Christmas Eve, in Colombia the whole of December, and in Ecuador the private Christmas sits beside a very public New Year's Eve.</p>
+<div class="verdicts">
+<div class="verdict"><span class="m">Peru</span><span class="w">Nochebuena wins</span><p>Christmas Eve is the main event: a late dinner, a midnight countdown, a hug, then everyone goes out to greet the neighbours while fireworks run for up to half an hour. In a Lima study 42.6% gave Christmas top importance against 36.8% for New Year. New Year is the luck-and-party night.</p></div>
+<div class="verdict"><span class="m">Colombia</span><span class="w">December as a season</span><p>December runs from the candles of 7 December through the nine nights of the Novena to the midnight of the 24th, when Niño Dios (the Christ Child, not Santa) brings the children's presents. New Year is the bigger party and the more likely trip, and couples rather than families travel for it.</p></div>
+<div class="verdict"><span class="m">Ecuador</span><span class="w">Christmas at home, Año Viejo in the street</span><p>Christmas is family and religious: 92% spend Nochebuena at home. The ritual the country is known for is 31 December, when effigies of the year (monigotes) are burned and men dressed as the year's "widows" stop traffic for coins.</p></div>
+</div>
+<p>The local layers are regional rather than national rivals to Christmas: Andean and Afro-Peruvian Christmas in Cusco and Ica, the Feria de Cali, Quito's city fiestas, the Pase del Niño processions and the Año Viejo effigies. They sit on top of the Christian calendar rather than beside it.</p>
+<p class="src">Sources: <a href="https://www.infobae.com/peru/2025/12/17/que-valoran-mas-los-peruanos-la-navidad-o-el-ano-nuevo-un-nuevo-estudio-revela-habitos-de-consumo-poco-conocidos-por-estas-fiestas/">USIL study via Infobae, 17 Dec 2025</a> · <a href="https://trome.com/actualidad/7-cosas-que-solo-los-peruanos-hacemos-en-navidad-fotos-video-imp-noticia/">Trome, 6 Dec 2022</a> · <a href="https://culturarecreacionydeporte.gov.co/es/bogotanitos/de-la-la-z/navidad-el-24-de-diciembre">Bogotá culture secretariat</a> · <a href="https://www.forbes.com.ec/money/en-gastan-ecuatorianos-fiestas-navidad-fin-ano-n83033">Kantar via Forbes Ecuador</a> · <a href="https://www.primicias.ec/sociedad/mascaras-caretas-ano-nuevo-ecuador-monigotes-31diciembre-112787/">Primicias</a></p>
+</section>
+
+<section class="sec" id="window" data-toc="24–27 December day by day" data-group="Start here">
+<p class="eyebrow">Thursday to Sunday</p>
+<h2>What happens between 24 and 27 December 2026</h2>
+<p>In 2026 the 24th is a Thursday and Christmas Day a Friday, so the days run straight into a weekend. The 28th (Monday) is the Day of the Holy Innocents, the Hispanic April Fools'.</p>
+<div class="tbl"><table>
+<thead><tr><th>Day</th><th>Peru (Lima)</th><th>Colombia</th><th>Ecuador</th></tr></thead>
+<tbody>
+<tr class="win"><td>Thu 24</td><td>Last-minute shopping peak (22–24 Dec). Dinner, countdown, midnight hug, street greetings, fireworks. Santurantikuy fair in Cusco.</td><td>Ninth and last night of the Novena. Christmas lottery draw. Niño Dios brings presents at midnight.</td><td>Pase del Niño Viajero in Cuenca (about 10:00–15:00). Christmas lottery at noon. Legal deadline for the 13th salary. Monigote sales start to climb.</td></tr>
+<tr class="win"><td>Fri 25</td><td>Public holiday. Leftovers, visiting, beach: Agua Dulce and Los Yuyos fill up. Takanakuy in Chumbivilcas (Cusco).</td><td>Public holiday. Children with new toys at the pesebre. Feria de Cali opens with the Salsódromo.</td><td>Public holiday. Family day, presents found at the nativity.</td></tr>
+<tr class="win"><td>Sat 26</td><td>Weekend. Clean-up and visits.</td><td>Feria de Cali continues to the 30th.</td><td>Monigote streets in Guayaquil (three authorised zones) busy until the 31st.</td></tr>
+<tr class="win"><td>Sun 27</td><td>Weekend. Run-up to New Year shopping.</td><td>Feria de Cali.</td><td>Monigote building and buying.</td></tr>
+<tr><td>Mon 28</td><td colspan="3">Día de los Santos Inocentes: pranks (inocentadas) in all three; Cuenca holds a costume fiesta; Pasto's pre-carnival begins.</td></tr>
+<tr><td>Thu 31</td><td>Twelve grapes, yellow underwear, lentils. Shamans' predictions on a Lima beach make global news (around the 29th–30th).</td><td>Muñecos de Año Viejo burned; Pasto's Desfile de Años Viejos.</td><td>Monigotes burned at midnight, viudas, testamentos.</td></tr>
+</tbody></table></div>
+<p class="src">Sources: <a href="https://www.businessempresarial.com.pe/asi-compran-los-peruanos-en-navidad-rappi-revela-que-la-mayoria-de-pedidos-se-concentran-a-ultimo-minuto/">Rappi Peru 2025</a> · <a href="https://elcomercio.pe/lima/sucesos/costa-verde-congestion-vehicular-por-la-gran-cantidad-de-visitantes-a-las-playas-en-el-feriado-de-navidad-playa-agua-dulce-los-yuyos-miraflores-chorrillos-barranco-verano-ultimas-noticia/">El Comercio on Costa Verde at Christmas</a> · <a href="https://www.elpais.com.co/cali/salsodromo-en-la-feria-de-cali-2025-en-vivo-calenos-esperan-ansiosos-el-gran-arranque-de-la-edicion-68-de-la-feria-de-cali-2511.html">El País Cali</a> · <a href="https://visitcuencaecuador.com.ec/en/procession-in-honor-of-baby-jesus/">Visit Cuenca</a> · <a href="https://www.primicias.ec/guayaquil/calles-venta-monigotes-anos-viejos-6marzo-alban-borja-horarios-111504/">Primicias Guayaquil</a> · <a href="https://www.primicias.ec/sociedad/dia-inocentes-origen-celebracion-ecuador-bromas-desfiles-112619/">Primicias on Inocentes</a></p>
+</section>
+
+<section class="sec" id="patterns" data-toc="What repeats" data-group="Start here">
+<p class="eyebrow">Written last, from the entries below</p>
+<h2>What repeats across all three</h2>
+<div class="pats">
+<div class="pat"><div><h3>Midnight on the 24th is the peak, and everything before it is a countdown</h3></div></div>
+<div class="pat"><div><h3>The gift-bringer is a child, not an old man</h3><p>Niño Dios in Colombia and Niño Jesús in Ecuador bring the presents, and children leave letters at the nativity scene. Papá Noel is a modern overlay. In Cusco the Christ Child (Niño Manuelito) is the star of the market.</p></div></div>
+<div class="pat"><div><h3>Money lands days before Christmas, but only for the formal half</h3><p>Peru pays the gratificación by 15 December, Colombia the prima by the 20th, Ecuador the 13th salary by the 24th. Couriers and most micro-business owners are informal and receive none of it. See report 3 for the numbers.</p></div></div>
+<div class="pat"><div><h3>Food and baskets are the gift</h3><p>Panetón with hot chocolate (Peru eats about 1.3 kg each), natilla and buñuelos (Colombia), pristiños and rompope (Ecuador), turkey everywhere. The basket is a gift format of its own: the employer's canasta navideña in Peru, the ancheta in Colombia, both sold and delivered by small businesses.</p></div></div>
+<div class="pat"><div><h3>The year is closed by settling accounts</h3><p>Ecuador and Colombia burn effigies of the year, often with politicians' faces. Peru's Takanakuy settles the year's disputes with a ritual fistfight that ends in an embrace. Mock wills (testamentos) read out the year's debts and jokes.</p></div></div>
+<div class="pat"><div><h3>Luck is part of the season</h3><p>Colombia and Ecuador run Christmas lottery draws on the 24th itself; New Year brings grapes, yellow underwear, lentils and suitcase runs everywhere. Peru found no national Christmas lottery tradition.</p></div></div>
+<div class="pat"><div><h3>Charity is a public ritual, especially in Peru</h3><p>The chocolatada, hot chocolate and panetón handed out to children in poor areas, is organised by companies, parishes, municipalities and neighbours from late November to Christmas Eve.</p></div></div>
+</div>
+</section>
+
+<section class="sec country" id="peru" data-toc="Overview" data-group="Peru">
+
+<h2>Peru: a midnight that goes out into the street</h2>
+<p class="lead">76% Catholic and 14% evangelical (Census 2017). More than 90% celebrate Christmas. For 61% it is above all a family moment, for 25% a religious one and for 3% a shopping season.</p>
+<p class="src">Sources: <a href="https://es.wikipedia.org/wiki/Religi%C3%B3n_en_Per%C3%BA">Census 2017 via Wikipedia</a> · <a href="https://rpp.pe/peru/actualidad/mas-del-90-de-peruanos-celebra-navidad-y-el-67-pasara-ano-nuevo-en-casa-o-en-la-de-algun-familiar-o-amigo-segun-cpi-noticia-1605359">CPI via RPP</a> · <a href="https://www.ipsos.com/es-pe/como-celebran-navidad-y-ano-nuevo-los-peruanos">Ipsos/Perú21, Dec 2025</a></p>
+
+<div class="item" id="pe-nochebuena"><div class="ihead"><h3>Nochebuena: countdown, hug, street, fireworks</h3><span class="when">24 Dec, midnight</span><span class="ev">well</span></div>
+<p>Families eat late and count down to midnight together. After the hug and "¡feliz Navidad!" people go out to greet their neighbours, hugging even people they barely know, and toast on the pavement. Firecrackers go off across the city, sometimes for thirty minutes. In 2025 the contrast was big enough to make news: San Isidro and San Borja stayed quiet while Chorrillos, San Juan de Lurigancho and Los Olivos exploded. 84% have the Nochebuena dinner at home with family. Misa de Gallo is the religious version of the same midnight.</p>
+
+<p class="src">Sources: <a href="https://trome.com/actualidad/7-cosas-que-solo-los-peruanos-hacemos-en-navidad-fotos-video-imp-noticia/">Trome</a> · <a href="https://www.infobae.com/peru/2025/12/25/el-distrito-de-lima-que-evito-los-fuegos-artificiales-en-la-celebracion-de-navidad-a-eso-lo-llamo-tener-empatia/">Infobae, 25 Dec 2025</a> · <a href="https://www.ipsos.com/es-pe/como-celebran-navidad-y-ano-nuevo-los-peruanos">Ipsos/Perú21</a></p></div>
+
+<div class="item" id="pe-paneton"><div class="ihead"><h3>Panetón and hot chocolate in the summer heat</h3><span class="when">all December</span><span class="ev">well</span></div>
+<p>Peru has been the world's top per-capita panetón consumer for six years running: about 34,000 tonnes a year, around 1.3 kg per person in 2024, with 33 million units expected in the 2025 campaign (+10%). It is drunk with thick hot chocolate even though December is summer in Lima. In Ipsos' 2025 survey panetón (63%), hot chocolate (57%) and turkey (47%) are the essentials. The most expensive panetón of 2025 cost S/874.</p>
+
+<p class="src">Sources: <a href="https://andina.pe/agencia/noticia-este-ano-se-registrara-venta-record-33-millones-panetones-navidad-590753.aspx">Andina</a> · <a href="https://larepublica.pe/mundo/2025/12/22/el-pais-que-come-mas-paneton-en-el-mundo-esta-en-america-latina-supera-a-italia-y-chile-con-mas-de-30000-toneladas-al-ano-1766534">La República, 22 Dec 2025</a> · <a href="https://gestion.pe/economia/empresas/venta-de-panetones-crecera-10-en-la-campana-navidena-2025-que-ofrecen-las-marcas-y-que-busca-el-consumidor-noticia/">Gestión</a> · <a href="https://www.infobae.com/peru/2025/12/02/cual-es-el-paneton-mas-caro-del-peru-este-2025-vale-874-soles-y-quedan-menos-de-10-unidades/">Infobae, 2 Dec 2025</a></p></div>
+
+<div class="item" id="pe-chocolatada"><div class="ihead"><h3>The chocolatada</h3><span class="when">late Nov – 24 Dec</span><span class="ev">partly</span></div>
+<p>A tradition of Peruvian origin: hot chocolate, often with panetón or sponge cake, handed out to groups of children in poor neighbourhoods. Companies, parishes, schools, municipalities and private people organise them, often with a Papá Noel and small toys.</p>
+
+<p class="src">Source: <a href="https://es.wikipedia.org/wiki/Chocolatada_navide%C3%B1a">Chocolatada navideña, Wikipedia</a></p></div>
+
+<div class="item" id="pe-canasta"><div class="ihead"><h3>The canasta navideña and the gratificación</h3><span class="when">by 15 Dec</span><span class="ev">well</span></div>
+<p>Formal employees get an extra month's salary plus 9% (the gratificación) by 15 December by law. Many employers add a Christmas basket or turkey voucher; it is voluntary unless a collective agreement requires it. Unusually generous "supercanastas" go viral on social media every year.</p>
+
+<p class="src">Sources: <a href="https://rpp.pe/economia/economia/gratificacion-diciembre-2025-calcula-cuanto-debes-recibir-y-cual-es-el-plazo-limite-del-pago-por-navidad-noticia-1667942">RPP</a> · <a href="https://www.infobae.com/peru/2025/12/10/canastas-navidenas-es-obligatorio-que-la-empresa-donde-trabajo-me-den-una-por-fiestas-de-fin-de-ano-esto-dice-la-ley/">Infobae, 10 Dec 2025</a> · <a href="https://www.infobae.com/peru/2025/12/20/las-supercanastas-que-empresas-y-figuras-publicas-entregaron-a-sus-trabajadores-en-2025-y-sorprendieron-a-los-usuarios/">Infobae, 20 Dec 2025</a></p></div>
+
+<div class="item" id="pe-gifts"><div class="ihead"><h3>How Lima buys presents</h3><span class="when">Nov–Dec</span><span class="ev">partly</span></div>
+<ul><li>81% plan to buy presents; most give to 3–4 people (44%); the most common budget is S/200–399 (34%).</li><li>Channels: shopping centres 75%, online 38%, department stores 23%.</li><li>34.2% shop two to three weeks ahead; delivery platforms see the peak on 22–24 December.</li><li>Gifts used to be exchanged at Bajada de Reyes (6 January) and have moved to Christmas Eve.</li></ul>
+
+<p class="src">Sources: <a href="https://www.infobae.com/peru/2025/12/17/que-valoran-mas-los-peruanos-la-navidad-o-el-ano-nuevo-un-nuevo-estudio-revela-habitos-de-consumo-poco-conocidos-por-estas-fiestas/">USIL, 500 interviews in Lima malls, 28 Nov–14 Dec 2025</a> · <a href="https://gestion.pe/economia/empresas/rappi-y-e-commerce-en-peru-pedidos-navidenos-y-crecimiento-2025-noticia/">Gestión on Rappi</a></p></div>
+
+<div class="item" id="pe-beach"><div class="ihead"><h3>Christmas Day on the beach</h3><span class="when">25 Dec</span><span class="ev">well</span></div>
+<p>Christmas falls in Lima's summer. On the 25th thousands of families go to the Costa Verde, Agua Dulce and Los Yuyos in Chorrillos above all, from early morning; parking fills and traffic backs up. On the 26th the beaches are covered in rubbish.</p>
+
+<p class="src">Sources: <a href="https://www.infobae.com/peru/2023/12/25/chorrillos-miles-de-familias-limenas-disfrutan-del-feriado-de-navidad-en-popular-playa-agua-dulce/">Infobae, 25 Dec 2023</a> · <a href="https://canaln.pe/actualidad/costa-verde-miles-personas-celebraron-25-diciembre-playas-lima-n469179">Canal N</a> · <a href="https://www.infobae.com/peru/2025/12/26/navidad-deja-playas-de-la-costa-verde-cubiertas-de-basura-y-desperdicios/">Infobae, 26 Dec 2025</a></p></div>
+
+<div class="item" id="pe-andean"><div class="ihead"><h3>Andean and Afro-Peruvian Christmas</h3><span class="when">22–25 Dec</span><span class="ev">well</span></div>
+<ul><li><b>Santurantikuy</b>, Cusco's Plaza de Armas, 22–24 December (originally only the 24th). The name means "buy me a saint": Niño Manuelito figures, nativity pieces, carvings and masks.</li><li><b>Takanakuy</b>, 25 December in Chumbivilcas (Santo Tomás): men and women settle the year's disputes in a refereed bare-fist fight. It stops at blood or a fall and ends with an embrace. It has spread to Lima's Andean communities.</li><li><b>Hatajo de Negritos and Pallitas</b>, Afro-Peruvian groups in Ica and El Carmen who sing and dance through the streets for the Christ Child.</li><li>Ipsos sees regional differences: Lima and the north celebrate at home with Western habits, the south is more religious, the centre is dominated by patron-saint fiestas.</li></ul>
+
+<p class="src">Sources: <a href="https://www.boletomachupicchu.com/santurantikuy-cusco/">Boleto Machu Picchu</a> · <a href="https://www.infobae.com/peru/2024/12/15/takanakuy-la-violenta-tradicion-andina-en-peru-donde-se-saldan-cuentas-a-puno-limpio-en-navidad/">Infobae, 15 Dec 2024</a> · <a href="https://www.superprof.pe/blog/tradiciones-navidad-costa-peruana/">Superprof</a> · <a href="https://www.ipsos.com/es-pe/como-celebran-navidad-y-ano-nuevo-los-peruanos">Ipsos/Perú21</a></p></div>
+
+<div class="item" id="pe-ny"><div class="ihead"><h3>New Year: grapes, yellow, lentils, shamans</h3><span class="when">29–31 Dec</span><span class="ev">well</span></div>
+<p>Ipsos: twelve grapes at midnight 43%, lentils in the pockets 22%, yellow underwear 18%, burning a muñeco 10%, flowering baths 6%, a run round the block with a suitcase 4%; 31% have no ritual. 66–67% spend New Year at home or at a relative's or friend's. Every year, around 29 December, a group of shamans holds a prediction ritual on La Herradura beach in Lima with photographs of world leaders, and the clip goes round international media.</p>
+
+<p class="src">Sources: <a href="https://peru21.pe/peru/uvas-lentejas-y-ropa-amarilla-estas-son-las-cabalas-para-ano-nuevo-de-los-peruanos-noticia/">Perú21/Ipsos</a> · <a href="https://peru21.pe/lima/ipsos-66-de-peruanos-celebrara-ano-nuevo-en-casa-con-amigos-yo-familiares-ano-nuevo-2025/">Perú21/Ipsos</a> · <a href="https://abc7.com/post/chamanes-peruanos-predicen-la-caida-de-nicolas-maduro-conflictos-globales-continuos-en-2026/18336858/">ABC7, Dec 2025</a></p></div>
+
+<div class="item" id="pe-reyes"><div class="ihead"><h3>Bajada de Reyes</h3><span class="when">6 Jan</span><span class="ev">partly</span></div>
+<p>The family takes down the nativity scene together. "Padrinos" are chosen, and they are expected to contribute to the party or to next year's nativity. It used to be the day for presents.</p>
+<p class="src">Sources: <a href="https://www.infobae.com/america/peru/2022/01/04/bajada-de-reyes-2022-cuando-es-y-por-que-debes-desarmar-el-nacimiento/">Infobae</a> · <a href="https://larepublica.pe/datos-lr/2025/01/03/bajada-de-reyes-2025-fecha-significado-y-como-se-celebra-en-peru-el-dia-de-reyes-magos-atmpe-86325">La República</a></p></div>
+</section>
+
+<section class="sec country" id="colombia" data-toc="Overview" data-group="Colombia">
+<p class="eyebrow">Colombia</p>
+<h2>Colombia: a month-long December</h2>
+<p class="lead">About 70% Catholic and 14–17% evangelical (2025 estimates). 89% celebrate Christmas at home or at a relative's; 91% celebrate New Year, 82% at home. Christmas travellers are mostly families (55%+), New Year travellers mostly couples (48%).</p>
+<p class="src">Sources: <a href="https://cambiocolombia.com/pais/articulo/2025/3/los-colombianos-somos-asi-que-es-la-religion-para-los-colombianos">Cambio, Mar 2025</a> · <a href="https://www.valoraanalitik.com/esta-son-algunas-tendencias-de-consumo-y-celebraciones-de-los-colombianos-en-navidad/">Valora Analitik</a></p>
+
+<div class="item" id="co-velitas"><div class="ihead"><h3>Día de las Velitas and the alumbrados</h3><span class="when">7–8 Dec onwards</span><span class="ev">well</span></div>
+<p>On the night of 7 December families light candles and paper lanterns on doorsteps, windows and pavements for the Immaculate Conception; it officially opens the season. Cities then switch on their lights. Medellín's 58th Alumbrados EPM (28 Nov 2025 – 12 Jan 2026) used 8 million LED bulbs, 600 km of light tubing and 25,000 figures across 61 points, with more than 400,000 tourists expected.</p>
+
+<p class="src">Sources: <a href="https://www.eltiempo.com/cultura/gente/sabe-cual-es-el-origen-de-la-celebracion-del-dia-de-las-velitas-la-tradicion-que-marca-el-inicio-de-la-navidad-en-colombia-3515096">El Tiempo</a> · <a href="https://www.infobae.com/colombia/2025/11/29/medellin-encendio-los-alumbrados-epm-con-ocho-millones-de-bombillas-led-este-ano-es-un-homenaje-a-la-historia-de-la-ciudad/">Infobae, 29 Nov 2025</a></p></div>
+
+<div class="item" id="co-novena"><div class="ihead"><h3>The Novena de Aguinaldos</h3><span class="when">16–24 Dec</span><span class="ev">well</span></div>
+<p>Nine evenings of prayers, gozos (sung refrains) and villancicos around the nativity scene, held at home, in offices, shopping centres, parishes and parks, with neighbours and colleagues. Natilla and buñuelos are the food of the Novena; Rappi counted more than 120,000 December orders containing them in 2025. The text was written in Quito in the 18th century and took root in Colombia.</p>
+
+<p class="src">Sources: <a href="https://www.infobae.com/colombia/2025/12/16/novena-de-aguinaldos-el-orden-correcto-para-rezarla-y-cual-es-su-origen/">Infobae, 16 Dec 2025</a> · <a href="https://www.portafolio.co/negocios/industrias/este-es-el-record-del-pedido-mas-rapido-repartido-por-rappi-en-un-dia-entrego-780-000-pedidos-488132">Portafolio on Rappi 2025</a> · <a href="https://es-us.finanzas.yahoo.com/noticias/novena-aguinaldos-tradici%C3%B3n-naci%C3%B3-ecuador-201351372.html">Yahoo Finanzas</a></p></div>
+
+<div class="item" id="co-aguinaldos"><div class="ihead"><h3>Aguinaldos: the December games</h3><span class="when">during the Novena</span><span class="ev">partly</span></div>
+<p>Small bets played between relatives and friends through the Novena, where the loser owes a small present (an aguinaldo). <i>Pajita en boca</i>: everyone keeps a straw in their mouth and must show it when challenged. <i>Sí y no</i>: hold a conversation without saying yes or no. <i>Tres pies</i>: slip your foot between someone's feet and shout "¡tres pies!". <i>Dar y no recibir</i>: hand someone an object without them noticing.</p>
+
+<p class="src">Sources: <a href="https://www.infobae.com/colombia/2025/12/24/que-son-y-como-se-juegan-los-aguinaldos-estas-son-las-reglas-del-tradicional-juego-navideno/">Infobae, 24 Dec 2025</a> · <a href="https://www.elnuevosiglo.com.co/cultura-y-sociedad/los-aguinaldos-tradicionales-juegos-que-acompanan-las-festividades-en-colombia">El Nuevo Siglo</a></p></div>
+
+<div class="item" id="co-ninodios"><div class="ihead"><h3>Niño Dios brings the presents at midnight</h3><span class="when">24 Dec</span><span class="ev">well</span></div>
+<p>After the last Novena and dinner, children wait for midnight to open what Niño Dios brought for being good, or find the presents at the pesebre on the morning of the 25th. Children write him letters. Bogotá's Divino Niño sanctuary in the 20 de Julio neighbourhood draws about 70,000 people on a normal Sunday; its image is the country's best-known "miraculous" child.</p>
+
+<p class="src">Sources: <a href="https://culturarecreacionydeporte.gov.co/es/bogotanitos/de-la-la-z/navidad-el-24-de-diciembre">Bogotá culture secretariat</a> · <a href="https://colombia.co/cultura-colombiana/estas-son-las-tradiciones-navidenas-imperdibles-para-los-colombianos">Colombia.co</a> · <a href="https://es.wikipedia.org/wiki/Divino_Ni%C3%B1o_Jes%C3%BAs_(20_de_Julio)">Divino Niño, Wikipedia</a></p></div>
+
+<div class="item" id="co-money"><div class="ihead"><h3>Prima, budgets and the Christmas lottery</h3><span class="when">by 20 Dec / 24 Dec</span><span class="ev">well</span></div>
+<ul><li>The prima de servicios (half a month's salary) must be paid by 20 December.</li><li>Fenalco 2025: 55% plan to spend over COP 800,000; 47% buy in December; 60% stay in their city, 32% travel within Colombia. Clothing and footwear lead the wish list. Online, 14% shop on Temu.</li><li>The Lotería de Boyacá and Lotería de Cundinamarca hold a joint Sorteo Extraordinario de Navidad on 24 December (COP 25 billion top prize in 2025); Extra de Colombia runs Christmas draws on 13 and 30 December.</li></ul>
+<p class="src">Sources: <a href="https://www.elcolombiano.com/negocios/plazo-limite-para-pagar-la-prima-diciembre-fin-de-ano-DN31781929">El Colombiano</a> · <a href="https://www.fenalco.com.co/blog/economico-3/resultado-encuesta-navidad-2025-8590">Fenalco Christmas survey 2025</a> · <a href="https://www.bluradio.com/economia/juegos-de-azar/sorteo-extraordinario-de-navidad-de-la-loteria-de-boyaca-24-de-diciembre-de-2025-so35">Blu Radio</a> · <a href="https://www.infobae.com/colombia/2025/12/14/resultados-loteria-extra-de-colombia-13-de-diciembre-ganadores-del-premio-mayor-de-14000-millones/">Infobae</a></p></div>
+
+<div class="item" id="co-cali"><div class="ihead"><h3>Feria de Cali</h3><span class="when">25–30 Dec</span><span class="ev">well</span></div>
+<p>The country's salsa capital opens its fair on Christmas Day with the Salsódromo parade. The 68th edition (2025) drew about 32,000 spectators to full stands and 2,200 dancers, 40% more than the year before, despite constant rain. A superconcierto and parades follow until the 30th.</p>
+
+<p class="src">Sources: <a href="https://occidente.co/cali/salsodromo-2025-en-la-feria-de-cali/">Occidente</a> · <a href="https://www.eltiempo.com/cultura/gente/asi-se-vivio-la-apertura-de-la-feria-de-cali-2025-salsodromo-lleno-lluvia-constante-y-miles-de-asistentes-disfrutando-de-la-tradicion-cultural-3519783">El Tiempo</a></p></div>
+
+<div class="item" id="co-anoviejo"><div class="ihead"><h3>Año Viejo, agüeros and Pasto</h3><span class="when">28 Dec – 7 Jan</span><span class="ev">well</span></div>
+<p>Muñecos de Año Viejo, stuffed with straw, sawdust and old clothes, are burned at midnight on the 31st in Cali, Bogotá, Barranquilla, Medellín and above all Antioquia and the coffee region, where small workshops make them. One Rionegro maker builds 70–100 a season at COP 70,000–300,000, and in 2025 everyone wanted Petro's face. Law 2224 of 2022 bans filling them with gunpowder. Agüeros: twelve grapes, lentils in the pocket, yellow underwear, a suitcase run. In Pasto the pre-carnival starts on the 28th and the Desfile de Años Viejos (satirical effigies) runs on the 31st, before the Carnaval de Negros y Blancos (2–7 January, UNESCO 2009).</p>
+
+<p class="src">Sources: <a href="https://www.infobae.com/colombia/2025/12/30/en-este-municipio-de-antioquia-se-producen-2000-munecos-de-ano-viejo-para-quemar-el-31-de-diciembre/">Infobae, 30 Dec 2025</a> · <a href="https://www.bbva.com/es/muneco-ano-viejo-otras-tradiciones-colombia-celebrar-fin-ano/">BBVA</a> · <a href="https://www.infobae.com/colombia/2025/12/24/los-agueros-mas-populares-en-navidad-y-ano-nuevo/">Infobae</a> · <a href="https://en.wikipedia.org/wiki/Blacks_and_Whites'_Carnival">Carnaval de Negros y Blancos, Wikipedia</a></p></div>
+</section>
+
+<section class="sec country" id="ecuador" data-toc="Overview" data-group="Ecuador">
+<p class="eyebrow">Ecuador</p>
+<h2>Ecuador: the Christ Child travels, the old year burns</h2>
+<p class="lead">80.4% Catholic and 11.3% evangelical in the only official measurement (INEC, 2012). 92% spend Nochebuena at home or at a relative's and 86% New Year. 27% planned to spend under US$300 on presents.</p>
+<p class="src">Sources: <a href="https://www.ecuavisa.com/noticias/ecuador/el-804-de-los-ecuatorianos-es-catolico-dice-el-inec-NREC11843">Ecuavisa on INEC</a> · <a href="https://www.forbes.com.ec/money/en-gastan-ecuatorianos-fiestas-navidad-fin-ano-n83033">Kantar via Forbes Ecuador</a></p>
+
+<div class="item" id="ec-quito"><div class="ihead"><h3>Fiestas de Quito</h3><span class="when">to 6 Dec</span><span class="ev">partly</span></div>
+<p>The capital celebrates its founding from mid-November to 6 December (491 years in 2025): concerts, a food festival, rural parades and chivas, open party buses with a band on board driving through the city. It ends before Christmas week.</p>
+<p class="src">Sources: <a href="https://www.elcomercio.com/actualidad/quito/agenda-fiestas-quito-2025-todo-lo-que-debes-saber/">El Comercio</a> · <a href="https://ecuadorchequea.com/fiestas-de-quito-historia-inclusion-social-y-agenda-de-actividades/">Ecuador Chequea</a></p></div>
+
+<div class="item" id="ec-pase"><div class="ihead"><h3>Pase del Niño Viajero</h3><span class="when">24 Dec</span><span class="ev">well</span></div>
+<p>Cuenca's procession, national intangible heritage since 2008, runs from about 10:00 to 15:00 on Christmas Eve. Children in costume (shepherds, gypsies, indigenous and Amazonian dress), families, bands and decorated floats follow an image of the Christ Child commissioned in 1823. It became the "travelling child" after it was taken to the Holy Land in 1961. Smaller Pases del Niño are held across the Andes through December and into January.</p>
+
+<p class="src">Sources: <a href="https://es.wikipedia.org/wiki/Pase_del_Ni%C3%B1o_Viajero">Pase del Niño Viajero, Wikipedia</a> · <a href="https://www.turismo.gob.ec/el-pase-del-nino-en-cuenca-riqueza-costumbrista-en-navidad/">Ministry of Tourism</a> · <a href="https://ecuador.travel/los-pases-del-nino-en-ecuador/">Ecuador Travel</a></p></div>
+
+<div class="item" id="ec-xmas"><div class="ihead"><h3>Novena, pesebre, letters to the Niño</h3><span class="when">16–25 Dec</span><span class="ev">partly</span></div>
+<p>Families and neighbours hold the Novena from the 16th to the 24th. The figure of the Christ Child is placed in the nativity at midnight on the 24th. Children leave letters for Niño Jesús at the pesebre and find presents on the morning of the 25th; Papá Noel appears as a modern overlay. Nochebuena dinner: turkey or stuffed chicken, pernil, hornado, tamales, and pristiños (fried dough rings in panela syrup) with rompope (egg liqueur). On the coast, Esmeraldas and Manabí prefer a seafood dinner.</p>
+<p class="src">Sources: <a href="https://www.eldiario.ec/vida/tradiciones-navidenas-en-ecuador-fe-musica-y-gastronomia-que-perduran-20122025/">El Diario, 20 Dec 2025</a> · <a href="https://eltiempolatino.com/2023/12/22/cultura/santa-o-el-nino-jesus-quien-entrega-los-regalos-de-navidad-a-los-ninos-de-latinoamerica/">El Tiempo Latino</a> · <a href="https://www.turismo.gob.ec/navidad-en-ecuador-una-amalgama-de-tradiciones/">Ministry of Tourism</a></p></div>
+
+<div class="item" id="ec-money"><div class="ihead"><h3>The 13th salary and the Christmas lottery, both on the 24th</h3><span class="when">24 Dec</span><span class="ev">well</span></div>
+<p>The décimo tercer sueldo, one twelfth of the year's earnings, must be paid by 24 December. On the same day at noon the Lotería Nacional (Junta de Beneficencia de Guayaquil) draws its Christmas prize: US$3 million for a whole ticket, sold in 40 "guachitos" at US$3, with weekly car draws through December.</p>
+
+<p class="src">Sources: <a href="https://www.primicias.ec/economia/decimo-tercer-sueldo-ecuador-calculo-total-parcial-trabajadores-empleados-111664/">Primicias</a> · <a href="https://www.vistazo.com/actualidad/nacional/2025-11-28-loteria-nacional-navidad-participar-sorteo-usd-3-millones-autos-semanales-ecuador-DN10485457">Vistazo, 28 Nov 2025</a></p></div>
+
+<div class="item" id="ec-inocentes"><div class="ihead"><h3>Día de los Inocentes</h3><span class="when">28 Dec</span><span class="ev">partly</span></div>
+<p>Pranks among friends and family, with records from colonial times. Cuenca holds a Fiesta de los Santos Inocentes with costumes and comparsas satirising current events; Quito's version used to last ten days with masked balls.</p>
+<p class="src">Sources: <a href="https://www.eldiario.ec/ecuador/dia-de-los-inocentes-ecuador-origen-tradicion-28122025/">El Diario, 28 Dec 2025</a> · <a href="https://www.turismo.gob.ec/la-fiesta-de-los-santos-inocentes-una-tradicion-en-cuenca/">Ministry of Tourism</a></p></div>
+
+<div class="item" id="ec-anoviejo"><div class="ihead"><h3>Año Viejo: monigotes, viudas, testamentos</h3><span class="when">24–31 Dec</span><span class="ev">well</span></div>
+<p>Monigotes are effigies of cardboard or cloth stuffed with sawdust and paper, with masks of politicians, footballers and cartoon characters, burned at midnight on the 31st to burn off the bad year. Men dress up as the old year's "widows" with wigs and heavy make-up and stop drivers asking for coins; a mock will lists the year's grievances. In 2025 Guayaquil licensed 1,100 sellers in three zones (Calle 6 de Marzo, Florida, around Albán Borja), open 08:00–22:00 daily. Prices run from US$15 to US$500 for giants; sellers report sales climbing from 24 December, about 25 a day at US$30. The municipality-backed Ruta de los Monigotes Gigantes in the southwest suburbs showed 21 official figures 4–11 metres tall in 2025 (Minecraft, Stitch, Naruto, Chavo del 8). The Diablada Pillareña follows on 1–6 January.</p>
+
+<p class="src">Sources: <a href="https://www.teleamazonas.com/monigotes-viudas-tradicion-fin-ano/">Teleamazonas</a> · <a href="https://www.infobae.com/america/america-latina/2022/12/31/por-que-cientos-de-hombres-en-ecuador-se-visten-de-mujeres-en-fin-de-ano/">Infobae on viudas</a> · <a href="https://guayaquil.gob.ec/comerciantes-monigotes-venden-productos-sectores-guayaquil/">Municipality of Guayaquil</a> · <a href="https://www.eluniverso.com/guayaquil/comunidad/ruta-de-los-monigotes-gigantes-2025-en-el-suburbio-de-guayaquil-ubicaciones-y-personajes-nota/">El Universo</a> · <a href="https://www.eluniverso.com/noticias/ecuador/diablada-pillaro-evento-patrimonial-movimiento-turistico-feriado-ano-nuevo-nota/">El Universo on the Diablada</a></p></div>
+</section>
+
+<section class="sec" id="spain" data-toc="El Gordo &amp; Los Reyes: local equivalents" data-group="Reference">
+<p class="eyebrow">Compared with Spain</p>
+<h2>Is there an El Gordo or a Reyes Magos here?</h2>
+<p>Partly. The Christmas lottery exists in Colombia and Ecuador but not as a national obsession, and the Three Kings have lost the presents to Christmas Eve. Two things Spain lacks carry more weight here: the effigies of the old year and, in Colombia, the child who delivers the presents.</p>
+<div class="tbl"><table>
+<thead><tr><th></th><th>Spain</th><th>Peru</th><th>Colombia</th><th>Ecuador</th></tr></thead>
+<tbody>
+<tr><td>Christmas lottery</td><td>El Gordo, 22 Dec</td><td>No national equivalent found</td><td>Sorteo Extraordinario de Navidad, Boyacá + Cundinamarca, 24 Dec; Extra de Colombia, 13 and 30 Dec</td><td>Lotería Nacional Christmas draw, US$3M, noon on 24 Dec</td></tr>
+<tr><td>Who brings presents</td><td>Reyes Magos (6 Jan), Papá Noel</td><td>Papá Noel on the 24th; Reyes in the past</td><td>Niño Dios, midnight on the 24th</td><td>Niño Jesús, morning of the 25th; Papá Noel as overlay</td></tr>
+<tr><td>6 January</td><td>Presents, roscón</td><td>Bajada de Reyes: the nativity comes down, padrinos chosen</td><td>Public holiday moved to Monday (11 Jan 2027)</td><td>Diablada Pillareña ends</td></tr>
+<tr><td>28 December</td><td>Inocentadas</td><td>Inocentadas</td><td>Inocentadas; Pasto pre-carnival</td><td>Inocentadas; costume fiesta in Cuenca</td></tr>
+<tr><td>31 December</td><td>Twelve grapes</td><td>Grapes, yellow, lentils; some burn a muñeco</td><td>Muñecos de Año Viejo, agüeros</td><td>Monigotes, viudas, testamentos: the national ritual</td></tr>
+<tr><td>Year-end bonus</td><td>Paga extra</td><td>Gratificación by 15 Dec</td><td>Prima by 20 Dec</td><td>13th salary by 24 Dec</td></tr>
+</tbody></table></div>
+<p class="src">Sources: <a href="https://en.wikipedia.org/wiki/Spanish_Christmas_Lottery">Spanish Christmas Lottery, Wikipedia</a> · <a href="https://www.cundinamarca.gov.co/noticias/regresa-el-sorteo-extraordinario-de-navidad-la-loteria-de-cundinamarca-entregara-18000-millones-">Gobernación de Cundinamarca</a> · <a href="https://www.ecuavisa.com/noticias/economia/loteria-navidad-2025-junta-beneficencia-guayaquil-AN10484730">Ecuavisa</a> · <a href="https://larepublica.pe/datos-lr/2025/01/03/bajada-de-reyes-2025-fecha-significado-y-como-se-celebra-en-peru-el-dia-de-reyes-magos-atmpe-86325">La República</a> · <a href="https://www.eldiario.ec/ecuador/decimo-tercer-sueldo-2025-fecha-pago-ecuador-02122025/">El Diario on the 13th salary</a> · <a href="https://www.cronista.com/colombia/finanzas-y-economia/prima-de-navidad-este-es-el-ultimo-dia-en-el-que-puedes-recibir-tu-pago/">El Cronista on the prima</a></p>
+</section>
+
+<section class="sec" id="gaps" data-toc="What is missing" data-group="Reference">
+<p class="eyebrow">Read before quoting</p>
+<h2>What this report could not confirm</h2>
+<ul>
+<li>No survey for Colombia or Ecuador directly compares the importance of Christmas and New Year as the Lima USIL study does. The verdicts for those two markets are read from where people celebrate, who travels and which rituals are public.</li>
+<li>Ecuador has no official religion data since 2012; the evangelical share has probably grown.</li>
+<li>No national Christmas lottery was found for Peru; that is an absence in search, not proof.</li>
+<li>Regional Peruvian customs (Takanakuy, Hatajo de Negritos) are well documented in press but their reach among Lima's migrants is not measured.</li>
+</ul>
+</section>
+
+<section class="sec sources" id="sources">
+  <p class="eyebrow">Reference</p>
+  <h2>All sources</h2>
+  <p>Every link cited above, once, in order of first use. Figures were checked on the page itself, not taken from search snippets.</p>
+  <ol><li><a href="https://www.infobae.com/peru/2025/12/17/que-valoran-mas-los-peruanos-la-navidad-o-el-ano-nuevo-un-nuevo-estudio-revela-habitos-de-consumo-poco-conocidos-por-estas-fiestas/">infobae.com</a> — USIL study via Infobae, 17 Dec 2025</li><li><a href="https://trome.com/actualidad/7-cosas-que-solo-los-peruanos-hacemos-en-navidad-fotos-video-imp-noticia/">trome.com</a> — Trome, 6 Dec 2022</li><li><a href="https://culturarecreacionydeporte.gov.co/es/bogotanitos/de-la-la-z/navidad-el-24-de-diciembre">culturarecreacionydeporte.gov.co</a> — Bogotá culture secretariat</li><li><a href="https://www.forbes.com.ec/money/en-gastan-ecuatorianos-fiestas-navidad-fin-ano-n83033">forbes.com.ec</a> — Kantar via Forbes Ecuador</li><li><a href="https://www.primicias.ec/sociedad/mascaras-caretas-ano-nuevo-ecuador-monigotes-31diciembre-112787/">primicias.ec</a> — Primicias</li><li><a href="https://www.businessempresarial.com.pe/asi-compran-los-peruanos-en-navidad-rappi-revela-que-la-mayoria-de-pedidos-se-concentran-a-ultimo-minuto/">businessempresarial.com.pe</a> — Rappi Peru 2025</li><li><a href="https://elcomercio.pe/lima/sucesos/costa-verde-congestion-vehicular-por-la-gran-cantidad-de-visitantes-a-las-playas-en-el-feriado-de-navidad-playa-agua-dulce-los-yuyos-miraflores-chorrillos-barranco-verano-ultimas-noticia/">elcomercio.pe</a> — El Comercio on Costa Verde at Christmas</li><li><a href="https://www.elpais.com.co/cali/salsodromo-en-la-feria-de-cali-2025-en-vivo-calenos-esperan-ansiosos-el-gran-arranque-de-la-edicion-68-de-la-feria-de-cali-2511.html">elpais.com.co</a> — El País Cali</li><li><a href="https://visitcuencaecuador.com.ec/en/procession-in-honor-of-baby-jesus/">visitcuencaecuador.com.ec</a> — Visit Cuenca</li><li><a href="https://www.primicias.ec/guayaquil/calles-venta-monigotes-anos-viejos-6marzo-alban-borja-horarios-111504/">primicias.ec</a> — Primicias Guayaquil</li><li><a href="https://www.primicias.ec/sociedad/dia-inocentes-origen-celebracion-ecuador-bromas-desfiles-112619/">primicias.ec</a> — Primicias on Inocentes</li><li><a href="https://es.wikipedia.org/wiki/Religi%C3%B3n_en_Per%C3%BA">es.wikipedia.org</a> — Census 2017 via Wikipedia</li><li><a href="https://rpp.pe/peru/actualidad/mas-del-90-de-peruanos-celebra-navidad-y-el-67-pasara-ano-nuevo-en-casa-o-en-la-de-algun-familiar-o-amigo-segun-cpi-noticia-1605359">rpp.pe</a> — CPI via RPP</li><li><a href="https://www.ipsos.com/es-pe/como-celebran-navidad-y-ano-nuevo-los-peruanos">ipsos.com</a> — Ipsos/Perú21, Dec 2025</li><li><a href="https://www.infobae.com/peru/2025/12/25/el-distrito-de-lima-que-evito-los-fuegos-artificiales-en-la-celebracion-de-navidad-a-eso-lo-llamo-tener-empatia/">infobae.com</a> — Infobae, 25 Dec 2025</li><li><a href="https://andina.pe/agencia/noticia-este-ano-se-registrara-venta-record-33-millones-panetones-navidad-590753.aspx">andina.pe</a> — Andina</li><li><a href="https://larepublica.pe/mundo/2025/12/22/el-pais-que-come-mas-paneton-en-el-mundo-esta-en-america-latina-supera-a-italia-y-chile-con-mas-de-30000-toneladas-al-ano-1766534">larepublica.pe</a> — La República, 22 Dec 2025</li><li><a href="https://gestion.pe/economia/empresas/venta-de-panetones-crecera-10-en-la-campana-navidena-2025-que-ofrecen-las-marcas-y-que-busca-el-consumidor-noticia/">gestion.pe</a> — Gestión</li><li><a href="https://www.infobae.com/peru/2025/12/02/cual-es-el-paneton-mas-caro-del-peru-este-2025-vale-874-soles-y-quedan-menos-de-10-unidades/">infobae.com</a> — Infobae, 2 Dec 2025</li><li><a href="https://es.wikipedia.org/wiki/Chocolatada_navide%C3%B1a">es.wikipedia.org</a> — Chocolatada navideña, Wikipedia</li><li><a href="https://rpp.pe/economia/economia/gratificacion-diciembre-2025-calcula-cuanto-debes-recibir-y-cual-es-el-plazo-limite-del-pago-por-navidad-noticia-1667942">rpp.pe</a> — RPP</li><li><a href="https://www.infobae.com/peru/2025/12/10/canastas-navidenas-es-obligatorio-que-la-empresa-donde-trabajo-me-den-una-por-fiestas-de-fin-de-ano-esto-dice-la-ley/">infobae.com</a> — Infobae, 10 Dec 2025</li><li><a href="https://www.infobae.com/peru/2025/12/20/las-supercanastas-que-empresas-y-figuras-publicas-entregaron-a-sus-trabajadores-en-2025-y-sorprendieron-a-los-usuarios/">infobae.com</a> — Infobae, 20 Dec 2025</li><li><a href="https://gestion.pe/economia/empresas/rappi-y-e-commerce-en-peru-pedidos-navidenos-y-crecimiento-2025-noticia/">gestion.pe</a> — Gestión on Rappi</li><li><a href="https://www.infobae.com/peru/2023/12/25/chorrillos-miles-de-familias-limenas-disfrutan-del-feriado-de-navidad-en-popular-playa-agua-dulce/">infobae.com</a> — Infobae, 25 Dec 2023</li><li><a href="https://canaln.pe/actualidad/costa-verde-miles-personas-celebraron-25-diciembre-playas-lima-n469179">canaln.pe</a> — Canal N</li><li><a href="https://www.infobae.com/peru/2025/12/26/navidad-deja-playas-de-la-costa-verde-cubiertas-de-basura-y-desperdicios/">infobae.com</a> — Infobae, 26 Dec 2025</li><li><a href="https://www.boletomachupicchu.com/santurantikuy-cusco/">boletomachupicchu.com</a> — Boleto Machu Picchu</li><li><a href="https://www.infobae.com/peru/2024/12/15/takanakuy-la-violenta-tradicion-andina-en-peru-donde-se-saldan-cuentas-a-puno-limpio-en-navidad/">infobae.com</a> — Infobae, 15 Dec 2024</li><li><a href="https://www.superprof.pe/blog/tradiciones-navidad-costa-peruana/">superprof.pe</a> — Superprof</li><li><a href="https://peru21.pe/peru/uvas-lentejas-y-ropa-amarilla-estas-son-las-cabalas-para-ano-nuevo-de-los-peruanos-noticia/">peru21.pe</a> — Perú21/Ipsos</li><li><a href="https://peru21.pe/lima/ipsos-66-de-peruanos-celebrara-ano-nuevo-en-casa-con-amigos-yo-familiares-ano-nuevo-2025/">peru21.pe</a> — Perú21/Ipsos</li><li><a href="https://abc7.com/post/chamanes-peruanos-predicen-la-caida-de-nicolas-maduro-conflictos-globales-continuos-en-2026/18336858/">abc7.com</a> — ABC7, Dec 2025</li><li><a href="https://www.infobae.com/america/peru/2022/01/04/bajada-de-reyes-2022-cuando-es-y-por-que-debes-desarmar-el-nacimiento/">infobae.com</a> — Infobae</li><li><a href="https://larepublica.pe/datos-lr/2025/01/03/bajada-de-reyes-2025-fecha-significado-y-como-se-celebra-en-peru-el-dia-de-reyes-magos-atmpe-86325">larepublica.pe</a> — La República</li><li><a href="https://cambiocolombia.com/pais/articulo/2025/3/los-colombianos-somos-asi-que-es-la-religion-para-los-colombianos">cambiocolombia.com</a> — Cambio, Mar 2025</li><li><a href="https://www.valoraanalitik.com/esta-son-algunas-tendencias-de-consumo-y-celebraciones-de-los-colombianos-en-navidad/">valoraanalitik.com</a> — Valora Analitik</li><li><a href="https://www.eltiempo.com/cultura/gente/sabe-cual-es-el-origen-de-la-celebracion-del-dia-de-las-velitas-la-tradicion-que-marca-el-inicio-de-la-navidad-en-colombia-3515096">eltiempo.com</a> — El Tiempo</li><li><a href="https://www.infobae.com/colombia/2025/11/29/medellin-encendio-los-alumbrados-epm-con-ocho-millones-de-bombillas-led-este-ano-es-un-homenaje-a-la-historia-de-la-ciudad/">infobae.com</a> — Infobae, 29 Nov 2025</li><li><a href="https://www.infobae.com/colombia/2025/12/16/novena-de-aguinaldos-el-orden-correcto-para-rezarla-y-cual-es-su-origen/">infobae.com</a> — Infobae, 16 Dec 2025</li><li><a href="https://www.portafolio.co/negocios/industrias/este-es-el-record-del-pedido-mas-rapido-repartido-por-rappi-en-un-dia-entrego-780-000-pedidos-488132">portafolio.co</a> — Portafolio on Rappi 2025</li><li><a href="https://es-us.finanzas.yahoo.com/noticias/novena-aguinaldos-tradici%C3%B3n-naci%C3%B3-ecuador-201351372.html">es-us.finanzas.yahoo.com</a> — Yahoo Finanzas</li><li><a href="https://www.infobae.com/colombia/2025/12/24/que-son-y-como-se-juegan-los-aguinaldos-estas-son-las-reglas-del-tradicional-juego-navideno/">infobae.com</a> — Infobae, 24 Dec 2025</li><li><a href="https://www.elnuevosiglo.com.co/cultura-y-sociedad/los-aguinaldos-tradicionales-juegos-que-acompanan-las-festividades-en-colombia">elnuevosiglo.com.co</a> — El Nuevo Siglo</li><li><a href="https://colombia.co/cultura-colombiana/estas-son-las-tradiciones-navidenas-imperdibles-para-los-colombianos">colombia.co</a> — Colombia.co</li><li><a href="https://es.wikipedia.org/wiki/Divino_Ni%C3%B1o_Jes%C3%BAs_(20_de_Julio)">es.wikipedia.org</a> — Divino Niño, Wikipedia</li><li><a href="https://www.elcolombiano.com/negocios/plazo-limite-para-pagar-la-prima-diciembre-fin-de-ano-DN31781929">elcolombiano.com</a> — El Colombiano</li><li><a href="https://www.fenalco.com.co/blog/economico-3/resultado-encuesta-navidad-2025-8590">fenalco.com.co</a> — Fenalco Christmas survey 2025</li><li><a href="https://www.bluradio.com/economia/juegos-de-azar/sorteo-extraordinario-de-navidad-de-la-loteria-de-boyaca-24-de-diciembre-de-2025-so35">bluradio.com</a> — Blu Radio</li><li><a href="https://www.infobae.com/colombia/2025/12/14/resultados-loteria-extra-de-colombia-13-de-diciembre-ganadores-del-premio-mayor-de-14000-millones/">infobae.com</a> — Infobae</li><li><a href="https://occidente.co/cali/salsodromo-2025-en-la-feria-de-cali/">occidente.co</a> — Occidente</li><li><a href="https://www.eltiempo.com/cultura/gente/asi-se-vivio-la-apertura-de-la-feria-de-cali-2025-salsodromo-lleno-lluvia-constante-y-miles-de-asistentes-disfrutando-de-la-tradicion-cultural-3519783">eltiempo.com</a> — El Tiempo</li><li><a href="https://www.infobae.com/colombia/2025/12/30/en-este-municipio-de-antioquia-se-producen-2000-munecos-de-ano-viejo-para-quemar-el-31-de-diciembre/">infobae.com</a> — Infobae, 30 Dec 2025</li><li><a href="https://www.bbva.com/es/muneco-ano-viejo-otras-tradiciones-colombia-celebrar-fin-ano/">bbva.com</a> — BBVA</li><li><a href="https://www.infobae.com/colombia/2025/12/24/los-agueros-mas-populares-en-navidad-y-ano-nuevo/">infobae.com</a> — Infobae</li><li><a href="https://en.wikipedia.org/wiki/Blacks_and_Whites&#x27;_Carnival">en.wikipedia.org</a> — Carnaval de Negros y Blancos, Wikipedia</li><li><a href="https://www.ecuavisa.com/noticias/ecuador/el-804-de-los-ecuatorianos-es-catolico-dice-el-inec-NREC11843">ecuavisa.com</a> — Ecuavisa on INEC</li><li><a href="https://www.elcomercio.com/actualidad/quito/agenda-fiestas-quito-2025-todo-lo-que-debes-saber/">elcomercio.com</a> — El Comercio</li><li><a href="https://ecuadorchequea.com/fiestas-de-quito-historia-inclusion-social-y-agenda-de-actividades/">ecuadorchequea.com</a> — Ecuador Chequea</li><li><a href="https://es.wikipedia.org/wiki/Pase_del_Ni%C3%B1o_Viajero">es.wikipedia.org</a> — Pase del Niño Viajero, Wikipedia</li><li><a href="https://www.turismo.gob.ec/el-pase-del-nino-en-cuenca-riqueza-costumbrista-en-navidad/">turismo.gob.ec</a> — Ministry of Tourism</li><li><a href="https://ecuador.travel/los-pases-del-nino-en-ecuador/">ecuador.travel</a> — Ecuador Travel</li><li><a href="https://www.eldiario.ec/vida/tradiciones-navidenas-en-ecuador-fe-musica-y-gastronomia-que-perduran-20122025/">eldiario.ec</a> — El Diario, 20 Dec 2025</li><li><a href="https://eltiempolatino.com/2023/12/22/cultura/santa-o-el-nino-jesus-quien-entrega-los-regalos-de-navidad-a-los-ninos-de-latinoamerica/">eltiempolatino.com</a> — El Tiempo Latino</li><li><a href="https://www.turismo.gob.ec/navidad-en-ecuador-una-amalgama-de-tradiciones/">turismo.gob.ec</a> — Ministry of Tourism</li><li><a href="https://www.primicias.ec/economia/decimo-tercer-sueldo-ecuador-calculo-total-parcial-trabajadores-empleados-111664/">primicias.ec</a> — Primicias</li><li><a href="https://www.vistazo.com/actualidad/nacional/2025-11-28-loteria-nacional-navidad-participar-sorteo-usd-3-millones-autos-semanales-ecuador-DN10485457">vistazo.com</a> — Vistazo, 28 Nov 2025</li><li><a href="https://www.eldiario.ec/ecuador/dia-de-los-inocentes-ecuador-origen-tradicion-28122025/">eldiario.ec</a> — El Diario, 28 Dec 2025</li><li><a href="https://www.turismo.gob.ec/la-fiesta-de-los-santos-inocentes-una-tradicion-en-cuenca/">turismo.gob.ec</a> — Ministry of Tourism</li><li><a href="https://www.teleamazonas.com/monigotes-viudas-tradicion-fin-ano/">teleamazonas.com</a> — Teleamazonas</li><li><a href="https://www.infobae.com/america/america-latina/2022/12/31/por-que-cientos-de-hombres-en-ecuador-se-visten-de-mujeres-en-fin-de-ano/">infobae.com</a> — Infobae on viudas</li><li><a href="https://guayaquil.gob.ec/comerciantes-monigotes-venden-productos-sectores-guayaquil/">guayaquil.gob.ec</a> — Municipality of Guayaquil</li><li><a href="https://www.eluniverso.com/guayaquil/comunidad/ruta-de-los-monigotes-gigantes-2025-en-el-suburbio-de-guayaquil-ubicaciones-y-personajes-nota/">eluniverso.com</a> — El Universo</li><li><a href="https://www.eluniverso.com/noticias/ecuador/diablada-pillaro-evento-patrimonial-movimiento-turistico-feriado-ano-nuevo-nota/">eluniverso.com</a> — El Universo on the Diablada</li><li><a href="https://en.wikipedia.org/wiki/Spanish_Christmas_Lottery">en.wikipedia.org</a> — Spanish Christmas Lottery, Wikipedia</li><li><a href="https://www.cundinamarca.gov.co/noticias/regresa-el-sorteo-extraordinario-de-navidad-la-loteria-de-cundinamarca-entregara-18000-millones-">cundinamarca.gov.co</a> — Gobernación de Cundinamarca</li><li><a href="https://www.ecuavisa.com/noticias/economia/loteria-navidad-2025-junta-beneficencia-guayaquil-AN10484730">ecuavisa.com</a> — Ecuavisa</li><li><a href="https://www.eldiario.ec/ecuador/decimo-tercer-sueldo-2025-fecha-pago-ecuador-02122025/">eldiario.ec</a> — El Diario on the 13th salary</li><li><a href="https://www.cronista.com/colombia/finanzas-y-economia/prima-de-navidad-este-es-el-ultimo-dia-en-el-que-puedes-recibir-tu-pago/">cronista.com</a> — El Cronista on the prima</li></ol>
+</section>
+
+  </main>
+</div>
+<script>
+(function(){
+  var b=document.body, burger=document.querySelector('.burger'), last=0;
+  function close(){b.classList.remove('nav')}
+  burger&&burger.addEventListener('click',function(){b.classList.add('nav')});
+  document.querySelector('.scrim').addEventListener('click',close);
+  document.querySelector('.navhead button').addEventListener('click',close);
+  document.querySelectorAll('.toc a').forEach(function(a){a.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+  window.addEventListener('scroll',function(){var y=window.scrollY; if(burger){burger.classList.toggle('away',y>last&&y>200)} last=y},{passive:true});
+  var links={}; document.querySelectorAll('.toc a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('cur')}); var l=links[e.target.id]; l&&l.classList.add('cur')}})},{rootMargin:'0px 0px -70% 0px'});
+    document.querySelectorAll('section.sec[id]').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
